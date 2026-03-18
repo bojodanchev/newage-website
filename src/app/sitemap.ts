@@ -1,4 +1,7 @@
 import { MetadataRoute } from 'next'
+
+export const dynamic = 'force-static'
+
 import { getAllServices } from '@/data/services'
 import { getAllCaseStudies } from '@/data/case-studies'
 import { getAllBlogPosts } from '@/data/blog-posts'
