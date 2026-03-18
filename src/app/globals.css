@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Dark First */
+  --color-primary: #0A0A0A;
+  --color-foreground: #F0F0F5;
+  --color-accent-purple: #6C3AFF;
+  --color-accent-mint: #00E5A0;
+  --color-accent-orange: #FF6B35;
+  --color-neutral-900: #0A0A0A;
+  --color-neutral-800: #1A1A2E;
+  --color-neutral-700: #2D2D44;
+  --color-neutral-600: #3D3D5C;
+  --color-neutral-500: #8B8BA3;
+  --color-neutral-400: #A0A0B8;
+  --color-neutral-300: #C0C0D0;
+  --color-neutral-200: #E0E0E8;
+  --color-neutral-100: #F0F0F5;
+
+  /* Typography Scale */
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --text-display: 5rem;
+  --text-h1: 3.75rem;
+  --text-h2: 3rem;
+  --text-h3: 2.25rem;
+  --text-h4: 1.5rem;
+  --text-h5: 1.25rem;
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.75rem;
+
+  /* Spacing Scale */
+  --spacing-section: 8rem;
+  --spacing-section-sm: 5rem;
+
+  /* Shadows */
+  --shadow-glow-purple: 0 0 20px rgba(108, 58, 255, 0.3);
+  --shadow-glow-mint: 0 0 20px rgba(0, 229, 160, 0.3);
+  --shadow-glow-purple-lg: 0 0 40px rgba(108, 58, 255, 0.4);
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  /* Z-index Scale */
+  --z-behind: -1;
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* Animations */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(108, 58, 255, 0.3);
+  color: var(--color-foreground);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-600);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-accent-purple);
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+@utility glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@utility gradient-text {
+  background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-mint));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility gradient-text-warm {
+  background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility glow-purple {
+  box-shadow: var(--shadow-glow-purple);
+}
+
+@utility glow-mint {
+  box-shadow: var(--shadow-glow-mint);
+}
+
+@utility glow-purple-lg {
+  box-shadow: var(--shadow-glow-purple-lg);
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@utility section-padding {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+@utility section-padding-sm {
+  padding-top: var(--spacing-section-sm);
+  padding-bottom: var(--spacing-section-sm);
+}
+
+/* Marquee animation for LogoMarquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
