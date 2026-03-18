@@ -5,6 +5,8 @@ import { FadeIn } from '@/components/animation/FadeIn'
 import { StaggerChildren } from '@/components/animation/StaggerChildren'
 import { fadeUp } from '@/lib/animations'
 
+const accentColors = ['text-accent-purple/10', 'text-accent-mint/10', 'text-accent-orange/10'] as const
+
 const testimonials = [
   {
     quote:
@@ -69,11 +71,14 @@ export function TestimonialsSection() {
         </FadeIn>
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+          {testimonials.map((t, i) => (
             <motion.div key={t.name} variants={fadeUp}>
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-8 h-full">
+              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-8 h-full overflow-hidden">
+                <span className={`absolute top-2 left-4 font-heading text-6xl ${accentColors[i % accentColors.length]} pointer-events-none select-none leading-none`}>
+                  &ldquo;
+                </span>
                 <StarRating count={t.rating} />
-                <blockquote className="text-neutral-300 leading-relaxed mb-6">
+                <blockquote className="text-lg text-neutral-300 leading-relaxed mb-6">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-3">

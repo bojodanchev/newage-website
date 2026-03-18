@@ -10,6 +10,7 @@ const caseStudies = [
   {
     industry: 'SaaS',
     headline: '3x Revenue in 90 Days',
+    metric: '3x',
     description:
       'Built a complete sales infrastructure and automated lead nurture system for a B2B SaaS startup, tripling MRR within one quarter.',
     slug: 'saas-revenue-3x',
@@ -18,6 +19,7 @@ const caseStudies = [
   {
     industry: 'E-Commerce',
     headline: '500% ROAS on Paid Ads',
+    metric: '500%',
     description:
       'Designed and built a full-funnel marketing system with automated retargeting, email flows, and conversion-optimized landing pages.',
     slug: 'ecommerce-500-roas',
@@ -26,6 +28,7 @@ const caseStudies = [
   {
     industry: 'Real Estate',
     headline: '10,000+ Hours Saved/Year',
+    metric: '10K+',
     description:
       'Replaced manual processes with a custom CRM and automation suite, freeing the team to focus on closing deals instead of admin.',
     slug: 'real-estate-automation',
@@ -51,11 +54,17 @@ export function CaseStudiesSection() {
             <motion.div key={study.slug} variants={fadeUp}>
               <a
                 href={`/work/${study.slug}`}
-                className="group block bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-8 h-full transition-all duration-300 hover:scale-[1.02] hover:border-accent-purple/30"
+                className="group block bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl overflow-hidden h-full transition-all duration-300 hover:scale-[1.02] hover:border-accent-purple/30"
               >
-                <Badge color={study.color} className="mb-6">
-                  {study.industry}
-                </Badge>
+                <div className="relative h-32 rounded-t-xl bg-gradient-to-br from-accent-purple/20 via-accent-mint/10 to-transparent flex items-center justify-center">
+                  <span className="absolute inset-0 flex items-center justify-center font-heading text-5xl font-bold text-white/20">
+                    {study.metric}
+                  </span>
+                  <Badge color={study.color} className="absolute top-3 right-3">
+                    {study.industry}
+                  </Badge>
+                </div>
+                <div className="p-8">
                 <h3 className="font-heading text-2xl font-bold mb-3">
                   {study.headline}
                 </h3>
@@ -78,6 +87,7 @@ export function CaseStudiesSection() {
                     />
                   </svg>
                 </span>
+                </div>
               </a>
             </motion.div>
           ))}

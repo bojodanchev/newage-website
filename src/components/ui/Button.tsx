@@ -27,7 +27,7 @@ type ButtonProps = ButtonAsButton | ButtonAsLink
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    'bg-gradient-to-r from-accent-purple to-accent-mint text-white hover:glow-purple',
+    'bg-gradient-to-r from-accent-purple to-accent-mint text-white hover:glow-purple shadow-lg shadow-accent-purple/20',
   secondary:
     'border border-neutral-700 text-foreground hover:border-accent-purple hover:text-accent-purple',
   ghost: 'text-foreground hover:bg-white/5',
@@ -49,7 +49,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center gap-2 rounded-lg font-medium',
+    'inline-flex items-center justify-center gap-2 rounded-lg font-medium whitespace-nowrap',
     'transition-all duration-300 ease-out',
     'hover:scale-[1.02] active:scale-[0.98]',
     'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-purple',

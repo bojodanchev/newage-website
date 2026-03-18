@@ -16,10 +16,11 @@ export function HeroSection() {
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-primary/60 via-primary/40 to-primary" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 w-full">
-        <div className="max-w-4xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 w-full text-center">
+        <div className="max-w-4xl mx-auto relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-accent-purple/15 rounded-full blur-3xl pointer-events-none -z-10" />
           <motion.h1
-            className="font-heading text-5xl md:text-7xl lg:text-display font-extrabold leading-tight"
+            className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
@@ -28,7 +29,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.h1
-            className="font-heading text-5xl md:text-7xl lg:text-display font-extrabold leading-tight gradient-text mt-2"
+            className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight gradient-text mt-2"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease }}
@@ -37,7 +38,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-xl text-neutral-300 max-w-2xl"
+            className="mt-6 text-xl text-neutral-300 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35, ease }}
@@ -47,7 +48,7 @@ export function HeroSection() {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-10 flex flex-wrap gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease }}

@@ -14,7 +14,7 @@ export function LogoBar() {
 
   return (
     <section className="py-8 border-t border-b border-neutral-700/30 overflow-hidden">
-      <p className="text-neutral-500 text-sm text-center mb-6">
+      <p className="text-neutral-400 text-xs uppercase tracking-[0.15em] text-center mb-6">
         Trusted by forward-thinking companies
       </p>
       <div className="relative">
@@ -26,9 +26,10 @@ export function LogoBar() {
           {marqueeItems.map((name, i) => (
             <span
               key={`${name}-${i}`}
-              className="flex-shrink-0 px-10 text-neutral-500 font-heading font-semibold text-lg tracking-wide whitespace-nowrap"
+              className="flex-shrink-0 px-6 text-neutral-400 font-heading font-semibold uppercase tracking-[0.15em] text-xs whitespace-nowrap flex items-center gap-6"
             >
               {name}
+              <span className="text-neutral-600">·</span>
             </span>
           ))}
         </div>

@@ -90,8 +90,9 @@ export function ServicesGrid() {
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <motion.div key={service.title} variants={fadeUp}>
-              <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 h-full transition-all duration-300 hover:border-accent-purple/30 hover:bg-white/[0.08]">
-                <span className="text-4xl block mb-4">{service.icon}</span>
+              <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-8 h-full transition-all duration-300 hover:border-accent-purple/30 hover:bg-white/[0.08] overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent-purple via-accent-mint to-accent-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="w-14 h-14 rounded-2xl bg-accent-purple/10 border border-accent-purple/20 flex items-center justify-center text-2xl mb-4">{service.icon}</div>
                 <h3 className="text-lg font-semibold font-heading mb-2">
                   {service.title}
                 </h3>

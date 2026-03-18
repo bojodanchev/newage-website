@@ -12,12 +12,12 @@ const metrics = [
 
 export function MetricsSection() {
   return (
-    <section className="py-20 bg-neutral-800/30 border-y border-neutral-700/30">
+    <section className="py-20 bg-neutral-800/50 border-y border-neutral-700/30">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x md:divide-neutral-700/30">
           {metrics.map((metric, i) => (
             <FadeIn key={metric.label} delay={i * 0.15} className="text-center">
-              <div className="gradient-text text-4xl md:text-5xl font-heading font-bold">
+              <div className="gradient-text text-5xl md:text-6xl font-heading font-bold">
                 <CountUp
                   end={metric.value}
                   suffix={metric.suffix}

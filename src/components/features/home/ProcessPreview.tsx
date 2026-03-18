@@ -56,12 +56,18 @@ export function ProcessPreview() {
             >
               {/* Connecting line (desktop only) */}
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[calc(50%+1.5rem)] right-[calc(-50%+1.5rem)] h-px bg-gradient-to-r from-accent-purple to-accent-mint opacity-30" />
+                <div className="hidden md:block absolute top-8 left-[calc(50%+1.5rem)] right-[calc(-50%+1.5rem)] h-[2px] bg-gradient-to-r from-accent-purple to-accent-mint opacity-50" />
               )}
 
               <div className="relative text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 border border-white/10 text-3xl mb-4">
-                  {step.icon}
+                <span className="absolute -top-2 left-1/2 -translate-x-1/2 font-heading text-6xl font-bold text-white/5 pointer-events-none select-none">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div className="relative inline-flex flex-col items-center">
+                  <div className="w-3 h-3 rounded-full bg-accent-purple shadow-lg shadow-accent-purple/50 mb-2" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/5 border border-white/10 text-3xl mb-4">
+                    {step.icon}
+                  </div>
                 </div>
                 <h3 className="font-heading font-semibold text-sm mb-1">
                   {step.title}

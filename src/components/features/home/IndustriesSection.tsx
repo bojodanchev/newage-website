@@ -32,7 +32,7 @@ export function IndustriesSection() {
           {industries.map((ind) => (
             <motion.div key={ind.name} variants={fadeUp}>
               <div className="group text-center cursor-default">
-                <div className="text-4xl mb-2 transition-transform duration-300 group-hover:scale-125">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-3xl mb-2 transition-all duration-300 hover:border-accent-purple/30 hover:bg-white/[0.08] group-hover:scale-110">
                   {ind.icon}
                 </div>
                 <p className="text-sm font-medium text-neutral-300">

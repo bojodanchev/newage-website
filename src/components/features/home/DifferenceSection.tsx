@@ -29,10 +29,10 @@ export function DifferenceSection() {
           </h2>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto relative">
           {/* Before */}
           <SlideIn direction="left">
-            <div className="rounded-xl border border-red-500/20 bg-red-500/[0.03] backdrop-blur-xl p-8 h-full">
+            <div className="rounded-xl border border-red-500/20 border-l-4 border-l-red-500/40 bg-red-500/[0.05] backdrop-blur-xl p-8 h-full">
               <p className="text-xs font-semibold tracking-widest uppercase text-red-400 mb-6">
                 Without New Age
               </p>
@@ -59,9 +59,13 @@ export function DifferenceSection() {
             </div>
           </SlideIn>
 
+          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 text-sm font-bold text-white/50 bg-white/10 rounded-full w-10 h-10 items-center justify-center">
+            VS
+          </div>
+
           {/* After */}
           <SlideIn direction="right">
-            <div className="rounded-xl border border-accent-mint/20 bg-accent-mint/[0.03] backdrop-blur-xl p-8 h-full">
+            <div className="rounded-xl border border-accent-mint/20 border-l-4 border-l-accent-mint/40 bg-accent-mint/[0.05] backdrop-blur-xl p-8 h-full">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-mint mb-6">
                 With New Age
               </p>

@@ -39,7 +39,7 @@ export function Navbar() {
       <header
         className={cn(
           'fixed top-0 left-0 w-full z-50 transition-all duration-300',
-          scrolled ? 'glass shadow-lg' : 'bg-transparent',
+          scrolled ? 'glass shadow-lg border-b border-white/5' : 'bg-transparent',
           visible ? 'translate-y-0' : '-translate-y-full'
         )}
       >

@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/Button'
 export function FinalCTA() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent" />
+
       {/* Dot grid background */}
       <div className="absolute inset-0 dot-grid" />
 
@@ -17,6 +19,8 @@ export function FinalCTA() {
             'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(108, 58, 255, 0.1) 0%, transparent 70%)',
         }}
       />
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-r from-accent-purple/20 to-accent-mint/20 rounded-full blur-3xl opacity-20 pointer-events-none animate-pulse" />
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <FadeIn>

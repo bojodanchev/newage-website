@@ -62,8 +62,8 @@ export function ProblemSection() {
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {painPoints.map((point) => (
             <motion.div key={point.title} variants={fadeUp}>
-              <Card variant="hover" className="h-full">
-                <div className="mb-4">{point.icon}</div>
+              <Card variant="hover" className="h-full border-l-2 border-red-500/30">
+                <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-4">{point.icon}</div>
                 <h3 className="text-lg font-semibold font-heading mb-2">
                   {point.title}
                 </h3>
