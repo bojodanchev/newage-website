@@ -124,7 +124,7 @@ export default function AboutPage() {
               <img
                 src="/team/bojo.png"
                 alt="Bojidar Danchev"
-                className="w-full h-full rounded-full object-cover"
+                className="w-full h-full rounded-full object-cover object-[center_20%]"
               />
             </div>
           </FadeIn>
