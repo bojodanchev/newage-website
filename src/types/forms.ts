@@ -32,3 +32,12 @@ export const newsletterSchema = z.object({
 })
 
 export type NewsletterFormData = z.infer<typeof newsletterSchema>
+
+export const exitIntentSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Please enter a valid email'),
+  phone: z.string().optional(),
+  preferredContact: z.enum(['email', 'phone', 'whatsapp']),
+})
+
+export type ExitIntentFormData = z.infer<typeof exitIntentSchema>
