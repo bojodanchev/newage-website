@@ -123,15 +123,15 @@ export default function AboutPage() {
           <FadeIn delay={0.2}>
             <div>
               <p className="text-sm font-mono uppercase tracking-widest text-accent-purple mb-2">
-                Founder & CEO
+                Co-Founder & CTO
               </p>
               <h2 className="font-heading text-3xl font-bold text-foreground mb-4 md:text-4xl">
-                Bojo Danchev
+                Bojidar Danchev
               </h2>
               <p className="text-neutral-400 leading-relaxed mb-4">
                 Serial builder, systems thinker, and recovering perfectionist. After spending years
                 building products for startups and watching businesses waste millions on fragmented
-                solutions, Bojo founded New Age to prove that one team — with the right architecture
+                solutions, Bojidar co-founded New Age to prove that one team — with the right architecture
                 — can deliver what normally takes five vendors and 18 months.
               </p>
               <p className="text-neutral-400 leading-relaxed">

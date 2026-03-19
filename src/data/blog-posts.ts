@@ -1,10 +1,10 @@
 import type { BlogPost } from '@/types/content'
 
 const bojoAuthor = {
-  name: 'Bojo Danchev',
-  role: 'Founder & CEO',
+  name: 'Bojidar Danchev',
+  role: 'Co-Founder & CTO',
   avatar: '/team/bojo.jpg',
-  bio: 'Founder of New Age. Builds the software, automations, and infrastructure that turn ideas into revenue machines.',
+  bio: 'Co-Founder & CTO of New Age. Builds the software, automations, and infrastructure that turn ideas into revenue machines.',
 }
 
 export const blogPosts: BlogPost[] = [

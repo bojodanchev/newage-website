@@ -2,7 +2,7 @@ import type { TeamMember } from '@/types/content'
 
 export const team: TeamMember[] = [
   {
-    name: 'Bozhidar Danchev',
+    name: 'Bojidar Danchev',
     role: 'Co-Founder & CTO',
     bio: 'The technical force behind New Age. Full-stack architect who designs and builds the software, automations, and infrastructure that power every client engagement. Obsessed with clean systems, scalable architecture, and turning complex business logic into elegant code. If it runs, Bojo built it.',
     avatar: '/team/bojo.jpg',
