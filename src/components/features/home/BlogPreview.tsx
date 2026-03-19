@@ -5,6 +5,7 @@ import { FadeIn } from '@/components/animation/FadeIn'
 import { StaggerChildren } from '@/components/animation/StaggerChildren'
 import { Badge } from '@/components/ui/Badge'
 import { fadeUp } from '@/lib/animations'
+import { getAllBlogPosts } from '@/data/blog-posts'
 
 const borderColors: Record<string, string> = {
   purple: 'border-t-accent-purple',
@@ -12,41 +13,27 @@ const borderColors: Record<string, string> = {
   orange: 'border-t-accent-orange',
 }
 
-const posts = [
-  {
-    slug: 'why-your-crm-is-costing-you-revenue',
-    category: 'Automation',
-    title: 'Why Your CRM Is Costing You Revenue (And How to Fix It)',
-    excerpt:
-      'Most businesses treat their CRM like a digital rolodex. Here\'s how to turn it into a revenue engine that actually works for you.',
-    author: 'Alex Rivera',
-    date: 'Mar 12, 2025',
-    readingTime: 6,
-    color: 'purple' as const,
-  },
-  {
-    slug: 'the-hidden-cost-of-manual-processes',
-    category: 'Business Strategy',
-    title: 'The Hidden Cost of Manual Processes in Growing Companies',
-    excerpt:
-      'That spreadsheet your team maintains by hand? It\'s costing you more than you think. We break down the real numbers.',
-    author: 'Jordan Lee',
-    date: 'Mar 5, 2025',
-    readingTime: 8,
-    color: 'mint' as const,
-  },
-  {
-    slug: 'building-a-sales-machine-from-scratch',
-    category: 'Sales',
-    title: 'Building a Sales Machine from Scratch: A Step-by-Step Guide',
-    excerpt:
-      'From first lead to closed deal — the exact systems, tools, and automations you need to build a repeatable sales process.',
-    author: 'Alex Rivera',
-    date: 'Feb 28, 2025',
-    readingTime: 10,
-    color: 'orange' as const,
-  },
-]
+const colorCycle = ['purple', 'mint', 'orange'] as const
+
+const categoryMap: Record<string, string> = {
+  'automation': 'Automation',
+  'sales': 'Sales',
+  'business-strategy': 'Business Strategy',
+  'development': 'Development',
+  'marketing': 'Marketing',
+}
+
+const allPosts = getAllBlogPosts()
+const posts = allPosts.slice(0, 3).map((post, i) => ({
+  slug: post.slug,
+  category: categoryMap[post.category] || post.category,
+  title: post.title,
+  excerpt: post.excerpt,
+  author: post.author.name,
+  date: new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+  readingTime: post.readingTime,
+  color: colorCycle[i % colorCycle.length],
+}))
 
 export function BlogPreview() {
   return (
