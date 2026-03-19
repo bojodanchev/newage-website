@@ -1,0 +1,38 @@
+{
+  "home": {
+    "title": "New Age — From Idea to Empire",
+    "description": "Premium business systems architect. We build the software, automations, and infrastructure that turn ideas into revenue machines."
+  },
+  "services": {
+    "title": "Services",
+    "description": "Full-service business systems: software development, automation, marketing, sales infrastructure, and complete business builds. Everything under one roof."
+  },
+  "work": {
+    "title": "Our Work",
+    "description": "Real projects. Real metrics. Real impact. See how we help businesses build systems that drive measurable growth."
+  },
+  "process": {
+    "title": "Our Process",
+    "description": "From discovery to launch and beyond — our 5-phase process turns ideas into revenue-generating systems with full transparency at every step."
+  },
+  "about": {
+    "title": "About",
+    "description": "The New Age story — why we exist, who we are, and how we help businesses build systems that turn ideas into revenue machines."
+  },
+  "blog": {
+    "title": "Blog | Insights & Strategy",
+    "description": "Expert perspectives on building, automating, and scaling modern businesses. Actionable strategies from the New Age team."
+  },
+  "contact": {
+    "title": "Contact | Let's Build Something Extraordinary",
+    "description": "Tell us about your project and we'll get back to you within 2 hours. Software, automation, marketing, sales — we build it all."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy for New Age. Learn how we collect, use, and protect your information."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Terms of Service for New Age. Please read these terms carefully before using our services."
+  }
+}

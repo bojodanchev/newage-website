@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactFormSchema, type ContactFormData } from '@/types/forms'
@@ -19,6 +20,7 @@ const stepFields: (keyof ContactFormData)[][] = [
 ]
 
 export function MultiStepForm() {
+  const t = useTranslations('contact')
   const [currentStep, setCurrentStep] = useState(1)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
@@ -86,11 +88,10 @@ export function MultiStepForm() {
           </svg>
         </div>
         <h3 className="font-heading text-2xl font-bold text-foreground">
-          Thank You!
+          {t('form.success.title')}
         </h3>
         <p className="mt-3 text-neutral-400">
-          We have received your submission and will get back to you within 2
-          hours during business hours.
+          {t('form.success.message')}
         </p>
       </div>
     )
@@ -132,7 +133,7 @@ export function MultiStepForm() {
 
         {submitStatus === 'error' && (
           <p className="mt-4 text-sm text-red-500">
-            Something went wrong. Please try again.
+            {t('form.errorGeneric')}
           </p>
         )}
 
@@ -143,7 +144,7 @@ export function MultiStepForm() {
               onClick={goBack}
               className="rounded-lg px-6 py-3 text-sm font-medium text-neutral-400 transition-colors hover:text-foreground"
             >
-              Back
+              {t('form.back')}
             </button>
           ) : (
             <div />
@@ -158,7 +159,7 @@ export function MultiStepForm() {
                 'transition-all duration-300 hover:scale-[1.02] hover:glow-purple active:scale-[0.98]'
               )}
             >
-              Next
+              {t('form.next')}
             </button>
           ) : (
             <button
@@ -170,7 +171,7 @@ export function MultiStepForm() {
                 'disabled:opacity-50 disabled:pointer-events-none'
               )}
             >
-              {isSubmitting ? 'Sending...' : 'Submit'}
+              {isSubmitting ? t('form.submitting') : t('form.submit')}
             </button>
           )}
         </div>

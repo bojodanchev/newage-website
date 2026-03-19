@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { Badge } from '@/components/ui/Badge'
 import { FadeIn } from '@/components/animation/FadeIn'
 import type { Service } from '@/types/content'
@@ -15,6 +17,8 @@ const categoryLabels: Record<string, string> = {
 }
 
 export function ServiceHero({ service }: ServiceHeroProps) {
+  const t = useTranslations('common')
+
   return (
     <section className="w-full bg-neutral-800/30 py-20">
       <div className="mx-auto max-w-5xl px-6">
@@ -39,12 +43,12 @@ export function ServiceHero({ service }: ServiceHeroProps) {
           </p>
         </FadeIn>
         <FadeIn delay={0.4}>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-lg font-medium bg-gradient-to-r from-accent-purple to-accent-mint text-white transition-all duration-300 hover:scale-[1.02] hover:glow-purple active:scale-[0.98]"
           >
-            Get Started
-          </a>
+            {t('nav.getStarted')}
+          </Link>
         </FadeIn>
       </div>
     </section>

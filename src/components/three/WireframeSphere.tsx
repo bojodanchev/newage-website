@@ -9,6 +9,7 @@ export function WireframeSphere() {
   const originalPositions = useRef<Float32Array | null>(null)
 
   const geometry = useMemo(() => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { IcosahedronGeometry } = require('three')
     const geo = new IcosahedronGeometry(2.5, 4)
     originalPositions.current = new Float32Array(geo.attributes.position.array)

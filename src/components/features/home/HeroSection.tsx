@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { HeroScene } from '@/components/three/HeroScene'
 import { Button } from '@/components/ui/Button'
@@ -7,6 +8,8 @@ import { Button } from '@/components/ui/Button'
 const ease = [0.16, 1, 0.3, 1] as const
 
 export function HeroSection() {
+  const t = useTranslations('home')
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Three.js background */}
@@ -25,7 +28,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
           >
-            We Don&apos;t Just Build Software.
+            {t('hero.titleLine1')}
           </motion.h1>
 
           <motion.h1
@@ -34,7 +37,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease }}
           >
-            We Build Business Empires.
+            {t('hero.titleLine2')}
           </motion.h1>
 
           <motion.p
@@ -43,8 +46,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35, ease }}
           >
-            The full-service agency that architects, builds, and scales the
-            systems behind your revenue.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div
@@ -54,10 +56,10 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.5, ease }}
           >
             <Button href="/contact" size="lg" variant="primary" className="glow-purple">
-              Book a Call
+              {t('hero.cta.primary')}
             </Button>
             <Button href="/work" size="lg" variant="secondary">
-              See Our Work
+              {t('hero.cta.secondary')}
               <svg
                 className="w-4 h-4 ml-1"
                 fill="none"

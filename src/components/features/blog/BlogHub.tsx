@@ -1,32 +1,36 @@
 'use client'
 
 import { useState } from 'react'
-import { getAllBlogPosts, getFeaturedPosts, getPostsByCategory } from '@/data/blog-posts'
+import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/i18n/routing'
+import { getAllBlogPosts, getFeaturedPosts, getPostsByCategory } from '@/data'
 import { PostCard } from '@/components/features/blog/PostCard'
 import { NewsletterForm } from '@/components/sections/NewsletterForm'
 import type { BlogCategory } from '@/types/content'
+import type { Locale } from '@/i18n/config'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 import { formatDate } from '@/lib/utils'
 
-const categories: { label: string; value: BlogCategory | 'all' }[] = [
-  { label: 'All', value: 'all' },
-  { label: 'Automation', value: 'automation' },
-  { label: 'Marketing', value: 'marketing' },
-  { label: 'Sales', value: 'sales' },
-  { label: 'Development', value: 'development' },
-  { label: 'Business Strategy', value: 'business-strategy' },
+const categoryKeys: { key: string; value: BlogCategory | 'all' }[] = [
+  { key: 'all', value: 'all' },
+  { key: 'automation', value: 'automation' },
+  { key: 'marketing', value: 'marketing' },
+  { key: 'sales', value: 'sales' },
+  { key: 'development', value: 'development' },
+  { key: 'businessStrategy', value: 'business-strategy' },
 ]
 
 export function BlogHub() {
+  const t = useTranslations('blog')
+  const locale = useLocale() as Locale
   const [activeCategory, setActiveCategory] = useState<BlogCategory | 'all'>('all')
 
-  const allPosts = getAllBlogPosts()
-  const featuredPosts = getFeaturedPosts()
+  const allPosts = getAllBlogPosts(locale)
+  const featuredPosts = getFeaturedPosts(locale)
   const featured = featuredPosts[0]
 
   const filteredPosts =
-    activeCategory === 'all' ? allPosts : getPostsByCategory(activeCategory)
+    activeCategory === 'all' ? allPosts : getPostsByCategory(activeCategory, locale)
 
   const nonFeaturedPosts =
     activeCategory === 'all'
@@ -46,7 +50,7 @@ export function BlogHub() {
           )}
         >
           <span className="inline-flex items-center rounded-full bg-accent-purple/10 px-3 py-1 text-xs font-medium text-accent-purple">
-            Featured
+            {t('hub.featured')}
           </span>
           <h2 className="mt-4 font-heading text-3xl font-bold text-foreground transition-colors group-hover:text-accent-purple md:text-4xl">
             {featured.title}
@@ -57,12 +61,12 @@ export function BlogHub() {
           <div className="mt-6 flex items-center gap-3 text-sm text-neutral-500">
             <span>{featured.author.name}</span>
             <span className="h-1 w-1 rounded-full bg-neutral-600" />
-            <span>{formatDate(featured.publishedAt)}</span>
+            <span>{formatDate(featured.publishedAt, locale)}</span>
             <span className="h-1 w-1 rounded-full bg-neutral-600" />
-            <span>{featured.readingTime} min read</span>
+            <span>{featured.readingTime} {t('hub.minRead')}</span>
           </div>
           <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent-purple transition-all group-hover:gap-3">
-            Read Article
+            {t('hub.readArticle')}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
@@ -73,7 +77,7 @@ export function BlogHub() {
 
       {/* Category Filters */}
       <div className="mb-12 flex flex-wrap gap-2">
-        {categories.map((cat) => (
+        {categoryKeys.map((cat) => (
           <button
             key={cat.value}
             onClick={() => setActiveCategory(cat.value)}
@@ -84,7 +88,7 @@ export function BlogHub() {
                 : 'bg-white/5 text-neutral-400 hover:bg-white/10 hover:text-foreground'
             )}
           >
-            {cat.label}
+            {t(`hub.categories.${cat.key}`)}
           </button>
         ))}
       </div>
@@ -98,18 +102,17 @@ export function BlogHub() {
 
       {nonFeaturedPosts.length === 0 && (
         <p className="py-20 text-center text-neutral-500">
-          No posts in this category yet. Check back soon.
+          {t('hub.emptyState')}
         </p>
       )}
 
       {/* Newsletter CTA Banner */}
       <div className="mt-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-8 text-center md:p-12">
         <h3 className="font-heading text-2xl font-bold gradient-text">
-          Get Weekly Insights
+          {t('hub.newsletterCta.title')}
         </h3>
         <p className="mx-auto mt-3 max-w-lg text-neutral-400">
-          Join 2,000+ founders and operators who get our best strategies
-          delivered every Thursday.
+          {t('hub.newsletterCta.description')}
         </p>
         <div className="mx-auto mt-6 max-w-md">
           <NewsletterForm />

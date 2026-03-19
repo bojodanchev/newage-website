@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "services": "Услуги",
+    "work": "Проекти",
+    "process": "Процес",
+    "about": "За нас",
+    "blog": "Блог",
+    "contact": "Контакт",
+    "getStarted": "Започнете",
+    "openMenu": "Отвори менюто",
+    "closeMenu": "Затвори менюто",
+    "bookStrategyCall": "Запазете стратегически разговор"
+  },
+  "footer": {
+    "stayInTheLoop": "Бъдете в течение",
+    "columns": {
+      "services": "Услуги",
+      "company": "Компания",
+      "resources": "Ресурси",
+      "legal": "Правна информация"
+    },
+    "links": {
+      "softwareDevelopment": "Разработка на софтуер",
+      "automation": "Автоматизация",
+      "marketing": "Маркетинг",
+      "sales": "Продажби",
+      "fullBuild": "Цялостно изграждане",
+      "about": "За нас",
+      "process": "Процес",
+      "work": "Проекти",
+      "contact": "Контакт",
+      "blog": "Блог",
+      "faq": "Въпроси и отговори",
+      "privacyPolicy": "Политика за поверителност",
+      "termsOfService": "Условия за ползване"
+    },
+    "copyright": "Всички права запазени."
+  },
+  "newsletter": {
+    "placeholder": "вие@компания.com",
+    "subscribe": "Абонирайте се",
+    "sending": "Изпращане...",
+    "success": "Благодарим! Вече сте абонирани.",
+    "errorInvalidEmail": "Моля, въведете валиден имейл адрес",
+    "errorGeneric": "Нещо се обърка. Моля, опитайте отново."
+  },
+  "backToTop": "Обратно нагоре",
+  "readCaseStudy": "Прочетете казуса",
+  "learnMore": "Научете повече",
+  "exitIntent": {
+    "badge": "Ексклузивна оферта",
+    "title": "Чакайте! Не си тръгвайте",
+    "titleHighlight": "с празни ръце",
+    "description": "Получете безплатен одит и открийте колко приходи губите.",
+    "benefits": {
+      "siteAnalysis": "Цялостен анализ на сайта",
+      "recommendations": "Практически препоръки",
+      "roiForecast": "Прогноза за ROI на вашия бизнес"
+    },
+    "form": {
+      "nameLabel": "Име",
+      "namePlaceholder": "Вашето име",
+      "emailLabel": "Имейл",
+      "emailPlaceholder": "вие@компания.com",
+      "phoneLabel": "Телефон (по избор)",
+      "phonePlaceholder": "+359 88 000 0000",
+      "preferredContactLabel": "Предпочитан контакт",
+      "contactEmail": "Имейл",
+      "contactPhone": "Телефон",
+      "contactWhatsApp": "WhatsApp",
+      "submit": "Вземете безплатния си одит \u2192",
+      "submitting": "Изпращане..."
+    },
+    "disclaimer": "Без спам. Ще се свържем с вас само относно вашия одит.",
+    "successTitle": "Работим по него!",
+    "successMessage": "Вашият безплатен одит се подготвя. Ще се свържем с вас до 24 часа.",
+    "close": "Затвори"
+  }
+}

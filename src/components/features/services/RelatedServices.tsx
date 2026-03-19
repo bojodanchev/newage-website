@@ -1,4 +1,5 @@
-import { getServiceBySlug } from '@/data/services'
+import { useTranslations } from 'next-intl'
+import { getServiceBySlug } from '@/data'
 import { ServiceCard } from './ServiceCard'
 import { StaggerChildren } from '@/components/animation/StaggerChildren'
 
@@ -7,6 +8,7 @@ interface RelatedServicesProps {
 }
 
 export function RelatedServices({ slugs }: RelatedServicesProps) {
+  const t = useTranslations('services')
   const related = slugs
     .map((slug) => getServiceBySlug(slug))
     .filter(Boolean)
@@ -16,7 +18,7 @@ export function RelatedServices({ slugs }: RelatedServicesProps) {
   return (
     <section className="section-padding mx-auto max-w-7xl px-6">
       <h2 className="font-heading text-2xl font-bold gradient-text mb-8 md:text-3xl">
-        You Might Also Need
+        {t('detail.relatedServices')}
       </h2>
       <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {related.map((service) => (

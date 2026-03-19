@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 import type { PricingTier } from '@/types/content'
 
@@ -50,7 +51,7 @@ export function PricingTable({ tiers }: PricingTableProps) {
               </li>
             ))}
           </ul>
-          <a
+          <Link
             href="/contact"
             className={cn(
               'block w-full text-center rounded-lg px-6 py-3 font-medium transition-all duration-300',
@@ -60,7 +61,7 @@ export function PricingTable({ tiers }: PricingTableProps) {
             )}
           >
             {tier.cta}
-          </a>
+          </Link>
         </div>
       ))}
     </div>

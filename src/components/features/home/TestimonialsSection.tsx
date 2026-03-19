@@ -1,43 +1,17 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { FadeIn } from '@/components/animation/FadeIn'
 import { StaggerChildren } from '@/components/animation/StaggerChildren'
 import { fadeUp } from '@/lib/animations'
 
 const accentColors = ['text-accent-purple/10', 'text-accent-mint/10', 'text-accent-orange/10'] as const
-
-const testimonials = [
-  {
-    quote:
-      'New Age didn\'t just build us software — they engineered a revenue machine. Our MRR tripled and our team works half the hours they used to.',
-    name: 'Sarah Chen',
-    title: 'CEO',
-    company: 'Meridian Labs',
-    initial: 'S',
-    color: 'bg-accent-purple',
-    rating: 5,
-  },
-  {
-    quote:
-      'We went from scattered spreadsheets to a fully automated pipeline in six weeks. The ROI was visible within the first month.',
-    name: 'Marcus Torres',
-    title: 'Head of Operations',
-    company: 'Apex Digital',
-    initial: 'M',
-    color: 'bg-accent-mint',
-    rating: 5,
-  },
-  {
-    quote:
-      'The level of strategic thinking they bring is rare. They don\'t just execute — they challenge your assumptions and make your business better.',
-    name: 'Elena Voss',
-    title: 'Founder',
-    company: 'Quantum Growth',
-    initial: 'E',
-    color: 'bg-accent-orange',
-    rating: 5,
-  },
+const testimonialKeys = ['sarahChen', 'marcusTorres', 'elenaVoss'] as const
+const testimonialMeta = [
+  { initial: 'S', color: 'bg-accent-purple', rating: 5 },
+  { initial: 'M', color: 'bg-accent-mint', rating: 5 },
+  { initial: 'E', color: 'bg-accent-orange', rating: 5 },
 ]
 
 function StarRating({ count }: { count: number }) {
@@ -58,39 +32,41 @@ function StarRating({ count }: { count: number }) {
 }
 
 export function TestimonialsSection() {
+  const t = useTranslations('home')
+
   return (
     <section className="section-padding">
       <div className="mx-auto max-w-6xl px-8 lg:px-16">
         <FadeIn className="text-center mb-16">
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-purple mb-4">
-            Client Love
+            {t('testimonials.overline')}
           </p>
           <h2 className="font-heading text-4xl md:text-h2 font-bold">
-            What They <span className="gradient-text">Say</span>
+            {t('testimonials.title')} <span className="gradient-text">{t('testimonials.titleHighlight')}</span>
           </h2>
         </FadeIn>
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <motion.div key={t.name} variants={fadeUp}>
+          {testimonialKeys.map((key, i) => (
+            <motion.div key={key} variants={fadeUp}>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-8 h-full overflow-hidden">
                 <span className={`absolute top-2 left-4 font-heading text-6xl ${accentColors[i % accentColors.length]} pointer-events-none select-none leading-none`}>
                   &ldquo;
                 </span>
-                <StarRating count={t.rating} />
+                <StarRating count={testimonialMeta[i].rating} />
                 <blockquote className="text-lg text-neutral-300 leading-relaxed mb-6">
-                  &ldquo;{t.quote}&rdquo;
+                  &ldquo;{t(`testimonials.items.${key}.quote`)}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-3">
                   <div
-                    className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-sm font-bold text-white`}
+                    className={`w-10 h-10 rounded-full ${testimonialMeta[i].color} flex items-center justify-center text-sm font-bold text-white`}
                   >
-                    {t.initial}
+                    {testimonialMeta[i].initial}
                   </div>
                   <div>
-                    <p className="font-semibold text-sm">{t.name}</p>
+                    <p className="font-semibold text-sm">{t(`testimonials.items.${key}.name`)}</p>
                     <p className="text-neutral-500 text-xs">
-                      {t.title}, {t.company}
+                      {t(`testimonials.items.${key}.title`)}, {t(`testimonials.items.${key}.company`)}
                     </p>
                   </div>
                 </div>

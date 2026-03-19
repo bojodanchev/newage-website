@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "overline": "Our Process",
+    "title": "How We Turn Ideas Into Empires",
+    "description": "A proven 5-phase methodology that takes you from concept to revenue-generating system — with full visibility at every step."
+  },
+  "phases": {
+    "discovery": {
+      "title": "Discovery & Strategy",
+      "duration": "Week 1-2",
+      "description": "We start by understanding your business inside and out. This phase establishes the foundation for everything we build.",
+      "deliverables": {
+        "freeStrategy": "Free strategy session",
+        "audit": "Business audit",
+        "goalSetting": "Goal setting",
+        "competitive": "Competitive analysis",
+        "roadmap": "Custom roadmap"
+      }
+    },
+    "architecture": {
+      "title": "Architecture & Design",
+      "duration": "Week 2-4",
+      "description": "With strategy locked, we design the systems and interfaces that will power your growth.",
+      "deliverables": {
+        "systemArchitecture": "System architecture",
+        "uiUx": "UI/UX design",
+        "userFlow": "User flow mapping",
+        "techStack": "Tech stack selection",
+        "clientApproval": "Client approval"
+      }
+    },
+    "build": {
+      "title": "Build & Automate",
+      "duration": "Week 4-10",
+      "description": "This is where the magic happens. We build fast, test rigorously, and keep you in the loop at every step.",
+      "deliverables": {
+        "sprints": "Agile sprints",
+        "automation": "Automation setup",
+        "integration": "Integration",
+        "demos": "Weekly demos",
+        "qa": "QA testing"
+      }
+    },
+    "launch": {
+      "title": "Launch & Optimize",
+      "duration": "Week 10-12",
+      "description": "Deployment is just the beginning. We launch with precision and immediately start optimizing for performance.",
+      "deliverables": {
+        "deployment": "Staged deployment",
+        "performance": "Performance optimization",
+        "analytics": "Analytics setup",
+        "training": "Team training",
+        "launchSupport": "Launch support"
+      }
+    },
+    "scale": {
+      "title": "Scale & Support",
+      "duration": "Ongoing",
+      "description": "We do not disappear after launch. We stay on as your growth partner, continuously improving the systems we built.",
+      "deliverables": {
+        "reviews": "Monthly reviews",
+        "optimization": "Continuous optimization",
+        "support": "Priority support",
+        "consulting": "Growth consulting"
+      }
+    }
+  },
+  "timeline": {
+    "overline": "Timeline",
+    "title": "What to Expect",
+    "description": "Key milestones from kickoff to ongoing growth.",
+    "milestones": {
+      "week1": { "week": "Week 1", "milestone": "Kickoff call and business audit complete" },
+      "week2": { "week": "Week 2", "milestone": "Strategy document and roadmap approved" },
+      "week4": { "week": "Week 4", "milestone": "Designs and architecture signed off" },
+      "week6": { "week": "Week 6", "milestone": "First working demo delivered" },
+      "week10": { "week": "Week 10", "milestone": "Feature-complete build ready for QA" },
+      "week12": { "week": "Week 12", "milestone": "Launch and go-live" },
+      "ongoing": { "week": "Ongoing", "milestone": "Monthly optimization and growth reviews" }
+    }
+  },
+  "commitment": {
+    "overline": "Our Promise",
+    "title": "Our Commitment",
+    "description": "What you can always count on when working with us.",
+    "items": {
+      "weeklyUpdates": {
+        "title": "Weekly Updates",
+        "description": "Every week, you get a clear status report — what was done, what is next, and any decisions that need your input. No surprises."
+      },
+      "fullTransparency": {
+        "title": "Full Transparency",
+        "description": "Shared project boards, live dashboards, and direct access to the team building your product. You see everything we see."
+      },
+      "dedicatedPM": {
+        "title": "Dedicated PM",
+        "description": "One point of contact who owns your project end-to-end. They know your business, your goals, and your timeline inside out."
+      }
+    }
+  },
+  "cta": {
+    "headline": "Start Your Journey",
+    "subheadline": "Book a free strategy call and let's map out your roadmap together.",
+    "primary": "Start Your Journey",
+    "secondary": "View Our Work"
+  }
+}

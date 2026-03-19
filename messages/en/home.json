@@ -1,0 +1,250 @@
+{
+  "hero": {
+    "titleLine1": "We Don't Just Build Software.",
+    "titleLine2": "We Build Business Empires.",
+    "description": "The full-service agency that architects, builds, and scales the systems behind your revenue.",
+    "cta": {
+      "primary": "Book a Call",
+      "secondary": "See Our Work"
+    }
+  },
+  "logoBar": {
+    "trustedBy": "Trusted by forward-thinking companies",
+    "clients": {
+      "meridianLabs": "Meridian Labs",
+      "apexDigital": "Apex Digital",
+      "quantumGrowth": "Quantum Growth",
+      "stratoSystems": "Strato Systems",
+      "vanguardAI": "Vanguard AI",
+      "nexusCorp": "Nexus Corp",
+      "pinnacleSaas": "Pinnacle SaaS",
+      "forgeCapital": "Forge Capital"
+    }
+  },
+  "problem": {
+    "title": "Sound Familiar?",
+    "items": {
+      "scatteredSystems": {
+        "title": "Scattered Systems",
+        "description": "Your data lives in 10 different tools. Nothing talks to anything. Every insight requires manual exports and guesswork."
+      },
+      "manualEverything": {
+        "title": "Manual Everything",
+        "description": "Hours lost every week on repetitive tasks your team shouldn't be doing. Data entry, follow-ups, reporting — all by hand."
+      },
+      "noRealFunnel": {
+        "title": "No Real Funnel",
+        "description": "Leads come in and fall through the cracks. No automation, no nurture sequence, no system to turn interest into revenue."
+      },
+      "techOverwhelm": {
+        "title": "Tech Overwhelm",
+        "description": "Too many tools, too many subscriptions, zero strategy. You're paying for a stack that's working against you."
+      }
+    },
+    "betterWay": "There's a better way."
+  },
+  "difference": {
+    "title": "The",
+    "titleHighlight": "Difference",
+    "without": {
+      "label": "Without New Age",
+      "items": {
+        "manualDataEntry": "Manual data entry across 5+ platforms",
+        "leadsLost": "Leads lost in spreadsheets",
+        "noFollowUp": "No follow-up automation",
+        "inconsistentBrand": "Inconsistent brand experience",
+        "revenueCapped": "Revenue capped by bandwidth"
+      }
+    },
+    "vs": "VS",
+    "with": {
+      "label": "With New Age",
+      "items": {
+        "unifiedSystem": "Unified system, single source of truth",
+        "automatedLeadCapture": "Automated lead capture & nurture",
+        "smartFollowUps": "Smart follow-ups that never miss",
+        "consistentBrand": "Consistent, premium brand at every touchpoint",
+        "revenueScales": "Revenue scales independently of headcount"
+      }
+    }
+  },
+  "services": {
+    "overline": "What We Do",
+    "title": "End-to-End",
+    "titleHighlight": "Services",
+    "items": {
+      "softwareDev": {
+        "title": "Software Development",
+        "description": "Custom web apps, mobile, SaaS platforms",
+        "bullets": {
+          "fullStack": "Full-stack web applications",
+          "mobile": "Mobile apps (iOS & Android)",
+          "saas": "SaaS platform architecture",
+          "api": "API design & integrations"
+        }
+      },
+      "automation": {
+        "title": "Automation & Systems",
+        "description": "CRM, workflows, business process automation",
+        "bullets": {
+          "crm": "CRM setup & customization",
+          "workflow": "Workflow automation",
+          "dataPipeline": "Data pipeline engineering",
+          "integrations": "System integrations"
+        }
+      },
+      "marketing": {
+        "title": "Marketing & Funnels",
+        "description": "Lead gen, email automation, content systems",
+        "bullets": {
+          "funnel": "Funnel strategy & build",
+          "email": "Email sequences & automation",
+          "landingPages": "Landing pages that convert",
+          "contentDistribution": "Content distribution systems"
+        }
+      },
+      "sales": {
+        "title": "Sales Infrastructure",
+        "description": "Outbound, pipelines, conversion optimization",
+        "bullets": {
+          "outbound": "Outbound sales systems",
+          "pipeline": "Pipeline optimization",
+          "proposal": "Proposal & closing automation",
+          "analytics": "Revenue analytics dashboards"
+        }
+      },
+      "database": {
+        "title": "Database & CRM",
+        "description": "Data architecture, CRM customization, analytics",
+        "bullets": {
+          "design": "Database design & migration",
+          "crmCustom": "CRM customization & training",
+          "reporting": "Analytics & reporting",
+          "dataDecisions": "Data-driven decision systems"
+        }
+      },
+      "fullBuild": {
+        "title": "Full Business Build",
+        "description": "Idea to MVP to scale. The complete package.",
+        "bullets": {
+          "validation": "Market validation & strategy",
+          "mvp": "MVP development & launch",
+          "growth": "Growth systems & scaling",
+          "partnership": "Ongoing technical partnership"
+        }
+      }
+    },
+    "exploreAll": "Explore All Services"
+  },
+  "metrics": {
+    "projectsDelivered": "Projects Delivered",
+    "avgRevenueIncrease": "Avg Revenue Increase",
+    "automationsBuilt": "Automations Built",
+    "hoursSavedMonthly": "Hours Saved Monthly"
+  },
+  "caseStudies": {
+    "overline": "Results That Speak",
+    "title": "Featured",
+    "titleHighlight": "Case Studies",
+    "items": {
+      "saas": {
+        "industry": "SaaS",
+        "headline": "3x Revenue in 90 Days",
+        "description": "Built a complete sales infrastructure and automated lead nurture system for a B2B SaaS startup, tripling MRR within one quarter."
+      },
+      "ecommerce": {
+        "industry": "E-Commerce",
+        "headline": "500% ROAS on Paid Ads",
+        "description": "Designed and built a full-funnel marketing system with automated retargeting, email flows, and conversion-optimized landing pages."
+      },
+      "realEstate": {
+        "industry": "Real Estate",
+        "headline": "10,000+ Hours Saved/Year",
+        "description": "Replaced manual processes with a custom CRM and automation suite, freeing the team to focus on closing deals instead of admin."
+      }
+    },
+    "readCaseStudy": "Read Case Study",
+    "viewAll": "View All Case Studies"
+  },
+  "process": {
+    "overline": "How We Work",
+    "title": "Our",
+    "titleHighlight": "Process",
+    "steps": {
+      "discovery": {
+        "title": "Discovery & Strategy",
+        "description": "Deep dive into your business, goals, and competitive landscape."
+      },
+      "architecture": {
+        "title": "Architecture & Design",
+        "description": "Blueprint the systems, flows, and user experience."
+      },
+      "build": {
+        "title": "Build & Automate",
+        "description": "Develop, integrate, and wire up every moving part."
+      },
+      "launch": {
+        "title": "Launch & Optimize",
+        "description": "Go live, test, measure, and refine for peak performance."
+      },
+      "scale": {
+        "title": "Scale & Support",
+        "description": "Continuous improvement with data-driven iteration."
+      }
+    },
+    "seeFullProcess": "See Our Full Process"
+  },
+  "testimonials": {
+    "overline": "Client Love",
+    "title": "What They",
+    "titleHighlight": "Say",
+    "items": {
+      "sarahChen": {
+        "quote": "New Age didn't just build us software — they engineered a revenue machine. Our MRR tripled and our team works half the hours they used to.",
+        "name": "Sarah Chen",
+        "title": "CEO",
+        "company": "Meridian Labs"
+      },
+      "marcusTorres": {
+        "quote": "We went from scattered spreadsheets to a fully automated pipeline in six weeks. The ROI was visible within the first month.",
+        "name": "Marcus Torres",
+        "title": "Head of Operations",
+        "company": "Apex Digital"
+      },
+      "elenaVoss": {
+        "quote": "The level of strategic thinking they bring is rare. They don't just execute — they challenge your assumptions and make your business better.",
+        "name": "Elena Voss",
+        "title": "Founder",
+        "company": "Quantum Growth"
+      }
+    }
+  },
+  "industries": {
+    "overline": "Who We Serve",
+    "title": "Industries We",
+    "titleHighlight": "Transform",
+    "items": {
+      "saas": { "name": "SaaS", "projects": "45" },
+      "ecommerce": { "name": "E-Commerce", "projects": "32" },
+      "realEstate": { "name": "Real Estate", "projects": "28" },
+      "healthcare": { "name": "Healthcare", "projects": "15" },
+      "finance": { "name": "Finance", "projects": "18" },
+      "agencies": { "name": "Agencies", "projects": "22" },
+      "localBiz": { "name": "Local Biz", "projects": "20" }
+    },
+    "projectsSuffix": "+ projects"
+  },
+  "blogPreview": {
+    "overline": "Insights",
+    "title": "Latest from the",
+    "titleHighlight": "Blog",
+    "minRead": "min read",
+    "readAll": "Read All Insights"
+  },
+  "finalCta": {
+    "title": "Ready to Build Something Extraordinary?",
+    "description": "Let's turn your vision into a revenue machine.",
+    "primary": "Start Your Project",
+    "secondary": "Download Capabilities Deck"
+  }
+}

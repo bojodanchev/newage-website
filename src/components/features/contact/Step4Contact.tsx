@@ -1,13 +1,10 @@
+import { useTranslations } from 'next-intl'
 import { Input } from '@/components/ui/Input'
 import { cn } from '@/lib/utils'
 import type { UseFormRegister, FieldErrors } from 'react-hook-form'
 import type { ContactFormData } from '@/types/forms'
 
-const contactMethods = [
-  { value: 'email', label: 'Email' },
-  { value: 'phone', label: 'Phone' },
-  { value: 'whatsapp', label: 'WhatsApp' },
-] as const
+const contactMethodKeys = ['email', 'phone', 'whatsapp'] as const
 
 interface Step4ContactProps {
   register: UseFormRegister<ContactFormData>
@@ -22,61 +19,63 @@ export function Step4Contact({
   isSubmitting,
   selectedContact,
 }: Step4ContactProps) {
+  const t = useTranslations('contact')
+
   return (
     <div>
       <h2 className="mb-2 font-heading text-2xl font-bold text-foreground">
-        How can we reach you?
+        {t('form.step4.title')}
       </h2>
       <p className="mb-8 text-neutral-400">
-        We will get back to you within 2 hours.
+        {t('form.step4.description')}
       </p>
 
       <div className="space-y-6">
         <Input
-          label="Name"
-          placeholder="Your full name"
+          label={t('form.step4.nameLabel')}
+          placeholder={t('form.step4.namePlaceholder')}
           error={errors.name?.message}
           {...register('name')}
         />
 
         <Input
-          label="Email"
+          label={t('form.step4.emailLabel')}
           type="email"
-          placeholder="you@company.com"
+          placeholder={t('form.step4.emailPlaceholder')}
           error={errors.email?.message}
           {...register('email')}
         />
 
         <Input
-          label="Phone (optional)"
+          label={t('form.step4.phoneLabel')}
           type="tel"
-          placeholder="+1 (555) 000-0000"
+          placeholder={t('form.step4.phonePlaceholder')}
           error={errors.phone?.message}
           {...register('phone')}
         />
 
         <div className="space-y-1.5">
           <p className="block text-sm font-medium text-neutral-300">
-            Preferred contact method
+            {t('form.step4.preferredContactLabel')}
           </p>
           <div className="flex gap-3">
-            {contactMethods.map((method) => (
+            {contactMethodKeys.map((method) => (
               <label
-                key={method.value}
+                key={method}
                 className={cn(
                   'flex-1 cursor-pointer rounded-lg border px-4 py-3 text-center text-sm font-medium transition-all duration-200',
-                  selectedContact === method.value
+                  selectedContact === method
                     ? 'border-accent-purple bg-accent-purple/10 text-accent-purple'
                     : 'border-neutral-700 bg-neutral-800 text-neutral-400 hover:border-neutral-600'
                 )}
               >
                 <input
                   type="radio"
-                  value={method.value}
+                  value={method}
                   {...register('preferredContact')}
                   className="sr-only"
                 />
-                {method.label}
+                {t(`form.step4.contactMethods.${method}`)}
               </label>
             ))}
           </div>
@@ -88,9 +87,9 @@ export function Step4Contact({
         </div>
 
         <Input
-          label="Website (optional)"
+          label={t('form.step4.websiteLabel')}
           type="url"
-          placeholder="https://yourcompany.com"
+          placeholder={t('form.step4.websitePlaceholder')}
           error={errors.website?.message}
           {...register('website')}
         />

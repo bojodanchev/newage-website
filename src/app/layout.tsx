@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { plusJakarta, inter, jetbrainsMono } from '@/lib/fonts'
 import { SITE } from '@/lib/constants'
 import './globals.css'
 
@@ -60,14 +59,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html
-      lang="en"
-      className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}
-    >
-      <body className="bg-primary text-foreground font-body antialiased">
-        {children}
-      </body>
-    </html>
-  )
+  return children
 }

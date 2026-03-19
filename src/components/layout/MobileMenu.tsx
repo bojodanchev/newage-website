@@ -1,9 +1,11 @@
 'use client'
 
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { motion, AnimatePresence } from 'framer-motion'
-import { NAV_LINKS, SOCIALS, SITE } from '@/lib/constants'
+import { SOCIALS, SITE } from '@/lib/constants'
 import { Button } from '@/components/ui/Button'
+import { LocaleSwitcher } from './LocaleSwitcher'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -28,7 +30,16 @@ const itemVariants = {
   exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
 }
 
+const NAV_HREFS = ['/services', '/work', '/process', '/about', '/blog', '/contact'] as const
+
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const t = useTranslations('common')
+
+  const navLinks = NAV_HREFS.map((href) => ({
+    href,
+    label: t(`nav.${href.slice(1)}`),
+  }))
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -47,7 +58,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <button
               onClick={onClose}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-700 text-foreground hover:border-accent-purple transition-colors"
-              aria-label="Close menu"
+              aria-label={t('nav.closeMenu')}
             >
               <svg
                 width="16"
@@ -70,7 +81,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             animate="visible"
             exit="exit"
           >
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <motion.div key={link.href} variants={itemVariants}>
                 <Link
                   href={link.href}
@@ -92,8 +103,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               className="w-full justify-center"
               onClick={onClose}
             >
-              Book a Strategy Call
+              {t('nav.bookStrategyCall')}
             </Button>
+          </div>
+
+          {/* Locale Switcher */}
+          <div className="flex items-center justify-center px-6 pb-4">
+            <LocaleSwitcher />
           </div>
 
           {/* Socials */}

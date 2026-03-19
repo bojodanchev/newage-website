@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
-import { formatDate } from '@/lib/utils'
+import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/i18n/routing'
+import { cn, formatDate } from '@/lib/utils'
 import { Badge } from '@/components/ui/Badge'
 import type { BlogPost, BlogCategory } from '@/types/content'
 
@@ -13,13 +13,13 @@ const categoryColors: Record<BlogCategory, 'purple' | 'mint' | 'orange' | 'neutr
   'case-studies': 'orange',
 }
 
-const categoryLabels: Record<BlogCategory, string> = {
-  automation: 'Automation',
-  marketing: 'Marketing',
-  sales: 'Sales',
-  development: 'Development',
-  'business-strategy': 'Business Strategy',
-  'case-studies': 'Case Studies',
+const categoryKeyMap: Record<BlogCategory, string> = {
+  automation: 'automation',
+  marketing: 'marketing',
+  sales: 'sales',
+  development: 'development',
+  'business-strategy': 'businessStrategy',
+  'case-studies': 'caseStudies',
 }
 
 interface PostCardProps {
@@ -28,6 +28,9 @@ interface PostCardProps {
 }
 
 export function PostCard({ post, className }: PostCardProps) {
+  const t = useTranslations('blog')
+  const locale = useLocale()
+
   return (
     <Link
       href={`/blog/${post.slug}`}
@@ -39,7 +42,7 @@ export function PostCard({ post, className }: PostCardProps) {
       )}
     >
       <Badge color={categoryColors[post.category]} className="mb-4">
-        {categoryLabels[post.category]}
+        {t(`hub.categories.${categoryKeyMap[post.category]}`)}
       </Badge>
 
       <h3 className="font-heading text-xl font-semibold text-foreground transition-colors duration-300 group-hover:text-accent-purple line-clamp-2">
@@ -53,9 +56,9 @@ export function PostCard({ post, className }: PostCardProps) {
       <div className="mt-5 flex items-center gap-3 text-xs text-neutral-500">
         <span>{post.author.name}</span>
         <span className="h-1 w-1 rounded-full bg-neutral-600" />
-        <span>{formatDate(post.publishedAt)}</span>
+        <span>{formatDate(post.publishedAt, locale)}</span>
         <span className="h-1 w-1 rounded-full bg-neutral-600" />
-        <span>{post.readingTime} min read</span>
+        <span>{post.readingTime} {t('hub.minRead')}</span>
       </div>
     </Link>
   )

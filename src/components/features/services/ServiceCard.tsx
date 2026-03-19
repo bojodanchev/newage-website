@@ -1,7 +1,8 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { Badge } from '@/components/ui/Badge'
 import { fadeUp } from '@/lib/animations'
 import type { Service } from '@/types/content'
@@ -19,6 +20,8 @@ const categoryLabels: Record<string, string> = {
 }
 
 export function ServiceCard({ service }: ServiceCardProps) {
+  const t = useTranslations('common')
+
   return (
     <motion.div variants={fadeUp}>
       <Link
@@ -38,7 +41,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           {service.description}
         </p>
         <span className="inline-flex items-center gap-1 text-sm font-medium text-accent-purple group-hover:gap-2 transition-all duration-300">
-          Learn More
+          {t('learnMore')}
           <svg
             width="16"
             height="16"

@@ -1,22 +1,25 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { CountUp } from '@/components/animation/CountUp'
 import { FadeIn } from '@/components/animation/FadeIn'
 
-const metrics = [
-  { value: 47, suffix: '+', label: 'Projects Delivered' },
-  { value: 215, suffix: '%', label: 'Avg Revenue Increase' },
-  { value: 120, suffix: '+', label: 'Automations Built' },
-  { value: 2400, suffix: '+', label: 'Hours Saved Monthly' },
+const metricsData = [
+  { value: 47, suffix: '+', key: 'projectsDelivered' },
+  { value: 215, suffix: '%', key: 'avgRevenueIncrease' },
+  { value: 120, suffix: '+', key: 'automationsBuilt' },
+  { value: 2400, suffix: '+', key: 'hoursSavedMonthly' },
 ]
 
 export function MetricsSection() {
+  const t = useTranslations('home')
+
   return (
     <section className="py-20 bg-neutral-800/50 border-y border-neutral-700/30">
       <div className="mx-auto max-w-6xl px-8 lg:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x md:divide-neutral-700/30">
-          {metrics.map((metric, i) => (
-            <FadeIn key={metric.label} delay={i * 0.15} className="text-center">
+          {metricsData.map((metric, i) => (
+            <FadeIn key={metric.key} delay={i * 0.15} className="text-center">
               <div className="gradient-text text-5xl md:text-6xl font-heading font-bold">
                 <CountUp
                   end={metric.value}
@@ -24,7 +27,7 @@ export function MetricsSection() {
                   duration={2200}
                 />
               </div>
-              <p className="text-neutral-400 text-sm mt-2">{metric.label}</p>
+              <p className="text-neutral-400 text-sm mt-2">{t(`metrics.${metric.key}`)}</p>
             </FadeIn>
           ))}
         </div>

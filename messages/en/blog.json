@@ -1,0 +1,37 @@
+{
+  "hub": {
+    "overline": "Blog",
+    "title": "Insights & Strategy",
+    "description": "Expert perspectives on building, automating, and scaling modern businesses.",
+    "featured": "Featured",
+    "readArticle": "Read Article",
+    "minRead": "min read",
+    "categories": {
+      "all": "All",
+      "automation": "Automation",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "development": "Development",
+      "businessStrategy": "Business Strategy",
+      "caseStudies": "Case Studies"
+    },
+    "emptyState": "No posts in this category yet. Check back soon.",
+    "newsletterCta": {
+      "title": "Get Weekly Insights",
+      "description": "Join 2,000+ founders and operators who get our best strategies delivered every Thursday."
+    }
+  },
+  "post": {
+    "share": "Share",
+    "shareOnX": "Share on X",
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "copyLink": "Copy link",
+    "copied": "Copied!",
+    "onThisPage": "On this page",
+    "moreLikeThis": "More Like This",
+    "newsletterCta": {
+      "title": "Get More Insights Like This",
+      "description": "Weekly strategies for building, automating, and scaling — delivered every Thursday."
+    }
+  }
+}

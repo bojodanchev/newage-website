@@ -1,6 +1,7 @@
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
-const stepLabels = ['Service', 'Business', 'Project', 'Contact']
+const stepKeys = ['service', 'business', 'project', 'contact']
 
 interface FormProgressProps {
   currentStep: number
@@ -8,6 +9,8 @@ interface FormProgressProps {
 }
 
 export function FormProgress({ currentStep, totalSteps }: FormProgressProps) {
+  const t = useTranslations('contact')
+
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between">
@@ -45,7 +48,7 @@ export function FormProgress({ currentStep, totalSteps }: FormProgressProps) {
                     isCurrent ? 'text-accent-purple' : 'text-neutral-500'
                   )}
                 >
-                  {stepLabels[i]}
+                  {t(`form.progress.${stepKeys[i]}`)}
                 </span>
               </div>
 

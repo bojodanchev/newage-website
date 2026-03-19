@@ -1,7 +1,7 @@
 import { SITE, SOCIALS } from './constants'
 import type { Service, FAQItem, BlogPost } from '@/types/content'
 
-export function organizationSchema() {
+export function organizationSchema(locale: string = 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -12,10 +12,12 @@ export function organizationSchema() {
     email: SITE.email,
     sameAs: Object.values(SOCIALS),
     foundingDate: `${SITE.foundedYear}`,
+    inLanguage: locale === 'bg' ? 'bg' : 'en',
   }
 }
 
-export function serviceSchema(service: Service) {
+export function serviceSchema(service: Service, locale: string = 'en') {
+  const prefix = locale === 'en' ? '' : `/${locale}`
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -25,14 +27,16 @@ export function serviceSchema(service: Service) {
       '@type': 'Organization',
       name: SITE.name,
     },
-    url: `${SITE.url}/services/${service.slug}`,
+    url: `${SITE.url}${prefix}/services/${service.slug}`,
+    inLanguage: locale === 'bg' ? 'bg' : 'en',
   }
 }
 
-export function faqSchema(items: FAQItem[]) {
+export function faqSchema(items: FAQItem[], locale: string = 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: locale === 'bg' ? 'bg' : 'en',
     mainEntity: items.map((item) => ({
       '@type': 'Question',
       name: item.question,
@@ -44,7 +48,8 @@ export function faqSchema(items: FAQItem[]) {
   }
 }
 
-export function blogPostSchema(post: BlogPost) {
+export function blogPostSchema(post: BlogPost, locale: string = 'en') {
+  const prefix = locale === 'en' ? '' : `/${locale}`
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -60,7 +65,8 @@ export function blogPostSchema(post: BlogPost) {
       name: SITE.name,
       url: SITE.url,
     },
-    url: `${SITE.url}/blog/${post.slug}`,
+    url: `${SITE.url}${prefix}/blog/${post.slug}`,
+    inLanguage: locale === 'bg' ? 'bg' : 'en',
   }
 }
 

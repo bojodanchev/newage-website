@@ -1,23 +1,14 @@
+import { useTranslations } from 'next-intl'
 import { Select } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
 import type { UseFormRegister, FieldErrors } from 'react-hook-form'
 import type { ContactFormData } from '@/types/forms'
 
-const timelines = [
-  { value: 'asap', label: 'ASAP' },
-  { value: '1-2-months', label: '1-2 months' },
-  { value: '3-6-months', label: '3-6 months' },
-  { value: '6+-months', label: '6+ months' },
-  { value: 'not-sure', label: 'Not sure' },
-]
+const timelineKeys = ['asap', '1-2months', '3-6months', '6plusMonths', 'notSure'] as const
+const timelineValues = ['asap', '1-2-months', '3-6-months', '6+-months', 'not-sure'] as const
 
-const budgets = [
-  { value: '5k-10k', label: '$5K - $10K' },
-  { value: '10k-25k', label: '$10K - $25K' },
-  { value: '25k-50k', label: '$25K - $50K' },
-  { value: '50k-100k', label: '$50K - $100K' },
-  { value: '100k+', label: '$100K+' },
-]
+const budgetKeys = ['5k10k', '10k25k', '25k50k', '50k100k', '100kPlus'] as const
+const budgetValues = ['5k-10k', '10k-25k', '25k-50k', '50k-100k', '100k+'] as const
 
 interface Step3ProjectProps {
   register: UseFormRegister<ContactFormData>
@@ -25,35 +16,47 @@ interface Step3ProjectProps {
 }
 
 export function Step3Project({ register, errors }: Step3ProjectProps) {
+  const t = useTranslations('contact')
+
+  const timelines = timelineKeys.map((key, i) => ({
+    value: timelineValues[i],
+    label: t(`form.step3.timelines.${key}`),
+  }))
+
+  const budgets = budgetKeys.map((key, i) => ({
+    value: budgetValues[i],
+    label: t(`form.step3.budgets.${key}`),
+  }))
+
   return (
     <div>
       <h2 className="mb-2 font-heading text-2xl font-bold text-foreground">
-        Project details
+        {t('form.step3.title')}
       </h2>
       <p className="mb-8 text-neutral-400">
-        Help us understand the scope and timeline.
+        {t('form.step3.description')}
       </p>
 
       <div className="space-y-6">
         <Select
-          label="Timeline"
-          placeholder="When do you need this?"
+          label={t('form.step3.timelineLabel')}
+          placeholder={t('form.step3.timelinePlaceholder')}
           options={timelines}
           error={errors.timeline?.message}
           {...register('timeline')}
         />
 
         <Select
-          label="Budget Range"
-          placeholder="Select a budget range"
+          label={t('form.step3.budgetLabel')}
+          placeholder={t('form.step3.budgetPlaceholder')}
           options={budgets}
           error={errors.budgetRange?.message}
           {...register('budgetRange')}
         />
 
         <Textarea
-          label="Project Description"
-          placeholder="Tell us about your project, goals, and any specific requirements..."
+          label={t('form.step3.descriptionLabel')}
+          placeholder={t('form.step3.descriptionPlaceholder')}
           error={errors.projectDescription?.message}
           {...register('projectDescription')}
         />

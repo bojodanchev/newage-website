@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "overline": "Our Story",
+    "title": "The New Age Story"
+  },
+  "story": {
+    "paragraph1": "Every business deserves systems that actually work. Not duct-taped tools that barely hold together. Not fragmented vendors who each own 10% of the picture. Not advice without execution.",
+    "paragraph2": "New Age was born from a simple frustration: businesses were spending fortunes on disconnected agencies, freelancers, and SaaS tools — and still operating in chaos. We built the company we wished existed — one team that owns the entire outcome, from software and automation to marketing and sales infrastructure. One partner that builds systems designed to compound, not campaigns designed to expire."
+  },
+  "missionVision": {
+    "mission": {
+      "label": "Mission",
+      "text": "To build the systems that turn ambitious ideas into revenue-generating businesses — faster, smarter, and more reliably than any other partner in the market."
+    },
+    "vision": {
+      "label": "Vision",
+      "text": "A world where every entrepreneur has access to enterprise-grade infrastructure — where the quality of your systems is never the bottleneck to your growth."
+    }
+  },
+  "founders": {
+    "overline": "The Founders",
+    "title": "Two People, One Mission",
+    "bojidar": {
+      "role": "Co-Founder & CTO",
+      "name": "Bojidar Danchev",
+      "bio1": "The technical force behind New Age. Full-stack architect who designs and builds the software, automations, and infrastructure that power every client engagement. After spending years building products for startups and watching businesses waste millions on fragmented solutions, Bojidar co-founded New Age to prove that one team — with the right architecture — can deliver what normally takes five vendors and 18 months.",
+      "bio2": "His philosophy is simple: build systems that make money while you sleep, or do not build at all. Every project at New Age is designed to compound — because the best business infrastructure is the kind that gets better over time, not the kind you have to rebuild every quarter."
+    },
+    "sean": {
+      "role": "Co-Founder & COO",
+      "name": "Sean Isa",
+      "bio1": "The operational backbone of New Age. Sean owns client strategy, project delivery, and business development. He translates business problems into actionable roadmaps and ensures every project ships on time and on budget.",
+      "bio2": "Where Bojidar builds the systems, Sean makes sure they solve the right problems for the right people. His focus is on outcomes — not outputs. Every engagement starts with understanding the business deeply, then working backwards to the technical solution that moves the needle fastest."
+    }
+  },
+  "team": {
+    "overline": "The Team",
+    "title": "The People Behind the Systems",
+    "description": "A lean team of specialists who own the outcome — not just the task."
+  },
+  "values": {
+    "overline": "What We Believe",
+    "title": "Our Values",
+    "description": "The principles that guide every decision, every project, every line of code.",
+    "items": {
+      "results": {
+        "title": "Results Over Promises",
+        "description": "We measure success in revenue, not deliverables. If it does not move the needle, we do not build it."
+      },
+      "systems": {
+        "title": "Systems Over Band-Aids",
+        "description": "Build once, scale forever. We create infrastructure that compounds — not quick fixes that crumble."
+      },
+      "partnership": {
+        "title": "Partnership Over Transactions",
+        "description": "Your success is our success. We think in years, not invoices — because that is how real growth works."
+      },
+      "innovation": {
+        "title": "Innovation Over Convention",
+        "description": "Better ways always exist. We challenge assumptions and build what should exist, not what everyone else builds."
+      }
+    }
+  },
+  "metrics": {
+    "overline": "Impact",
+    "title": "By the Numbers",
+    "items": {
+      "projectsDelivered": { "value": "50+", "label": "Projects Delivered" },
+      "revenueGenerated": { "value": "3M+", "label": "Revenue Generated for Clients" },
+      "clientRetention": { "value": "98%", "label": "Client Retention Rate" },
+      "countriesServed": { "value": "12", "label": "Countries Served" }
+    }
+  },
+  "techTools": {
+    "overline": "Our Stack",
+    "title": "Tech & Tools We Use",
+    "description": "The technologies and platforms that power everything we build."
+  },
+  "cta": {
+    "headline": "Work With Us",
+    "subheadline": "Ready to build something that actually works? Let's start with a conversation.",
+    "primary": "Work With Us",
+    "secondary": "View Our Process"
+  }
+}

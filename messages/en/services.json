@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "overline": "What We Do",
+    "title": "Everything Your Business Needs. Under One Roof.",
+    "description": "From custom software to full business builds — we architect the systems that turn ideas into revenue machines. No fragmented vendors. No communication gaps. One team, total ownership."
+  },
+  "comparison": {
+    "overline": "Why New Age",
+    "title": "What Sets Us Apart",
+    "description": "The difference between a vendor and a growth partner.",
+    "newAge": {
+      "label": "New Age",
+      "items": {
+        "oneTeam": "One team owns the entire outcome",
+        "compounding": "Systems built to compound over time",
+        "revenuFirst": "Revenue-first — every decision optimizes for growth",
+        "transparency": "Full transparency: weekly demos, shared dashboards",
+        "postLaunch": "Post-launch support included in every tier",
+        "directAccess": "You talk to the builders, not account managers"
+      }
+    },
+    "typicalAgency": {
+      "label": "Typical Agency",
+      "items": {
+        "multipleVendors": "Multiple vendors, nobody owns the big picture",
+        "oneOff": "One-off campaigns with no compounding effect",
+        "vanityMetrics": "Vanity metrics: likes, impressions, deliverables",
+        "monthlyReports": "Monthly reports you never read",
+        "supportEnds": "Support ends when the invoice is paid",
+        "accountManagers": "Account managers relay messages to developers"
+      }
+    }
+  },
+  "cta": {
+    "headline": "Don't See What You Need? We Probably Do It.",
+    "subheadline": "Let's talk about what your business actually needs — no templates, no upsells.",
+    "primary": "Let's Talk",
+    "secondary": "View Our Work"
+  },
+  "detail": {
+    "theProblem": "The Problem",
+    "ourSolution": "Our Solution",
+    "whatsIncluded": {
+      "overline": "Features",
+      "title": "What's Included"
+    },
+    "ourProcess": {
+      "overline": "How It Works",
+      "title": "Our Process"
+    },
+    "techStack": {
+      "overline": "Technology",
+      "title": "Our Tech Stack"
+    },
+    "pricing": {
+      "overline": "Investment",
+      "title": "Pricing",
+      "description": "Transparent pricing. No hidden fees. No surprises."
+    },
+    "faq": {
+      "overline": "Questions",
+      "title": "Frequently Asked Questions"
+    },
+    "ctaHeadline": "Let's Build Your {serviceTitle}",
+    "ctaSubheadline": "Book a free strategy call and let's map out exactly what you need.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Our Work",
+    "relatedServices": "You Might Also Need"
+  }
+}

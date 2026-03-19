@@ -1,7 +1,8 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { Badge } from '@/components/ui/Badge'
 import { fadeUp } from '@/lib/animations'
 import type { CaseStudy } from '@/types/content'
@@ -11,6 +12,7 @@ interface CaseStudyCardProps {
 }
 
 export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
+  const t = useTranslations('common')
   const headlineResult = caseStudy.results[0]
 
   return (
@@ -42,7 +44,7 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
             {caseStudy.challenge}
           </p>
           <span className="inline-flex items-center gap-1 text-sm font-medium text-accent-purple group-hover:gap-2 transition-all duration-300">
-            Read Case Study
+            {t('readCaseStudy')}
             <svg
               width="16"
               height="16"

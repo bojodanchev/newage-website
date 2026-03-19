@@ -1,19 +1,28 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
-import { NAV_LINKS, SITE } from '@/lib/constants'
+import { SITE } from '@/lib/constants'
 import { Button } from '@/components/ui/Button'
 import { MobileMenu } from './MobileMenu'
+import { LocaleSwitcher } from './LocaleSwitcher'
+
+const NAV_HREFS = ['/services', '/work', '/process', '/about', '/blog', '/contact'] as const
 
 export function Navbar() {
   const pathname = usePathname()
+  const t = useTranslations('common')
   const [scrolled, setScrolled] = useState(false)
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  const navLinks = NAV_HREFS.map((href) => ({
+    href,
+    label: t(`nav.${href.slice(1)}`),
+  }))
 
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY
@@ -54,7 +63,7 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <ul className="hidden items-center gap-8 md:flex">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -73,20 +82,23 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              <LocaleSwitcher />
+            </div>
             <Button
               href="/contact"
               variant="primary"
               size="sm"
               className="hidden md:inline-flex"
             >
-              Get Started
+              {t('nav.getStarted')}
             </Button>
 
             {/* Hamburger */}
             <button
               onClick={() => setMobileOpen(true)}
               className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
-              aria-label="Open menu"
+              aria-label={t('nav.openMenu')}
             >
               <span className="block h-0.5 w-6 bg-foreground transition-transform" />
               <span className="block h-0.5 w-6 bg-foreground transition-transform" />

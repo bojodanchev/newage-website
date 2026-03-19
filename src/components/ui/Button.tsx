@@ -1,7 +1,8 @@
 'use client'
 
+import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
-import type { ButtonHTMLAttributes, AnchorHTMLAttributes } from 'react'
+import type { ButtonHTMLAttributes } from 'react'
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'gradient'
 type Size = 'sm' | 'md' | 'lg'
@@ -18,10 +19,10 @@ type ButtonAsButton = BaseProps &
     href?: undefined
   }
 
-type ButtonAsLink = BaseProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps> & {
-    href: string
-  }
+type ButtonAsLink = BaseProps & {
+  href: string
+  onClick?: () => void
+}
 
 type ButtonProps = ButtonAsButton | ButtonAsLink
 
@@ -60,11 +61,11 @@ export function Button({
   )
 
   if ('href' in props && props.href) {
-    const { href, ...rest } = props as ButtonAsLink
+    const { href, onClick, ...rest } = props as ButtonAsLink
     return (
-      <a href={href} className={classes} {...rest}>
+      <Link href={href} className={classes} onClick={onClick} {...rest}>
         {children}
-      </a>
+      </Link>
     )
   }
 

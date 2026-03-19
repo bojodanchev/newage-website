@@ -1,3 +1,4 @@
+import { Link } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
 interface CTASectionProps {
@@ -31,7 +32,7 @@ export function CTASection({
           <p className="mt-4 text-lg text-neutral-400">{subheadline}</p>
         )}
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
+          <Link
             href={primaryCTA.href}
             className={cn(
               'inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-lg font-medium',
@@ -41,9 +42,9 @@ export function CTASection({
             )}
           >
             {primaryCTA.label}
-          </a>
+          </Link>
           {secondaryCTA && (
-            <a
+            <Link
               href={secondaryCTA.href}
               className={cn(
                 'inline-flex items-center justify-center gap-2 rounded-lg px-8 py-4 text-lg font-medium',
@@ -52,7 +53,7 @@ export function CTASection({
               )}
             >
               {secondaryCTA.label}
-            </a>
+            </Link>
           )}
         </div>
       </div>

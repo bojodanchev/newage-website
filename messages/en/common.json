@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "process": "Process",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "bookStrategyCall": "Book a Strategy Call"
+  },
+  "footer": {
+    "stayInTheLoop": "Stay in the loop",
+    "columns": {
+      "services": "Services",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "links": {
+      "softwareDevelopment": "Software Development",
+      "automation": "Automation",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "fullBuild": "Full Build",
+      "about": "About",
+      "process": "Process",
+      "work": "Work",
+      "contact": "Contact",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    },
+    "copyright": "All Rights Reserved."
+  },
+  "newsletter": {
+    "placeholder": "you@company.com",
+    "subscribe": "Subscribe",
+    "sending": "Sending...",
+    "success": "Thanks! You're in.",
+    "errorInvalidEmail": "Please enter a valid email",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+  "backToTop": "Back to top",
+  "readCaseStudy": "Read Case Study",
+  "learnMore": "Learn More",
+  "exitIntent": {
+    "badge": "Exclusive Offer",
+    "title": "Wait! Don't Leave",
+    "titleHighlight": "Empty-Handed",
+    "description": "Get a free audit and discover how much revenue you're losing.",
+    "benefits": {
+      "siteAnalysis": "Comprehensive site analysis",
+      "recommendations": "Actionable recommendations",
+      "roiForecast": "ROI forecast for your business"
+    },
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@company.com",
+      "phoneLabel": "Phone (optional)",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "preferredContactLabel": "Preferred Contact",
+      "contactEmail": "Email",
+      "contactPhone": "Phone",
+      "contactWhatsApp": "WhatsApp",
+      "submit": "Get Your Free Audit \u2192",
+      "submitting": "Sending..."
+    },
+    "disclaimer": "No spam, ever. We'll only contact you about your audit.",
+    "successTitle": "We're On It!",
+    "successMessage": "Your free audit is being prepared. We'll be in touch within 24 hours.",
+    "close": "Close"
+  }
+}

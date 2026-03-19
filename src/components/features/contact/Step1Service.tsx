@@ -1,16 +1,17 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import type { UseFormRegister, FieldErrors } from 'react-hook-form'
 import type { ContactFormData } from '@/types/forms'
 
 const serviceOptions = [
-  { value: 'software-development', label: 'Software Development', icon: '💻' },
-  { value: 'automation-systems', label: 'Automation & Systems', icon: '⚙️' },
-  { value: 'marketing-growth', label: 'Marketing & Growth', icon: '📈' },
-  { value: 'sales-infrastructure', label: 'Sales Infrastructure', icon: '💰' },
-  { value: 'full-business-build', label: 'Full Business Build', icon: '🏢' },
-  { value: 'not-sure', label: 'Not Sure Yet', icon: '🤔' },
+  { value: 'software-development', key: 'softwareDevelopment', icon: '💻' },
+  { value: 'automation-systems', key: 'automationSystems', icon: '⚙️' },
+  { value: 'marketing-growth', key: 'marketingGrowth', icon: '📈' },
+  { value: 'sales-infrastructure', key: 'salesInfrastructure', icon: '💰' },
+  { value: 'full-business-build', key: 'fullBusinessBuild', icon: '🏢' },
+  { value: 'not-sure', key: 'notSure', icon: '🤔' },
 ]
 
 interface Step1ServiceProps {
@@ -20,13 +21,15 @@ interface Step1ServiceProps {
 }
 
 export function Step1Service({ register, errors, selectedValue }: Step1ServiceProps) {
+  const t = useTranslations('contact')
+
   return (
     <div>
       <h2 className="mb-2 font-heading text-2xl font-bold text-foreground">
-        What do you need?
+        {t('form.step1.title')}
       </h2>
       <p className="mb-8 text-neutral-400">
-        Select the service that best matches your project.
+        {t('form.step1.description')}
       </p>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -49,7 +52,7 @@ export function Step1Service({ register, errors, selectedValue }: Step1ServicePr
             />
             <span className="mb-3 block text-2xl">{option.icon}</span>
             <span className="block font-medium text-foreground">
-              {option.label}
+              {t(`form.step1.options.${option.key}`)}
             </span>
             {selectedValue === option.value && (
               <div className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full bg-accent-purple">

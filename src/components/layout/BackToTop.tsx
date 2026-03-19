@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
 export function BackToTop() {
+  const t = useTranslations('common')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export function BackToTop() {
           ? 'translate-y-0 opacity-100'
           : 'pointer-events-none translate-y-4 opacity-0'
       )}
-      aria-label="Back to top"
+      aria-label={t('backToTop')}
     >
       <svg
         width="16"

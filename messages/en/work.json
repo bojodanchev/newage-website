@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "overline": "Our Work",
+    "title": "Results That Speak for Themselves",
+    "description": "Real projects. Real metrics. Real impact. See how we help businesses build systems that drive measurable growth."
+  },
+  "filters": {
+    "all": "All",
+    "saas": "SaaS",
+    "ecommerce": "E-Commerce",
+    "realEstate": "Real Estate"
+  },
+  "emptyState": "No case studies found for this category. Check back soon.",
+  "cta": {
+    "headline": "Want Results Like These?",
+    "subheadline": "Every project starts with a conversation. Tell us where you are, and we'll show you where we can take you.",
+    "primary": "Let's Talk",
+    "secondary": "View Services"
+  },
+  "detail": {
+    "overline": "Case Study",
+    "theChallenge": "The Challenge",
+    "ourApproach": "Our Approach",
+    "theSolution": "The Solution",
+    "results": {
+      "overline": "Impact",
+      "title": "The Results"
+    },
+    "timeline": {
+      "overline": "Timeline",
+      "title": "Project Milestones"
+    },
+    "beforeAfter": {
+      "overline": "Transformation",
+      "title": "Before & After"
+    },
+    "cta": {
+      "headline": "Want Results Like These? Let's Talk.",
+      "subheadline": "Every great outcome starts with a conversation. Book your free strategy session.",
+      "primary": "Start Your Project",
+      "secondary": "See More Work"
+    }
+  }
+}

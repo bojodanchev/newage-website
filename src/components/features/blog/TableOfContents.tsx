@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 
 interface TOCItem {
@@ -30,6 +31,7 @@ function extractHeadings(html: string): TOCItem[] {
 }
 
 export function TableOfContents({ content }: TableOfContentsProps) {
+  const t = useTranslations('blog')
   const [activeId, setActiveId] = useState<string>('')
   const headings = extractHeadings(content)
 
@@ -58,7 +60,7 @@ export function TableOfContents({ content }: TableOfContentsProps) {
   return (
     <nav className="sticky top-24">
       <p className="mb-4 text-xs font-medium uppercase tracking-[0.15em] text-neutral-500">
-        On this page
+        {t('post.onThisPage')}
       </p>
       <ul className="space-y-1 border-l border-neutral-700/50">
         {headings.map((heading) => (

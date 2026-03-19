@@ -1,9 +1,12 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { FadeIn } from '@/components/animation/FadeIn'
 import { Button } from '@/components/ui/Button'
 
 export function FinalCTA() {
+  const t = useTranslations('home')
+
   return (
     <section className="relative py-32 md:py-40 overflow-hidden bg-white/[0.03]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent" />
@@ -25,13 +28,13 @@ export function FinalCTA() {
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <FadeIn>
           <h2 className="font-heading text-4xl md:text-5xl font-bold gradient-text">
-            Ready to Build Something Extraordinary?
+            {t('finalCta.title')}
           </h2>
         </FadeIn>
 
         <FadeIn delay={0.15}>
           <p className="text-xl text-neutral-300 mt-4 max-w-2xl mx-auto">
-            Let&apos;s turn your vision into a revenue machine.
+            {t('finalCta.description')}
           </p>
         </FadeIn>
 
@@ -43,7 +46,7 @@ export function FinalCTA() {
               variant="primary"
               className="glow-purple"
             >
-              Start Your Project
+              {t('finalCta.primary')}
               <svg
                 className="w-4 h-4 ml-1"
                 fill="none"
@@ -59,7 +62,7 @@ export function FinalCTA() {
               </svg>
             </Button>
             <Button href="/contact" size="lg" variant="ghost">
-              Download Capabilities Deck
+              {t('finalCta.secondary')}
             </Button>
           </div>
         </FadeIn>

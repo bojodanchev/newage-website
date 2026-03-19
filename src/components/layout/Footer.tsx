@@ -1,28 +1,29 @@
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { SITE, SOCIALS } from '@/lib/constants'
 import { NewsletterForm } from '@/components/sections/NewsletterForm'
 
-const footerLinks = {
+const footerLinkData = {
   services: [
-    { label: 'Software Development', href: '/services/software-development' },
-    { label: 'Automation', href: '/services/automation-systems' },
-    { label: 'Marketing', href: '/services/marketing-growth' },
-    { label: 'Sales', href: '/services/sales-infrastructure' },
-    { label: 'Full Build', href: '/services/full-business-build' },
+    { key: 'softwareDevelopment', href: '/services/software-development' },
+    { key: 'automation', href: '/services/automation-systems' },
+    { key: 'marketing', href: '/services/marketing-growth' },
+    { key: 'sales', href: '/services/sales-infrastructure' },
+    { key: 'fullBuild', href: '/services/full-business-build' },
   ],
   company: [
-    { label: 'About', href: '/about' },
-    { label: 'Process', href: '/process' },
-    { label: 'Work', href: '/work' },
-    { label: 'Contact', href: '/contact' },
+    { key: 'about', href: '/about' },
+    { key: 'process', href: '/process' },
+    { key: 'work', href: '/work' },
+    { key: 'contact', href: '/contact' },
   ],
   resources: [
-    { label: 'Blog', href: '/blog' },
-    { label: 'FAQ', href: '/contact#faq' },
+    { key: 'blog', href: '/blog' },
+    { key: 'faq', href: '/contact#faq' },
   ],
   legal: [
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms of Service', href: '/terms' },
+    { key: 'privacyPolicy', href: '/privacy' },
+    { key: 'termsOfService', href: '/terms' },
   ],
 }
 
@@ -54,7 +55,11 @@ const socialIcons: Record<string, React.ReactNode> = {
   ),
 }
 
+const columnKeys = ['services', 'company', 'resources', 'legal'] as const
+
 export function Footer() {
+  const t = useTranslations('common')
+
   return (
     <footer className="w-full bg-neutral-800/50">
       <div className="bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent h-px w-full" />
@@ -74,7 +79,7 @@ export function Footer() {
           </div>
           <div className="w-full max-w-sm">
             <p className="mb-3 text-sm font-medium text-neutral-300">
-              Stay in the loop
+              {t('footer.stayInTheLoop')}
             </p>
             <NewsletterForm />
           </div>
@@ -82,16 +87,31 @@ export function Footer() {
 
         {/* Middle: Link columns */}
         <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
-          <FooterColumn title="Services" links={footerLinks.services} />
-          <FooterColumn title="Company" links={footerLinks.company} />
-          <FooterColumn title="Resources" links={footerLinks.resources} />
-          <FooterColumn title="Legal" links={footerLinks.legal} />
+          {columnKeys.map((col) => (
+            <div key={col}>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+                {t(`footer.columns.${col}`)}
+              </h3>
+              <ul className="space-y-3">
+                {footerLinkData[col].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-neutral-500 transition-colors hover:text-foreground"
+                    >
+                      {t(`footer.links.${link.key}`)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom: Copyright + Socials */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-neutral-700/50 pt-8 md:flex-row">
           <p className="text-sm text-neutral-500">
-            &copy; {new Date().getFullYear()} {SITE.name}. All Rights Reserved.
+            &copy; {new Date().getFullYear()} {SITE.name}. {t('footer.copyright')}
           </p>
           <div className="flex items-center gap-4">
             {Object.entries(SOCIALS).map(([name, url]) => (
@@ -110,33 +130,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
-}
-
-function FooterColumn({
-  title,
-  links,
-}: {
-  title: string
-  links: { label: string; href: string }[]
-}) {
-  return (
-    <div>
-      <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
-        {title}
-      </h3>
-      <ul className="space-y-3">
-        {links.map((link) => (
-          <li key={link.href}>
-            <Link
-              href={link.href}
-              className="text-sm text-neutral-500 transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
   )
 }
