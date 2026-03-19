@@ -58,7 +58,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-neutral-800/50">
       <div className="bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent h-px w-full" />
-      <div className="mx-auto max-w-7xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-8 lg:px-16 py-16">
         {/* Top: Logo + Newsletter */}
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>

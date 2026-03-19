@@ -13,7 +13,7 @@ const metrics = [
 export function MetricsSection() {
   return (
     <section className="py-20 bg-neutral-800/50 border-y border-neutral-700/30">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-6xl px-8 lg:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x md:divide-neutral-700/30">
           {metrics.map((metric, i) => (
             <FadeIn key={metric.label} delay={i * 0.15} className="text-center">

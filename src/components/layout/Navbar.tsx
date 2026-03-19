@@ -43,7 +43,7 @@ export function Navbar() {
           visible ? 'translate-y-0' : '-translate-y-full'
         )}
       >
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-20">
+        <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-8 lg:px-16 md:h-20">
           {/* Logo */}
           <Link
             href="/"

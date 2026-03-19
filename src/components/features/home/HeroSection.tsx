@@ -16,8 +16,8 @@ export function HeroSection() {
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-primary/60 via-primary/40 to-primary" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 w-full text-center">
-        <div className="max-w-4xl mx-auto relative">
+      <div className="relative z-10 mx-auto max-w-6xl px-8 lg:px-16 py-32 w-full text-center">
+        <div className="max-w-3xl mx-auto relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-accent-purple/15 rounded-full blur-3xl pointer-events-none -z-10" />
           <motion.h1
             className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight"

@@ -52,7 +52,7 @@ const painPoints = [
 export function ProblemSection() {
   return (
     <section id="problem" className="section-padding">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-6xl px-8 lg:px-16">
         <FadeIn className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-h2 font-bold">
             Sound Familiar?

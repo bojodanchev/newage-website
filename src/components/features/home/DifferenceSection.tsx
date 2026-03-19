@@ -22,7 +22,7 @@ const afterItems = [
 export function DifferenceSection() {
   return (
     <section className="section-padding bg-white/[0.03]">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-6xl px-8 lg:px-16">
         <FadeIn className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-h2 font-bold">
             The <span className="gradient-text">Difference</span>

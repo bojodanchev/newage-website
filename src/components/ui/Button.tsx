@@ -29,7 +29,7 @@ const variantStyles: Record<Variant, string> = {
   primary:
     'bg-gradient-to-r from-accent-purple to-accent-mint text-white hover:glow-purple shadow-lg shadow-accent-purple/20',
   secondary:
-    'border border-neutral-700 text-foreground hover:border-accent-purple hover:text-accent-purple',
+    'border border-neutral-500 text-foreground hover:border-accent-purple hover:text-accent-purple bg-white/5',
   ghost: 'text-foreground hover:bg-white/5',
   gradient:
     'bg-gradient-to-r from-accent-purple via-accent-mint to-accent-orange text-white hover:glow-purple',

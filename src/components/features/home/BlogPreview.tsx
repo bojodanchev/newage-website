@@ -51,7 +51,7 @@ const posts = [
 export function BlogPreview() {
   return (
     <section className="section-padding">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-6xl px-8 lg:px-16">
         <FadeIn className="text-center mb-16">
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-purple mb-4">
             Insights
