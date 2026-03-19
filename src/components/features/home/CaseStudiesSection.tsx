@@ -13,7 +13,7 @@ const caseStudies = [
     metric: '3x',
     description:
       'Built a complete sales infrastructure and automated lead nurture system for a B2B SaaS startup, tripling MRR within one quarter.',
-    slug: 'saas-revenue-3x',
+    slug: 'saas-3x-revenue',
     color: 'purple' as const,
   },
   {
@@ -22,7 +22,7 @@ const caseStudies = [
     metric: '500%',
     description:
       'Designed and built a full-funnel marketing system with automated retargeting, email flows, and conversion-optimized landing pages.',
-    slug: 'ecommerce-500-roas',
+    slug: 'ecommerce-automation',
     color: 'mint' as const,
   },
   {
@@ -31,7 +31,7 @@ const caseStudies = [
     metric: '10K+',
     description:
       'Replaced manual processes with a custom CRM and automation suite, freeing the team to focus on closing deals instead of admin.',
-    slug: 'real-estate-automation',
+    slug: 'real-estate-pipeline',
     color: 'orange' as const,
   },
 ]
