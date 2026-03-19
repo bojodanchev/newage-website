@@ -115,7 +115,7 @@ export function ServicesGrid() {
           ))}
         </StaggerChildren>
 
-        <FadeIn delay={0.3} className="text-center mt-12">
+        <FadeIn delay={0.3} className="text-center mt-12 pb-4">
           <a
             href="/services"
             className="inline-flex items-center gap-2 text-accent-purple hover:text-accent-mint transition-colors font-medium"

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button'
 
 export function FinalCTA() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-32 md:py-40 overflow-hidden bg-white/[0.03]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent" />
 
       {/* Dot grid background */}

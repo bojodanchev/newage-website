@@ -21,7 +21,7 @@ const afterItems = [
 
 export function DifferenceSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6">
         <FadeIn className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-h2 font-bold">

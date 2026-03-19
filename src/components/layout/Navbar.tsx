@@ -79,7 +79,7 @@ export function Navbar() {
               size="sm"
               className="hidden md:inline-flex"
             >
-              Book a Strategy Call
+              Get Started
             </Button>
 
             {/* Hamburger */}

@@ -17,7 +17,7 @@ const industries = [
 
 export function IndustriesSection() {
   return (
-    <section className="section-padding-sm">
+    <section className="section-padding-sm bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6">
         <FadeIn className="text-center mb-12">
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-purple mb-4">

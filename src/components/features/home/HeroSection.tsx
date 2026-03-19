@@ -54,7 +54,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.5, ease }}
           >
             <Button href="/contact" size="lg" variant="primary" className="glow-purple">
-              Book a Strategy Call
+              Book a Call
             </Button>
             <Button href="/work" size="lg" variant="secondary">
               See Our Work

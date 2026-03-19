@@ -37,13 +37,17 @@ export default function HomePage() {
       <LogoBar />
       <ProblemSection />
       <DifferenceSection />
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto max-w-4xl" />
       <ServicesGrid />
       <MetricsSection />
       <CaseStudiesSection />
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto max-w-4xl" />
       <ProcessPreview />
       <TestimonialsSection />
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto max-w-4xl" />
       <IndustriesSection />
       <BlogPreview />
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-accent-purple/30 to-transparent mx-auto max-w-4xl" />
       <FinalCTA />
     </>
   )

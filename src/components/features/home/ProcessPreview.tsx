@@ -35,7 +35,7 @@ const steps = [
 
 export function ProcessPreview() {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-white/[0.03]">
       <div className="mx-auto max-w-7xl px-6">
         <FadeIn className="text-center mb-16">
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-purple mb-4">
@@ -80,7 +80,7 @@ export function ProcessPreview() {
           ))}
         </StaggerChildren>
 
-        <FadeIn delay={0.3} className="text-center mt-12">
+        <FadeIn delay={0.3} className="text-center mt-12 pb-4">
           <a
             href="/process"
             className="inline-flex items-center gap-2 text-accent-purple hover:text-accent-mint transition-colors font-medium"
