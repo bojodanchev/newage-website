@@ -67,55 +67,54 @@
   --duration-slower: 700ms;
 }
 
-/* Base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Base styles — MUST be in @layer base so Tailwind utilities can override */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-body {
-  background-color: var(--color-primary);
-  color: var(--color-foreground);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-/* Selection */
-::selection {
-  background-color: rgba(108, 58, 255, 0.3);
-  color: var(--color-foreground);
-}
+  ::selection {
+    background-color: rgba(108, 58, 255, 0.3);
+    color: var(--color-foreground);
+  }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--color-neutral-900);
-}
+  ::-webkit-scrollbar-track {
+    background: var(--color-neutral-900);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-neutral-700);
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-neutral-700);
+    border-radius: 4px;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-neutral-600);
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neutral-600);
+  }
 
-/* Focus styles */
-:focus-visible {
-  outline: 2px solid var(--color-accent-purple);
-  outline-offset: 2px;
+  :focus-visible {
+    outline: 2px solid var(--color-accent-purple);
+    outline-offset: 2px;
+  }
 }
 
 /* Utility classes */
