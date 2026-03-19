@@ -170,6 +170,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-block: 0.1em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 @utility gradient-text-warm {
@@ -177,6 +180,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-block: 0.1em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 @utility glow-purple {
