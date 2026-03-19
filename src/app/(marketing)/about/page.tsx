@@ -110,14 +110,22 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      {/* Founder Spotlight */}
+      {/* Co-Founders */}
       <SectionWrapper dotGrid>
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <SectionHeader
+          overline="The Founders"
+          title="Two People, One Mission"
+          className="mb-16"
+        />
+
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 mb-20">
           <FadeIn className="shrink-0">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-accent-purple via-accent-mint to-accent-orange p-1">
-              <div className="w-full h-full rounded-full bg-neutral-800 flex items-center justify-center">
-                <span className="text-6xl font-heading font-bold gradient-text">B</span>
-              </div>
+              <img
+                src="/team/bojo.png"
+                alt="Bojidar Danchev"
+                className="w-full h-full rounded-full object-cover"
+              />
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -129,16 +137,50 @@ export default function AboutPage() {
                 Bojidar Danchev
               </h2>
               <p className="text-neutral-400 leading-relaxed mb-4">
-                Serial builder, systems thinker, and recovering perfectionist. After spending years
-                building products for startups and watching businesses waste millions on fragmented
-                solutions, Bojidar co-founded New Age to prove that one team — with the right architecture
-                — can deliver what normally takes five vendors and 18 months.
+                The technical force behind New Age. Full-stack architect who designs and builds the
+                software, automations, and infrastructure that power every client engagement. After
+                spending years building products for startups and watching businesses waste millions
+                on fragmented solutions, Bojidar co-founded New Age to prove that one team — with
+                the right architecture — can deliver what normally takes five vendors and 18 months.
               </p>
               <p className="text-neutral-400 leading-relaxed">
                 His philosophy is simple: build systems that make money while you sleep, or do not
                 build at all. Every project at New Age is designed to compound — because the best
                 business infrastructure is the kind that gets better over time, not the kind you
                 have to rebuild every quarter.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
+          <FadeIn className="shrink-0">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-accent-mint via-accent-purple to-accent-orange p-1">
+              <img
+                src="/team/sean.jpg"
+                alt="Sean Isa"
+                className="w-full h-full rounded-full object-cover"
+              />
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div>
+              <p className="text-sm font-mono uppercase tracking-widest text-accent-mint mb-2">
+                Co-Founder & COO
+              </p>
+              <h2 className="font-heading text-3xl font-bold text-foreground mb-4 md:text-4xl">
+                Sean Isa
+              </h2>
+              <p className="text-neutral-400 leading-relaxed mb-4">
+                The operational backbone of New Age. Sean owns client strategy, project delivery,
+                and business development. He translates business problems into actionable roadmaps
+                and ensures every project ships on time and on budget.
+              </p>
+              <p className="text-neutral-400 leading-relaxed">
+                Where Bojidar builds the systems, Sean makes sure they solve the right problems
+                for the right people. His focus is on outcomes — not outputs. Every engagement
+                starts with understanding the business deeply, then working backwards to the
+                technical solution that moves the needle fastest.
               </p>
             </div>
           </FadeIn>
