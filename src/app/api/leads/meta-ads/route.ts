@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server'
 import { metaAdsLeadSchema } from '@/types/forms'
 import { ensureLeadsTable } from '@/lib/db-schema'
 import { getDb } from '@/lib/db'
-import { forwardToGhl } from '@/lib/crm/ghl'
 
 export async function POST(request: Request) {
   let body: unknown
@@ -53,24 +52,6 @@ export async function POST(request: Request) {
     typeof crypto !== 'undefined' && 'randomUUID' in crypto
       ? crypto.randomUUID()
       : `lead_${Date.now()}`
-
-  // Fire-and-forget CRM forward — does not block the response.
-  forwardToGhl({
-    event: 'lead',
-    event_id: eventId,
-    source: 'meta-ads-funnel',
-    email: data.email,
-    name: data.name,
-    company: data.company,
-    website: data.website || undefined,
-    custom: {
-      monthlyRevenue: data.monthlyRevenue,
-      monthlyAdSpend: data.monthlyAdSpend,
-      biggestBottleneck: data.biggestBottleneck,
-    },
-  }).catch((err) => {
-    console.error('[ghl forward] error:', err)
-  })
 
   return NextResponse.json({
     success: true,

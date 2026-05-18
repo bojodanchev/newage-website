@@ -93,16 +93,15 @@ export function MetaAdsBookingSection() {
         }).catch(() => {})
 
         if (inviteeEmail) {
-          fetch('/api/crm/ghl', {
+          fetch('/api/leads/booking', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             keepalive: true,
             body: JSON.stringify({
-              event: 'booking_scheduled',
-              event_id: eventId,
               email: inviteeEmail,
               name: inviteeName,
-              custom: { calendly_event_uri: data.payload?.event?.uri },
+              event_id: eventId,
+              calendly_event_uri: data.payload?.event?.uri,
             }),
           }).catch(() => {})
         }
