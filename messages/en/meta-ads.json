@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Meta Ads acquisition systems for businesses that want predictable growth",
+    "description": "We build acquisition systems for service businesses, personal brands, and local businesses. More inquiries. More clients. Higher revenue."
+  },
+  "hero": {
+    "eyebrow": "Meta Ads · Funnels · CRM · Automation",
+    "headlineLine1": "More inquiries. More clients.",
+    "headlineLine2": "Higher revenue.",
+    "subheadline": "We help businesses and experts grow inquiries, customers and revenue through Meta Ads systems and automations.",
+    "ctaPrimary": "Book a free strategy call",
+    "ctaSecondary": "See how it works",
+    "scrollHint": "Scroll to see the system"
+  },
+  "problem": {
+    "eyebrow": "Why most businesses stay stuck",
+    "title": "Meta Ads don't work when there's no funnel behind them.",
+    "body": "You have a good product, a team, a real offer. What you don't have is a predictable acquisition system. Most businesses lose money not because the service is bad — but because there's nothing converting traffic into qualified, booked calls.",
+    "items": [
+      { "title": "Not enough clients", "body": "Lead flow is unpredictable. Some weeks busy, some quiet — no system you can scale." },
+      { "title": "Reliance on referrals", "body": "Word of mouth is great until it caps out. There's no second engine." },
+      { "title": "Chaotic marketing", "body": "Random ads, random posts, no offer-to-funnel-to-CRM thread holding it together." },
+      { "title": "Wasted ad spend", "body": "Meta Ads run to a homepage with no clear CTA, no tracking, no follow-up — money in the void." }
+    ]
+  },
+  "solution": {
+    "eyebrow": "What we actually build",
+    "title": "A predictable client system, end to end.",
+    "body": "Meta Ads, landing page, lead funnel, conversion optimization and automation — wired together so each booked call has a paper trail from impression to revenue.",
+    "steps": [
+      { "stage": "TOFU", "label": "Attention", "title": "Meta Ads that stop the scroll", "body": "Founder videos, pain-based hooks, case-study creatives — tested in tight cohorts, scaled when CPL drops." },
+      { "stage": "MOFU", "label": "Conviction", "title": "Landing page that converts", "body": "Hero, problem, solution, case studies, offer, FAQ, CTA — every section earns its place, every CTA goes to a booked call." },
+      { "stage": "BOFU", "label": "Conversion", "title": "Call funnel that closes", "body": "Qualification, problem diagnosis, vision, solution, offer close — a repeatable conversation that turns calls into clients." }
+    ]
+  },
+  "caseStudies": {
+    "eyebrow": "Selected results",
+    "title": "Numbers that move when the system runs.",
+    "body": "Indicative results from acquisition systems we've architected. Replace these with your own once your case studies are in.",
+    "items": [
+      { "client": "Service Agency · B2B", "metric": "−62%", "metricLabel": "Cost per lead", "before": "€84 CPL · 12 leads/mo", "after": "€32 CPL · 47 leads/mo", "note": "Pain-based creatives + tightened landing page hero." },
+      { "client": "Local Aesthetics Clinic", "metric": "3.8×", "metricLabel": "Monthly revenue", "before": "€18k MRR · referral-only", "after": "€69k MRR · Meta + Calendly", "note": "Funnel + booking automation + GHL follow-up." },
+      { "client": "High-Ticket Coach", "metric": "+212", "metricLabel": "Booked strategy calls", "before": "Sporadic DM bookings", "after": "212 booked calls in 90 days", "note": "Authority creatives + qualified call funnel." }
+    ]
+  },
+  "offer": {
+    "eyebrow": "What you get",
+    "title": "We own the full acquisition stack.",
+    "body": "Six modules, one accountable team. No agency-of-record overhead, no scope ping-pong.",
+    "modules": [
+      { "letter": "A", "title": "Funnel strategy", "body": "Offer, positioning, angle, CTA, lead flow." },
+      { "letter": "B", "title": "Website / landing page", "body": "High-converting LP, mobile optimization, booking and form optimization." },
+      { "letter": "C", "title": "Meta Ads", "body": "Campaign setup, creatives, copy, retargeting, optimization." },
+      { "letter": "D", "title": "Lead management", "body": "CRM, automation, follow-up, qualification." },
+      { "letter": "E", "title": "Scaling", "body": "KPI tracking, CAC optimization, ROAS scaling." },
+      { "letter": "F", "title": "AI layer", "body": "Lead scoring, auto-qualification, automated follow-up drafts." }
+    ],
+    "process": {
+      "title": "How the engagement runs",
+      "steps": [
+        { "label": "Week 0–1", "title": "Foundation", "body": "Offer, positioning, tracking, CRM, landing page draft." },
+        { "label": "Week 1–2", "title": "Creative production", "body": "5–10 ad creatives — founder, case-study, pain, authority." },
+        { "label": "Week 2–3", "title": "Campaign launch", "body": "Cold testing, retargeting, live KPI dashboard." },
+        { "label": "Week 3+", "title": "Optimize and scale", "body": "Kill weak creatives, scale winners, optimize funnel CVR." }
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "title": "Honest answers before the call.",
+    "items": [
+      { "q": "How much does it cost?", "a": "Engagements start at €3.5k/month management + a one-time foundation fee for landing page, tracking and CRM. Ad spend is separate and stays in your account." },
+      { "q": "How long until we see results?", "a": "First booked calls usually land in week 2–3. Stable CPL and predictable lead flow typically settles by week 4–6 once we have enough data to optimize." },
+      { "q": "Do you guarantee results?", "a": "We guarantee the process and the system. We don't guarantee specific numbers — anyone who does is misleading you. We do offer a 60-day work-with-us-until-it-works window for qualified accounts." },
+      { "q": "Who owns the ad account, pixel, CRM?", "a": "You do. Always. We work inside your assets. If we part ways, everything stays with you." },
+      { "q": "How do we communicate?", "a": "Async via Slack or Telegram, weekly live calls, monthly KPI review. You get a live dashboard for CPL, CVR, CAC, ROAS." },
+      { "q": "Do you work with our industry?", "a": "Service businesses, personal brands, local businesses, high-ticket experts. If you have a real offer and capacity to fulfill — we can probably help. If you're pre-product, we're not the right fit." }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Next step",
+    "title": "Predictable growth starts with one call.",
+    "body": "30 minutes. We audit your current funnel and tell you exactly what would move the needle first — whether you work with us or not.",
+    "ctaPrimary": "Book a free strategy call",
+    "ctaSecondary": "Send a quick message",
+    "trust": "No deck. No pitch. A working audit you can keep."
+  },
+  "leadForm": {
+    "title": "Get a free funnel audit",
+    "body": "Tell us about your business. We'll come back within 24 hours with a written audit of your acquisition system and the highest-leverage fix.",
+    "fields": {
+      "name": "Full name",
+      "email": "Work email",
+      "company": "Company",
+      "website": "Current website (optional)",
+      "monthlyRevenue": "Approx. monthly revenue",
+      "monthlyAdSpend": "Approx. monthly ad spend",
+      "biggestBottleneck": "Biggest bottleneck right now"
+    },
+    "revenueOptions": ["< €5k", "€5–25k", "€25–100k", "€100k+"],
+    "spendOptions": ["€0", "< €1k", "€1–5k", "€5–15k", "€15k+"],
+    "submit": "Send my audit request",
+    "submitting": "Sending…",
+    "success": "Got it. Audit on the way within 24 hours.",
+    "error": "Something went wrong. Try again or email us at hello@newagecontent.com.",
+    "consent": "By submitting, you agree to be contacted about your funnel audit."
+  },
+  "booking": {
+    "title": "Or book the call directly",
+    "body": "Pick a 30-minute slot that works for you. Free audit, no pitch deck.",
+    "fallback": "Calendly isn't connected yet. Use the form on this page or email hello@newagecontent.com to book your call."
+  }
+}

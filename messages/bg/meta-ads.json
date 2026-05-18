@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "title": "Meta Ads acquisition системи за бизнеси, които искат предвидим растеж",
+    "description": "Изграждаме acquisition системи за service businesses, личен бранд и локални бизнеси. Повече запитвания. Повече клиенти. По-висок оборот."
+  },
+  "hero": {
+    "eyebrow": "Meta Ads · Funnel · CRM · Automation",
+    "headlineLine1": "Повече запитвания. Повече клиенти.",
+    "headlineLine2": "По-висок оборот.",
+    "subheadline": "Помагаме на бизнеси и експерти да увеличат запитванията, клиентите и оборота си чрез Meta Ads системи и автоматизации.",
+    "ctaPrimary": "Резервирай безплатна стратегическа сесия",
+    "ctaSecondary": "Виж как работи",
+    "scrollHint": "Scroll, за да видиш системата"
+  },
+  "problem": {
+    "eyebrow": "Защо повечето бизнеси стоят на едно място",
+    "title": "Meta Ads не работят, когато няма funnel зад тях.",
+    "body": "Имате добър продукт, екип и реална оферта. Това, което нямате, е предвидима acquisition система. Повечето бизнеси губят пари не защото услугата им е лоша — а защото нищо не превръща трафика в качествени резервирани разговори.",
+    "items": [
+      { "title": "Недостатъчно клиенти", "body": "Lead flow-ът е непредвидим. Едни седмици — натоварено, други — тихо. Без система, която да мащабираш." },
+      { "title": "Разчитане на препоръки", "body": "Word of mouth е чудесен — докато стигне тавана. Няма втори двигател." },
+      { "title": "Хаотичен маркетинг", "body": "Случайни реклами, случайни постове, без offer → funnel → CRM нишка, която да ги държи заедно." },
+      { "title": "Изхабен ad spend", "body": "Meta Ads водят към homepage без ясно CTA, без tracking, без follow-up — пари във вакуум." }
+    ]
+  },
+  "solution": {
+    "eyebrow": "Какво всъщност изграждаме",
+    "title": "Предвидима клиентска система — end to end.",
+    "body": "Meta Ads, landing page, lead funnel, conversion optimization и automation — свързани така, че всеки booked call има пътека от impression до приход.",
+    "steps": [
+      { "stage": "TOFU", "label": "Внимание", "title": "Meta Ads, които спират scroll-а", "body": "Founder видеа, pain-based hooks, case-study креативи — тествани в стегнати кохорти, мащабирани щом CPL падне." },
+      { "stage": "MOFU", "label": "Убеденост", "title": "Landing page, която конвертира", "body": "Hero, problem, solution, case studies, offer, FAQ, CTA — всяка секция има роля, всяко CTA води към booked call." },
+      { "stage": "BOFU", "label": "Конверсия", "title": "Call funnel, който затваря", "body": "Qualification, problem diagnosis, vision, solution, offer close — повтаряем разговор, който превръща обажданията в клиенти." }
+    ]
+  },
+  "caseStudies": {
+    "eyebrow": "Избрани резултати",
+    "title": "Числа, които се движат, щом системата работи.",
+    "body": "Индикативни резултати от acquisition системи, които сме архитектурирали. Заместват се с твоите case studies, щом бъдат готови.",
+    "items": [
+      { "client": "Service Agency · B2B", "metric": "−62%", "metricLabel": "Cost per lead", "before": "€84 CPL · 12 lead-а/мес", "after": "€32 CPL · 47 lead-а/мес", "note": "Pain-based креативи + затегнат hero на landing page-а." },
+      { "client": "Локална естетична клиника", "metric": "3.8×", "metricLabel": "Месечен оборот", "before": "€18k MRR · само препоръки", "after": "€69k MRR · Meta + Calendly", "note": "Funnel + booking automation + GHL follow-up." },
+      { "client": "High-Ticket Coach", "metric": "+212", "metricLabel": "Booked strategy calls", "before": "Спорадични DM bookings", "after": "212 booked calls за 90 дни", "note": "Authority креативи + квалифициран call funnel." }
+    ]
+  },
+  "offer": {
+    "eyebrow": "Какво получаваш",
+    "title": "Поемаме целия acquisition stack.",
+    "body": "Шест модула, един отговорен екип. Без agency-of-record overhead, без scope ping-pong.",
+    "modules": [
+      { "letter": "A", "title": "Funnel стратегия", "body": "Offer, positioning, angle, CTA, lead flow." },
+      { "letter": "B", "title": "Website / Landing page", "body": "High-converting LP, mobile optimization, booking + form optimization." },
+      { "letter": "C", "title": "Meta Ads", "body": "Campaign setup, креативи, copy, retargeting, optimization." },
+      { "letter": "D", "title": "Lead management", "body": "CRM, automation, follow-up, qualification." },
+      { "letter": "E", "title": "Scaling", "body": "KPI tracking, CAC optimization, ROAS scaling." },
+      { "letter": "F", "title": "AI слой", "body": "Lead scoring, auto-qualification, drafts за автоматичен follow-up." }
+    ],
+    "process": {
+      "title": "Как тече ангажиментът",
+      "steps": [
+        { "label": "Седм. 0–1", "title": "Foundation", "body": "Offer, positioning, tracking, CRM, draft на landing page." },
+        { "label": "Седм. 1–2", "title": "Creative production", "body": "5–10 креатива — founder, case-study, pain, authority." },
+        { "label": "Седм. 2–3", "title": "Campaign launch", "body": "Cold testing, retargeting, live KPI dashboard." },
+        { "label": "Седм. 3+", "title": "Оптимизация и scale", "body": "Изхвърляме слаби креативи, скалираме победители, оптимизираме funnel CVR." }
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Често задавани въпроси",
+    "title": "Честни отговори преди разговора.",
+    "items": [
+      { "q": "Колко струва?", "a": "Engagements започват от €3.5k/месец management + еднократен foundation fee за landing page, tracking и CRM. Ad spend е отделен и стои в твой акаунт." },
+      { "q": "За колко време ще видим резултати?", "a": "Първите booked calls обикновено са в седмица 2–3. Стабилен CPL и предвидим lead flow обикновено са на място до седмица 4–6, щом има достатъчно данни за оптимизация." },
+      { "q": "Гарантирате ли резултати?", "a": "Гарантираме процеса и системата. Не гарантираме конкретни числа — който го прави, те подвежда. Имаме 60-дневен work-with-us-until-it-works прозорец за качествени акаунти." },
+      { "q": "Чий е ad account-ът, pixel-ът, CRM-ът?", "a": "Твой. Винаги. Работим вътре в твоите активи. Ако се разделим, всичко остава при теб." },
+      { "q": "Как комуникираме?", "a": "Async през Slack или Telegram, седмични live разговори, месечен KPI review. Получаваш live dashboard за CPL, CVR, CAC, ROAS." },
+      { "q": "Работите ли с нашата индустрия?", "a": "Service businesses, личен бранд, локални бизнеси, high-ticket експерти. Ако имаш реална оферта и капацитет да я обслужиш — вероятно можем. Ако си pre-product, не сме правилният партньор." }
+    ]
+  },
+  "finalCta": {
+    "eyebrow": "Следваща стъпка",
+    "title": "Предвидимият растеж започва с един разговор.",
+    "body": "30 минути. Одит на текущия ти funnel и казваме точно какво ще даде най-голям ливъридж първо — независимо дали работим заедно или не.",
+    "ctaPrimary": "Резервирай безплатна стратегическа сесия",
+    "ctaSecondary": "Изпрати кратко съобщение",
+    "trust": "Без deck. Без pitch. Работещ одит, който остава при теб."
+  },
+  "leadForm": {
+    "title": "Получи безплатен funnel одит",
+    "body": "Разкажи ни за бизнеса си. Връщаме се до 24 часа с писмен одит на acquisition системата ти и най-силната първа корекция.",
+    "fields": {
+      "name": "Име и фамилия",
+      "email": "Имейл",
+      "company": "Компания",
+      "website": "Текущ сайт (по желание)",
+      "monthlyRevenue": "Месечен оборот (приблизително)",
+      "monthlyAdSpend": "Месечен ad spend (приблизително)",
+      "biggestBottleneck": "Най-голямото bottleneck в момента"
+    },
+    "revenueOptions": ["< €5k", "€5–25k", "€25–100k", "€100k+"],
+    "spendOptions": ["€0", "< €1k", "€1–5k", "€5–15k", "€15k+"],
+    "submit": "Изпрати заявка за одит",
+    "submitting": "Изпращане…",
+    "success": "Получихме. Одитът идва до 24 часа.",
+    "error": "Нещо се обърка. Опитай пак или пиши на hello@newagecontent.com.",
+    "consent": "С изпращането се съгласяваш да те потърсим относно funnel одита."
+  },
+  "booking": {
+    "title": "Или резервирай разговор директно",
+    "body": "Избери 30-минутен слот, който ти удобен. Безплатен одит, без pitch deck.",
+    "fallback": "Calendly още не е свързан. Използвай формата на тази страница или пиши на hello@newagecontent.com, за да резервираш."
+  }
+}

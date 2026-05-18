@@ -22,6 +22,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       legal: (await import(`../../messages/${locale}/legal.json`)).default,
       errors: (await import(`../../messages/${locale}/errors.json`)).default,
       metadata: (await import(`../../messages/${locale}/metadata.json`)).default,
+      'meta-ads': (await import(`../../messages/${locale}/meta-ads.json`)).default,
     },
   }
 })

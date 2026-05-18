@@ -41,3 +41,37 @@ export const exitIntentSchema = z.object({
 })
 
 export type ExitIntentFormData = z.infer<typeof exitIntentSchema>
+
+export const metaAdsLeadSchema = z
+  .object({
+    name: z.string().min(2, 'Name is required'),
+    email: z.string().email('Valid email required'),
+    company: z.string().min(1, 'Company is required'),
+    website: z.string().url('Valid URL').optional().or(z.literal('')),
+    monthlyRevenue: z.string().min(1, 'Monthly revenue is required'),
+    monthlyAdSpend: z.string().min(1, 'Monthly ad spend is required'),
+    biggestBottleneck: z
+      .string()
+      .min(8, 'Tell us a bit more about your bottleneck')
+      .max(2000, 'Max 2000 characters'),
+    website_url: z.string().optional(),
+    renderedAt: z.number().int().nonnegative().optional(),
+  })
+  .superRefine((data, ctx) => {
+    if (data.website_url && data.website_url.length > 0) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'spam_detected',
+        path: ['website_url'],
+      })
+    }
+    if (data.renderedAt && Date.now() - data.renderedAt < 1500) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'too_fast',
+        path: ['renderedAt'],
+      })
+    }
+  })
+
+export type MetaAdsLeadFormData = z.infer<typeof metaAdsLeadSchema>
