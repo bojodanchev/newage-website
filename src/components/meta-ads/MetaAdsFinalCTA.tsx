@@ -20,7 +20,8 @@ export function MetaAdsFinalCTA() {
       <div className="mx-auto max-w-4xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease }}
           className="font-mono text-[11px] uppercase tracking-[0.32em] text-accent-mint"
         >
@@ -29,7 +30,8 @@ export function MetaAdsFinalCTA() {
 
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="mt-6 font-heading text-4xl font-extrabold leading-[1.1] tracking-tight md:text-6xl"
         >
@@ -38,7 +40,8 @@ export function MetaAdsFinalCTA() {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
           className="mx-auto mt-6 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
@@ -47,7 +50,8 @@ export function MetaAdsFinalCTA() {
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.3, ease }}
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
         >

@@ -19,7 +19,8 @@ export function MetaAdsProblem() {
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease }}
           className="font-mono text-[11px] uppercase tracking-[0.32em] text-accent-orange"
         >
@@ -28,7 +29,8 @@ export function MetaAdsProblem() {
 
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="mt-6 max-w-3xl font-heading text-3xl font-extrabold leading-tight md:text-5xl"
         >
@@ -37,7 +39,8 @@ export function MetaAdsProblem() {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
           className="mt-6 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
@@ -49,7 +52,8 @@ export function MetaAdsProblem() {
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, delay: 0.1 + idx * 0.08, ease }}
               className="glass rounded-2xl p-6 lg:p-8"
             >

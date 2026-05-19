@@ -236,4 +236,115 @@ export const blogPosts: BlogPost[] = [
     metaDescription:
       'Рамката на три фази за маркетинг автоматизация, която расте — от основни последователности до оптимизация с данни до мащабиране на победителите.',
   },
+  {
+    slug: 'meta-ads-cpl-breakdown',
+    title: 'Как Meta Ads funnel сваля CPL с над 60% (без да гори бюджет)',
+    excerpt:
+      'Ако Meta Ads пращат трафик към homepage без ясен следващ ход, CPL-ът ти плаща за безразличие. Методологията, с която сваляме CPL с 50–65% за service business акаунти в първите 30 дни.',
+    content: `
+<h2>Какво всъщност значи −62%</h2>
+<p>Падането на CPL почти никога не е резултат от един магически креатив или умен audience hack. То идва от четири loose-coupled слоя: офертата, conversion rate на landing page, ъгъла на креатива и post-click follow-up. Премести и четирите с 15–20% и CPL се срива наполовина.</p>
+
+<h2>Слой 1 — Стегнатата оферта преди още реклама</h2>
+<p>Повечето акаунти с лош CPL нямат рекламен проблем. Имат проблем с офертата. „Помагаме на бизнеси да растат с Meta Ads" не е оферта — категория е. Конкретна оферта: „Изграждаме funnel-а, креативите и кампаниите така, че service business до €50k/месец да стигне до предвидими €25k+ месечни запитвания за 90 дни."</p>
+
+<h2>Слой 2 — Замени homepage с funnel-specific landing page</h2>
+<p>Meta трафик не бива да каца на homepage. Стандартът ни: 6 секции (hero, problem, solution, case studies, offer, FAQ) + едно CTA, което се повтаря. Преместването от homepage към dedicated landing page обикновено дава 2–4× lift на conversion rate.</p>
+
+<h2>Слой 3 — Cohort-тестване на креативи</h2>
+<p>Тестваме креативите в стегнати cohorts от 3–4 групирани по angle: founder-video, pain-based, case-study, authority. По €100–200/ден за 5–7 дни на cohort. Победителите мащабираме. Слабите убиваме. След 3 седмици акаунтът има 2–3 креатива, които стабилно седят на половин CPL.</p>
+
+<h2>Слой 4 — Затваряне на цикъла с бърз follow-up</h2>
+<p>Скритият CPL drain: ако първият follow-up отнема повече от 5 минути, си загубил 30–50% от intent-а. Връзваме всеки lead form към CRM с моментален email + SMS sequence + Slack ping. Първият touch излиза в 60 секунди. Calls, бронирани от „кликнал днес", затварят 3× по-добре от „кликнал миналата седмица".</p>
+
+<h2>Какво носи −62% числото</h2>
+<p>Акаунтът от case study-то имаше €84 CPL на Advantage+ кампания към homepage. След 30 дни по методологията — €32 blended CPL. Два от осемте тествани креатива станаха long-tail workhorses. Един още работи под €25 CPL.</p>
+
+<h2>Как да го приложиш без агенция</h2>
+<p>Не оправяй и четирите слоя наведнъж. Най-бързият payoff е landing page-ът — извади paid трафика от homepage тази седмица и CPL ще падне 30–40% за 10 дни. После оферта, после креативи, после follow-up. Или резервирай 30-минутен одит от /meta-ads.</p>
+`,
+    category: 'case-studies',
+    tags: ['meta ads', 'CPL', 'funnel', 'paid acquisition', 'service business'],
+    author: bojoAuthor,
+    publishedAt: '2026-05-18',
+    readingTime: 6,
+    featured: false,
+    metaTitle: 'Как Meta Ads funnel сваля CPL с над 60% | New Age',
+    metaDescription:
+      'Четирислойната методология за сваляне на service-business CPL от €80+ до под €35 за 30 дни. Оферта, landing page, cohort креативи, бърз follow-up.',
+  },
+  {
+    slug: 'meta-ads-mrr-multiplier',
+    title: 'От препоръки към 3.8× MRR: Acquisition системата за локални high-margin услуги',
+    excerpt:
+      'Word of mouth е най-добрият бизнес — докато стигне таван. Как локален high-margin service business добави втори revenue engine върху препоръките чрез Meta Ads, booking funnel и дисциплиниран CRM.',
+    content: `
+<h2>Защо referral-only бизнесите плато-ват</h2>
+<p>Повечето локални service businesses, с които работим — естетични клиники, фитнес студиа, бутикови юридически фирми — удрят същата стена около €15–25k/месец, почти изцяло от word of mouth. Маржове отлични. Качество отлично. Но растежът е capped от това колко бързо доволни клиенти препоръчват.</p>
+
+<h2>Стъпка 1 — Продуктизирай най-печелившата услуга</h2>
+<p>Не можеш да пуснеш paid acquisition за „предлагаме пълно меню". Можеш да го пуснеш за „60-минутна нов-пациентска консултация, която карта на лечебния ти план". Една продуктизирана, ясно ценообразувана услуга. Останалото меню е на един клик навътре.</p>
+
+<h2>Стъпка 2 — Booking-first funnel</h2>
+<p>Lead form не е целта. Резервираният час е. Calendar embed на landing page-а. Посетителят избира час. CRM създава контакт. Reminder sequence се завърта. Посетителят идва. Show-up rate се покачва от 50–60% на 75–85%.</p>
+
+<h2>Стъпка 3 — CRM отдолу</h2>
+<p>CRM-ът е където системата се натрупва. Всяка резервация е запис с timestamp, source attribution, какво е дошъл за и дали е превърнал в платено. 6 месеца от тези данни = най-ценният актив в бизнеса: измерими unit economics. Reactivation последователности сами по себе си движат +20–30% месечен оборот, без нова рекламна стотинка.</p>
+
+<h2>Стъпка 4 — Реклами към funnel-а, не към марката</h2>
+<p>Два ъгъла паралелно: „results" (преди/след, where compliance allows) и „trust" (founder-on-camera за изживяването). И двата към booking page-а. Targeting в радиус 10–15 km, broad demos, остави Advantage+ да оптимизира. Cost per <em>shown</em> appointment типично €40–90 за висок ticket, €15–35 за фитнес/красота.</p>
+
+<h2>Какво всъщност значи 3.8× MRR</h2>
+<p>Естетичната клиника от case study-то правеше €18k/месец от препоръки. 3 месеца по-късно — €51k допълнително от paid-acquired резервирани часове, при запазени €18k референции. Общо €69k/месец = 3.8× числото. Не е магия. Продуктизирана услуга + booking funnel + истински CRM + дисциплинирано тестване на креативи едновременно.</p>
+
+<h2>Откъде да започнеш</h2>
+<p>Първо оправи продуктизацията, не ad account-а. Една услуга. Цена. Календар отгоре. След това funnel и CRM и креативи са тактически избори. За 30-минутен одит на твоята специфика — /meta-ads.</p>
+`,
+    category: 'case-studies',
+    tags: ['meta ads', 'local business', 'MRR', 'aesthetic', 'booking funnel'],
+    author: bojoAuthor,
+    publishedAt: '2026-05-18',
+    readingTime: 6,
+    featured: false,
+    metaTitle: 'От препоръки към 3.8× MRR | New Age',
+    metaDescription:
+      'Как локален high-margin service business добави Meta Ads + booking-funnel + CRM върху препоръките и утрои месечния си оборот за 90 дни.',
+  },
+  {
+    slug: 'meta-ads-booked-calls',
+    title: '+212 booked strategy calls за 90 дни: authority funnel-ът за high-ticket експерти',
+    excerpt:
+      'High-ticket експерти разчитат на inbound DM-и, podcast появи и топли препоръки. Как изграждаме paid acquisition engine, който резервира предвидими strategy calls без енергията на course-seller.',
+    content: `
+<h2>Защо high-ticket експертите underperform-ват на paid реклами</h2>
+<p>Модел, който виждаме навсякъде: оферта реална, testimonials реални, ценовият клас понася paid acquisition — и въпреки това рекламите конвертират на 20–30% от това, с което конвертира сравним service business. Причината: high-ticket купувачите купуват на authority и pattern recognition, не на оферта-механики. Трябва да те видят като човека, който е решил точно този проблем на точно това ниво.</p>
+
+<h2>Стъпка 1 — Authority първо, оферта последно</h2>
+<p>Първата реклама, която повечето експерти пускат, е най-лошата им: излъскано видео „резервирай безплатна strategy session". Не работи на cold traffic. Креативите, които движат high-ticket prospects, демонстрират експертиза преди да поискат нещо. Frameworks за 90 секунди. Често грешки разбити на whiteboard. CTA-то на първия креатив почти никога не е „book a call". То е „follow for more" или „read the breakdown". Резервацията идва на втория touch, след като доверие съществува.</p>
+
+<h2>Стъпка 2 — Two-layer funnel</h2>
+<p>Top of funnel: content-style реклама, която дава стойност без да иска клик. KPI: reach × hold rate, не CPL. Bottom of funnel: retargeting реклама към хора, които са engagе-нали с content-а. Обещава strategy call, назовава резултата, target 7–14 дни след content-а. CPL на retargeting обикновено пада 30–50% спрямо cold, и calls бронират на много по-високо качество.</p>
+
+<h2>Стъпка 3 — Качествай на формата, не на разговора</h2>
+<p>High-ticket експерт не може да хаби 30 минути на разговор с някой, който никога не е щял да купи. Качването става на формата. 3–5 полета, дизайн за филтриране на budget, urgency, self-awareness. За €10k+ engagement: текущ revenue band, конкретен резултат, какво вече е опитал, checkbox „имам заделен бюджет". Form-view → form-submit пада 30–40%. Form-submit → shown call се покачва 50–70%. Strategy-call часовете са 2–3× по-продуктивни.</p>
+
+<h2>Стъпка 4 — Разговорът като диагноза, не pitch</h2>
+<p>10 минути qualification, 10 минути диагноза, 5 минути визия, 5 минути решение, 5 минути close. Затваря 25–40% при high-ticket експерти. Pitch-driven структурата затваря 8–15%. Системата се натрупва, защото всеки показан call вече струва 2–3× повече.</p>
+
+<h2>Какво значи +212 числото</h2>
+<p>High-ticket coaching акаунтът правеше 4–8 booked calls/месец от organic DM-и и малък newsletter преди системата. 3 месеца по-късно — 65–80 booked strategy calls/месец. Кумулативната допълнителна цифра от paid engine-а за 90-дневния прозорец = 212.</p>
+
+<h2>Как да го приложиш без енергията на course-seller</h2>
+<p>Най-трудната част е authority креативът — експертите се чувстват неловко да филмират себе си преподавайки безплатно. Two reframes: (1) content рекламите <em>са</em> маркетингът — strategy call-ът потвърждава fit, доверието се изгражда в feed-а; (2) всяко framework, което раздаваш в креатив, е частта от работата, която не изисква теб. Частта, която изисква теб, е тази, за която те плащат. За помощ с дизайна на authority креативите + формата + структурата на разговора, /meta-ads.</p>
+`,
+    category: 'case-studies',
+    tags: ['meta ads', 'high-ticket', 'authority', 'booked calls', 'consulting'],
+    author: bojoAuthor,
+    publishedAt: '2026-05-18',
+    readingTime: 7,
+    featured: false,
+    metaTitle: '+212 booked strategy calls за 90 дни | New Age',
+    metaDescription:
+      'Как authority-first креатив + retargeting + квалифицираща форма заедно генерират предвидими high-ticket strategy calls.',
+  },
 ]

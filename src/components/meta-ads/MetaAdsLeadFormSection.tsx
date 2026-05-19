@@ -17,7 +17,8 @@ export function MetaAdsLeadFormSection() {
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, ease }}
           className="lg:sticky lg:top-32 lg:self-start"
         >
@@ -32,7 +33,8 @@ export function MetaAdsLeadFormSection() {
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="glass-strong rounded-3xl p-6 lg:p-8"
         >

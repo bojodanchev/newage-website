@@ -27,7 +27,8 @@ export function MetaAdsOffer() {
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease }}
           className="font-mono text-[11px] uppercase tracking-[0.32em] text-accent-purple"
         >
@@ -36,7 +37,8 @@ export function MetaAdsOffer() {
 
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="mt-6 max-w-3xl font-heading text-3xl font-extrabold leading-tight md:text-5xl"
         >
@@ -45,7 +47,8 @@ export function MetaAdsOffer() {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
           className="mt-6 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
@@ -57,11 +60,13 @@ export function MetaAdsOffer() {
             <motion.div
               key={mod.letter}
               initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, delay: 0.05 + idx * 0.05, ease }}
-              className="glass rounded-2xl p-6 lg:p-7"
+              whileHover={{ y: -4 }}
+              className="group glass rounded-2xl p-6 transition-all duration-300 hover:border-accent-purple/30 hover:shadow-[0_18px_44px_-28px_rgba(108,58,255,0.5)] lg:p-7"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-foreground/15 font-heading text-sm font-bold text-foreground">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-foreground/15 font-heading text-sm font-bold text-foreground transition-colors group-hover:border-accent-purple/40 group-hover:text-accent-purple">
                 {mod.letter}
               </div>
               <h3 className="mt-5 font-heading text-lg font-bold md:text-xl">{mod.title}</h3>
@@ -73,7 +78,8 @@ export function MetaAdsOffer() {
         <div className="mt-24">
           <motion.h3
             initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5, ease }}
             className="font-heading text-2xl font-bold md:text-3xl"
           >
@@ -85,7 +91,8 @@ export function MetaAdsOffer() {
               <motion.li
                 key={step.label}
                 initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: 0.05 + idx * 0.08, ease }}
                 className="relative rounded-2xl border border-foreground/10 p-5 lg:p-6"
               >

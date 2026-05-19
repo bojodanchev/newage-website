@@ -21,7 +21,8 @@ export function MetaAdsFAQ() {
       <div className="mx-auto max-w-4xl">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease }}
           className="font-mono text-[11px] uppercase tracking-[0.32em] text-foreground/60"
         >
@@ -30,7 +31,8 @@ export function MetaAdsFAQ() {
 
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="mt-6 font-heading text-3xl font-extrabold leading-tight md:text-5xl"
         >
@@ -44,7 +46,8 @@ export function MetaAdsFAQ() {
               <motion.li
                 key={item.q}
                 initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.4, delay: 0.04 * idx, ease }}
                 className="overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.02]"
               >

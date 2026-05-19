@@ -37,6 +37,7 @@
     "eyebrow": "Selected results",
     "title": "Numbers that move when the system runs.",
     "body": "Indicative results from acquisition systems we've architected. Replace these with your own once your case studies are in.",
+    "readBreakdown": "Read the breakdown →",
     "items": [
       { "client": "Service Agency · B2B", "metric": "−62%", "metricLabel": "Cost per lead", "before": "€84 CPL · 12 leads/mo", "after": "€32 CPL · 47 leads/mo", "note": "Pain-based creatives + tightened landing page hero." },
       { "client": "Local Aesthetics Clinic", "metric": "3.8×", "metricLabel": "Monthly revenue", "before": "€18k MRR · referral-only", "after": "€69k MRR · Meta + Calendly", "note": "Funnel + booking automation + GHL follow-up." },

@@ -37,6 +37,7 @@
     "eyebrow": "Избрани резултати",
     "title": "Числа, които се движат, щом системата работи.",
     "body": "Индикативни резултати от acquisition системи, които сме архитектурирали. Заместват се с твоите case studies, щом бъдат готови.",
+    "readBreakdown": "Прочети методологията →",
     "items": [
       { "client": "Service Agency · B2B", "metric": "−62%", "metricLabel": "Cost per lead", "before": "€84 CPL · 12 lead-а/мес", "after": "€32 CPL · 47 lead-а/мес", "note": "Pain-based креативи + затегнат hero на landing page-а." },
       { "client": "Локална естетична клиника", "metric": "3.8×", "metricLabel": "Месечен оборот", "before": "€18k MRR · само препоръки", "after": "€69k MRR · Meta + Calendly", "note": "Funnel + booking automation + GHL follow-up." },

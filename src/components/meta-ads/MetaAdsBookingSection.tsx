@@ -152,7 +152,8 @@ export function MetaAdsBookingSection() {
       <div className="mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, ease }}
           className="font-heading text-3xl font-extrabold leading-tight md:text-5xl"
         >
@@ -161,7 +162,8 @@ export function MetaAdsBookingSection() {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="mt-6 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
@@ -170,7 +172,8 @@ export function MetaAdsBookingSection() {
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
           className="mt-12 grid gap-6 rounded-3xl border border-foreground/10 bg-foreground/[0.02] p-8 md:p-12 lg:grid-cols-[1.2fr_1fr] lg:gap-12 lg:p-14"
         >

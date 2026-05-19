@@ -1,15 +1,50 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 
 const ease = [0.16, 1, 0.3, 1] as const
+const FRAMEWORK_IMAGE = '/meta-ads/process/framework.png'
 
 interface SolutionStep {
   stage: string
   label: string
   title: string
   body: string
+}
+
+function FrameworkDiagram() {
+  const [hasImage, setHasImage] = useState(false)
+  useEffect(() => {
+    let cancelled = false
+    fetch(FRAMEWORK_IMAGE, { method: 'HEAD' })
+      .then((res) => {
+        if (!cancelled && res.ok) setHasImage(true)
+      })
+      .catch(() => {})
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  if (!hasImage) return null
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease }}
+      className="mt-12 overflow-hidden rounded-3xl border border-foreground/10"
+    >
+      <span
+        className="block aspect-[3/2] w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${FRAMEWORK_IMAGE})` }}
+        aria-hidden
+      />
+    </motion.div>
+  )
 }
 
 export function MetaAdsSolution() {
@@ -21,7 +56,8 @@ export function MetaAdsSolution() {
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease }}
           className="font-mono text-[11px] uppercase tracking-[0.32em] text-accent-mint"
         >
@@ -30,7 +66,8 @@ export function MetaAdsSolution() {
 
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1, ease }}
           className="mt-6 max-w-3xl font-heading text-3xl font-extrabold leading-tight md:text-5xl"
         >
@@ -39,12 +76,15 @@ export function MetaAdsSolution() {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
           className="mt-6 max-w-2xl text-base text-foreground/70 md:text-lg"
         >
           {t('body')}
         </motion.p>
+
+        <FrameworkDiagram />
 
         <div className="relative mt-16 grid gap-6 md:grid-cols-3">
           <div className="pointer-events-none absolute inset-x-0 top-12 hidden h-px bg-gradient-to-r from-transparent via-foreground/15 to-transparent md:block" />
@@ -52,7 +92,8 @@ export function MetaAdsSolution() {
             <motion.div
               key={step.stage}
               initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: 0.1 + idx * 0.12, ease }}
               className="glass relative rounded-2xl p-6 lg:p-8"
             >
