@@ -4,6 +4,7 @@ import { MetaAdsHero } from '@/components/meta-ads/MetaAdsHero'
 import { MetaAdsProblem } from '@/components/meta-ads/MetaAdsProblem'
 import { MetaAdsSolution } from '@/components/meta-ads/MetaAdsSolution'
 import { MetaAdsCaseStudies } from '@/components/meta-ads/MetaAdsCaseStudies'
+import { MetaAdsTestimonials } from '@/components/meta-ads/MetaAdsTestimonials'
 import { MetaAdsOffer } from '@/components/meta-ads/MetaAdsOffer'
 import { MetaAdsFAQ } from '@/components/meta-ads/MetaAdsFAQ'
 import { MetaAdsLeadFormSection } from '@/components/meta-ads/MetaAdsLeadFormSection'
@@ -33,6 +34,7 @@ export default async function MetaAdsFunnelPage({ params }: PageProps) {
       <MetaAdsProblem />
       <MetaAdsSolution />
       <MetaAdsCaseStudies />
+      <MetaAdsTestimonials />
       <MetaAdsOffer />
       <MetaAdsFAQ />
       <MetaAdsLeadFormSection />

@@ -44,6 +44,37 @@
       { "client": "High-Ticket Coach", "metric": "+212", "metricLabel": "Booked strategy calls", "before": "Sporadic DM bookings", "after": "212 booked calls in 90 days", "note": "Authority creatives + qualified call funnel." }
     ]
   },
+  "testimonials": {
+    "eyebrow": "Voices from the work",
+    "title": "Operators who stopped relying on luck.",
+    "body": "Three operators, three industries, one acquisition stack underneath.",
+    "items": [
+      {
+        "name": "Iva",
+        "role": "Co-founder · B2B service agency",
+        "city": "Sofia",
+        "quote": "Within sixty days we knew which channel was paying for itself. The funnel and the dashboard turned guesswork into a P&L line we could defend.",
+        "metric": "−62% CPL",
+        "image": "/meta-ads/testimonials/iva.png"
+      },
+      {
+        "name": "Mariya",
+        "role": "Owner · aesthetic clinic",
+        "city": "Plovdiv",
+        "quote": "We stopped depending on word-of-mouth weeks. The calendar finally shows steady growth instead of gaps, and the team can plan the floor around it.",
+        "metric": "3.8× revenue",
+        "image": "/meta-ads/testimonials/mariya.png"
+      },
+      {
+        "name": "Pavel",
+        "role": "Performance coach · high-ticket programs",
+        "city": "Vienna",
+        "quote": "The call funnel filters out tire-kickers before they ever hit my calendar. I show up to qualified conversations only — that's what changed everything.",
+        "metric": "+212 calls",
+        "image": "/meta-ads/testimonials/pavel.png"
+      }
+    ]
+  },
   "offer": {
     "eyebrow": "What you get",
     "title": "We own the full acquisition stack.",

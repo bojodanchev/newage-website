@@ -44,6 +44,37 @@
       { "client": "High-Ticket Coach", "metric": "+212", "metricLabel": "Booked strategy calls", "before": "Спорадични DM bookings", "after": "212 booked calls за 90 дни", "note": "Authority креативи + квалифициран call funnel." }
     ]
   },
+  "testimonials": {
+    "eyebrow": "Гласове от работата",
+    "title": "Оператори, които спряха да разчитат на късмет.",
+    "body": "Трима оператори, три индустрии, една acquisition система отдолу.",
+    "items": [
+      {
+        "name": "Iva",
+        "role": "Съосновател · B2B service agency",
+        "city": "София",
+        "quote": "За 60 дни знаехме точно кой канал си изкарва парите. Funnel-ът и dashboard-ът превърнаха гадаенето в P&L линия, която можем да защитим.",
+        "metric": "−62% CPL",
+        "image": "/meta-ads/testimonials/iva.png"
+      },
+      {
+        "name": "Mariya",
+        "role": "Собственик · естетична клиника",
+        "city": "Пловдив",
+        "quote": "Спряхме да зависим от седмици на препоръки. Календарът най-накрая показва устойчив растеж, а екипът може да планира работата си около него.",
+        "metric": "3.8× оборот",
+        "image": "/meta-ads/testimonials/mariya.png"
+      },
+      {
+        "name": "Pavel",
+        "role": "Performance coach · high-ticket програми",
+        "city": "Виена",
+        "quote": "Call funnel-ът филтрира любопитните преди да стигнат до календара ми. Идвам само на квалифицирани разговори — това промени всичко.",
+        "metric": "+212 разговора",
+        "image": "/meta-ads/testimonials/pavel.png"
+      }
+    ]
+  },
   "offer": {
     "eyebrow": "Какво получаваш",
     "title": "Поемаме целия acquisition stack.",
