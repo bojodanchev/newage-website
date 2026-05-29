@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion, useReducedMotion } from 'framer-motion'
-import { Link } from '@/i18n/routing'
 import { useCountUp } from '@/lib/hooks/useCountUp'
 
 const ease = [0.16, 1, 0.3, 1] as const
@@ -18,33 +17,29 @@ interface CaseStudy {
 }
 
 interface CaseSlotMeta {
-  slug: string
   image: string
   metric: { value: number; prefix: string; suffix: string; decimals: number }
 }
 
 const SLOTS: CaseSlotMeta[] = [
   {
-    slug: 'meta-ads-cpl-breakdown',
     image: '/meta-ads/case-studies/cpl.png',
-    metric: { value: 62, prefix: '−', suffix: '%', decimals: 0 },
+    metric: { value: 24, prefix: '€', suffix: 'k', decimals: 0 },
   },
   {
-    slug: 'meta-ads-mrr-multiplier',
     image: '/meta-ads/case-studies/mrr.png',
-    metric: { value: 3.8, prefix: '', suffix: '×', decimals: 1 },
+    metric: { value: 67, prefix: '€', suffix: 'k', decimals: 0 },
   },
   {
-    slug: 'meta-ads-booked-calls',
     image: '/meta-ads/case-studies/calls.png',
-    metric: { value: 212, prefix: '+', suffix: '', decimals: 0 },
+    metric: { value: 11.7, prefix: '€', suffix: 'k', decimals: 1 },
   },
 ]
 
 export function MetaAdsCaseStudies() {
   const t = useTranslations('meta-ads.caseStudies')
   const items = t.raw('items') as CaseStudy[]
-  const ctaLabel = t.has('readBreakdown') ? t('readBreakdown') : 'Read the breakdown →'
+  const ctaLabel = t.has('readBreakdown') ? t('readBreakdown') : 'Start your funnel →'
 
   return (
     <section id="results" className="relative border-t border-foreground/5 px-6 py-24 sm:px-8 lg:py-32 lg:px-16">
@@ -196,15 +191,15 @@ function CaseStudyCard({
 
         <p className="mt-6 text-xs text-foreground/60 md:text-sm">{item.note}</p>
 
-        <Link
-          href={`/blog/${slot.slug}`}
+        <a
+          href="#lead-form"
           className="mt-6 inline-flex items-center gap-2 self-start font-mono text-[10px] uppercase tracking-[0.32em] text-foreground/70 transition-colors hover:text-accent-mint"
         >
           <span>{ctaLabel}</span>
           <span className="transition-transform group-hover:translate-x-1" aria-hidden>
             →
           </span>
-        </Link>
+        </a>
       </div>
     </motion.article>
   )

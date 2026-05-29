@@ -3,9 +3,11 @@ import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { MetaAdsHero } from '@/components/meta-ads/MetaAdsHero'
 import { MetaAdsProblem } from '@/components/meta-ads/MetaAdsProblem'
 import { MetaAdsSolution } from '@/components/meta-ads/MetaAdsSolution'
+import { MetaAdsQualification } from '@/components/meta-ads/MetaAdsQualification'
 import { MetaAdsCaseStudies } from '@/components/meta-ads/MetaAdsCaseStudies'
 import { MetaAdsTestimonials } from '@/components/meta-ads/MetaAdsTestimonials'
 import { MetaAdsOffer } from '@/components/meta-ads/MetaAdsOffer'
+import { MetaAdsPricing } from '@/components/meta-ads/MetaAdsPricing'
 import { MetaAdsFAQ } from '@/components/meta-ads/MetaAdsFAQ'
 import { MetaAdsLeadFormSection } from '@/components/meta-ads/MetaAdsLeadFormSection'
 import { MetaAdsBookingSection } from '@/components/meta-ads/MetaAdsBookingSection'
@@ -33,9 +35,11 @@ export default async function MetaAdsFunnelPage({ params }: PageProps) {
       <MetaAdsHero />
       <MetaAdsProblem />
       <MetaAdsSolution />
+      <MetaAdsQualification />
       <MetaAdsCaseStudies />
       <MetaAdsTestimonials />
       <MetaAdsOffer />
+      <MetaAdsPricing />
       <MetaAdsFAQ />
       <MetaAdsLeadFormSection />
       <MetaAdsBookingSection />
