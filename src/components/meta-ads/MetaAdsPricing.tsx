@@ -22,6 +22,7 @@ export function MetaAdsPricing() {
   const t = useTranslations('meta-ads.pricing')
   const variants = t.raw('variants') as Variant[]
   const roi = t.raw('roi') as RoiItem[]
+  const reassure = t.raw('reassure') as string[]
 
   return (
     <section
@@ -149,8 +150,37 @@ export function MetaAdsPricing() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.15, ease }}
+          className="mt-6 rounded-3xl border border-accent-mint/25 bg-accent-mint/[0.04] p-8 md:p-10"
+        >
+          <div className="flex items-start gap-4">
+            <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent-mint/40 bg-accent-mint/10 text-accent-mint">
+              ✓
+            </span>
+            <div>
+              <h3 className="font-heading text-lg font-bold md:text-xl">{t('guaranteeTitle')}</h3>
+              <p className="mt-3 max-w-2xl text-sm text-foreground/75 md:text-base">{t('guarantee')}</p>
+            </div>
+          </div>
+
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            {reassure.map((item) => (
+              <li key={item} className="flex items-start gap-3 text-sm text-foreground/80 md:text-base">
+                <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-accent-mint/40 bg-accent-mint/10 text-[11px] text-accent-mint">
+                  ✓
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.2, ease }}
-          className="mt-12 rounded-3xl border border-foreground/10 bg-foreground/[0.02] p-8 md:p-10"
+          className="mt-6 rounded-3xl border border-foreground/10 bg-foreground/[0.02] p-8 md:p-10"
         >
           <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
             <h3 className="font-heading text-xl font-bold md:text-2xl">{t('roiTitle')}</h3>
@@ -170,6 +200,24 @@ export function MetaAdsPricing() {
               </div>
             ))}
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.1, ease }}
+          className="mt-14 text-center"
+        >
+          <p className="mx-auto max-w-3xl text-lg font-medium leading-relaxed text-foreground/85 md:text-xl">
+            {t('close')}
+          </p>
+          <a
+            href="#lead-form"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-foreground px-8 text-sm font-semibold text-primary transition-transform hover:scale-[1.02]"
+          >
+            {t('closeCta')}
+          </a>
         </motion.div>
       </div>
     </section>
