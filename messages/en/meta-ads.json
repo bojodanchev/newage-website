@@ -1,145 +1,214 @@
 {
   "meta": {
-    "title": "Meta Ads acquisition systems for businesses that want predictable growth",
-    "description": "We build acquisition systems for service businesses, personal brands, and local businesses. More inquiries. More clients. Higher revenue."
+    "title": "Lead generation systems for mortgage brokers — a predictable flow of qualified clients",
+    "description": "We build a high-converting funnel and acquisition system for mortgage brokers: mortgage, refinancing and home-loan clients who are ready to close. Meta Ads, Google Ads, qualification and lead nurturing."
   },
   "hero": {
-    "eyebrow": "Meta Ads · Funnels · CRM · Automation",
-    "headlineLine1": "More inquiries. More clients.",
-    "headlineLine2": "Higher revenue.",
-    "subheadline": "We help businesses and experts grow inquiries, customers and revenue through Meta Ads systems and automations.",
+    "eyebrow": "Funnel · Meta Ads · Google Ads · CRM · Lead Nurturing",
+    "headlineLine1": "A predictable flow of qualified",
+    "headlineLine2": "mortgage clients.",
+    "subheadline": "We build a high-converting funnel and acquisition system that brings mortgage, refinancing and home-loan clients who are actually ready to close — not payday-loan seekers and tire-kickers.",
     "ctaPrimary": "Book a free strategy call",
     "ctaSecondary": "See how it works",
     "scrollHint": "Scroll to see the system"
   },
   "problem": {
-    "eyebrow": "Why most businesses stay stuck",
-    "title": "Meta Ads don't work when there's no funnel behind them.",
-    "body": "You have a good product, a team, a real offer. What you don't have is a predictable acquisition system. Most businesses lose money not because the service is bad — but because there's nothing converting traffic into qualified, booked calls.",
+    "eyebrow": "Why most mortgage brokers stay stuck",
+    "title": "Good clients arrive by chance. Bad inquiries arrive constantly.",
+    "body": "You know how to close a mortgage. What you don't have is a predictable system that puts ready-to-buy clients in front of you every week. Most brokers don't lose deals because the offer is weak — they lose them because nothing reliably attracts and filters the right people.",
     "items": [
-      { "title": "Not enough clients", "body": "Lead flow is unpredictable. Some weeks busy, some quiet — no system you can scale." },
-      { "title": "Reliance on referrals", "body": "Word of mouth is great until it caps out. There's no second engine." },
-      { "title": "Chaotic marketing", "body": "Random ads, random posts, no offer-to-funnel-to-CRM thread holding it together." },
-      { "title": "Wasted ad spend", "body": "Meta Ads run to a homepage with no clear CTA, no tracking, no follow-up — money in the void." }
+      { "title": "Unpredictable lead flow", "body": "Some weeks the phone rings, some weeks silence. There's no engine you can turn up or down on demand." },
+      { "title": "Bad-fit inquiries", "body": "Low credit scores, payday-loan seekers, no down payment — time burned on people who will never get approved." },
+      { "title": "Dependence on referrals and banks", "body": "Word of mouth and bank desks are great until they dry up. There's no second channel you control." },
+      { "title": "Wasted ad spend", "body": "Boosted posts that run to a phone number, no funnel, no qualification, no follow-up — money into the void." }
     ]
   },
   "solution": {
     "eyebrow": "What we actually build",
-    "title": "A predictable client system, end to end.",
-    "body": "Meta Ads, landing page, lead funnel, conversion optimization and automation — wired together so each booked call has a paper trail from impression to revenue.",
+    "title": "Attract, filter, nurture, close — one system.",
+    "body": "A high-converting funnel wired to Meta and Google Ads, an automatic qualification layer, and a nurturing system — so every euro of ad spend has a paper trail from impression to a closed mortgage deal.",
     "steps": [
-      { "stage": "TOFU", "label": "Attention", "title": "Meta Ads that stop the scroll", "body": "Founder videos, pain-based hooks, case-study creatives — tested in tight cohorts, scaled when CPL drops." },
-      { "stage": "MOFU", "label": "Conviction", "title": "Landing page that converts", "body": "Hero, problem, solution, case studies, offer, FAQ, CTA — every section earns its place, every CTA goes to a booked call." },
-      { "stage": "BOFU", "label": "Conversion", "title": "Call funnel that closes", "body": "Qualification, problem diagnosis, vision, solution, offer close — a repeatable conversation that turns calls into clients." }
+      { "stage": "ATTRACT", "label": "Reach", "title": "Ads that reach ready buyers", "body": "Meta and Google Ads with pain-based hooks, video concepts and retargeting — tested in tight cohorts, scaled when cost per lead drops." },
+      { "stage": "FILTER", "label": "Qualify", "title": "A funnel that filters quality", "body": "Landing pages, qualification forms and trust elements that separate ready, well-prepared clients from the rest before they ever reach you." },
+      { "stage": "CLOSE", "label": "Nurture", "title": "Follow-up that closes deals", "body": "Automated email and SMS follow-up, remarketing and useful content that builds trust and turns qualified leads into signed deals." }
+    ]
+  },
+  "qualification": {
+    "eyebrow": "The filtering system",
+    "title": "We only send you clients worth your time.",
+    "body": "A qualification process runs on every inquiry and automatically sorts leads by readiness — so your hours go to deals that can actually close.",
+    "targetTitle": "Who we bring you",
+    "target": [
+      "Want a mortgage",
+      "Looking to buy a home",
+      "Want to refinance an existing loan",
+      "Good credit history",
+      "Stable income",
+      "Have a down payment",
+      "Ready for a real deal"
+    ],
+    "excludeTitle": "Who we filter out",
+    "exclude": [
+      "Payday-loan seekers",
+      "Low credit score",
+      "Unrealistic inquiries",
+      "Clients with no financial preparation"
+    ],
+    "tiersTitle": "Every lead, automatically scored",
+    "tiers": [
+      { "level": "High priority", "title": "Ready to close", "items": ["Good income", "Good credit history", "Has a down payment", "Real readiness for a deal"] },
+      { "level": "Medium priority", "title": "Needs a nudge", "items": ["Needs extra consultation", "Partial readiness"] },
+      { "level": "Low priority", "title": "Low fit", "items": ["Poor credit profile", "Unrealistic expectations", "Low chance of approval"] }
     ]
   },
   "caseStudies": {
     "eyebrow": "Selected results",
-    "title": "Numbers that move when the system runs.",
-    "body": "Indicative results from acquisition systems we've architected. Replace these with your own once your case studies are in.",
-    "readBreakdown": "Read the breakdown →",
+    "title": "Systems we've built, numbers they produced.",
+    "body": "Real results from funnels and acquisition systems we've architected across industries — the same playbook we apply to mortgage and home-loan brokers.",
+    "readBreakdown": "Start your funnel →",
     "items": [
-      { "client": "Service Agency · B2B", "metric": "−62%", "metricLabel": "Cost per lead", "before": "€84 CPL · 12 leads/mo", "after": "€32 CPL · 47 leads/mo", "note": "Pain-based creatives + tightened landing page hero." },
-      { "client": "Local Aesthetics Clinic", "metric": "3.8×", "metricLabel": "Monthly revenue", "before": "€18k MRR · referral-only", "after": "€69k MRR · Meta + Calendly", "note": "Funnel + booking automation + GHL follow-up." },
-      { "client": "High-Ticket Coach", "metric": "+212", "metricLabel": "Booked strategy calls", "before": "Sporadic DM bookings", "after": "212 booked calls in 90 days", "note": "Authority creatives + qualified call funnel." }
+      { "client": "Bio Empire · E-commerce", "metric": "€24k", "metricLabel": "Revenue in 12 months", "before": "No online sales system", "after": "800 clients · €24k revenue", "note": "Website, sales funnel, SEO blog and audience-retention system. Ad spend €4,530." },
+      { "client": "Private real-estate business", "metric": "€67k", "metricLabel": "Revenue in 8 months", "before": "Referral-only deals", "after": "200 closed deals · €67k", "note": "150 rental + 50 owner deals. Ad spend €12,467, profit split 50/50." },
+      { "client": "Tabata & nutrition coach", "metric": "€11.7k", "metricLabel": "Revenue in 3 months", "before": "Manual DM sales", "after": "25 new clients · €11.7k", "note": "Website, sales funnel, automated sales process and social support. Ad spend €2,460." }
     ]
   },
   "testimonials": {
     "eyebrow": "Voices from the work",
     "title": "Operators who stopped relying on luck.",
-    "body": "Three operators, three industries, one acquisition stack underneath.",
+    "body": "Different industries, one acquisition system underneath — the same one we build for mortgage brokers.",
     "items": [
       {
-        "name": "Iva",
-        "role": "Co-founder · B2B service agency",
-        "city": "Sofia",
-        "quote": "Within sixty days we knew which channel was paying for itself. The funnel and the dashboard turned guesswork into a P&L line we could defend.",
-        "metric": "−62% CPL",
+        "name": "Bio Empire",
+        "role": "E-commerce brand",
+        "city": "12-month build",
+        "quote": "They built the website, the funnel and the SEO engine from scratch. 800 clients and €24k in revenue later, we finally have a system instead of guesswork.",
+        "metric": "800 clients",
         "image": "/meta-ads/testimonials/iva.png"
       },
       {
-        "name": "Mariya",
-        "role": "Owner · aesthetic clinic",
-        "city": "Plovdiv",
-        "quote": "We stopped depending on word-of-mouth weeks. The calendar finally shows steady growth instead of gaps, and the team can plan the floor around it.",
-        "metric": "3.8× revenue",
+        "name": "Real-estate agency",
+        "role": "Sales & rentals",
+        "city": "8-month partnership",
+        "quote": "200 closed deals in eight months and a steady pipeline we can plan around. The lead filtering meant we only spent time on people ready to move.",
+        "metric": "€67k revenue",
         "image": "/meta-ads/testimonials/mariya.png"
       },
       {
-        "name": "Pavel",
-        "role": "Performance coach · high-ticket programs",
-        "city": "Vienna",
-        "quote": "The call funnel filters out tire-kickers before they ever hit my calendar. I show up to qualified conversations only — that's what changed everything.",
-        "metric": "+212 calls",
+        "name": "Performance coach",
+        "role": "Tabata & nutrition",
+        "city": "3-month build",
+        "quote": "25 new clients and €11.7k in three months from an automated sales process. I show up to qualified conversations only — that changed everything.",
+        "metric": "+25 clients",
         "image": "/meta-ads/testimonials/pavel.png"
       }
     ]
   },
   "offer": {
     "eyebrow": "What you get",
-    "title": "We own the full acquisition stack.",
-    "body": "Six modules, one accountable team. No agency-of-record overhead, no scope ping-pong.",
+    "title": "The full acquisition stack for your brokerage.",
+    "body": "Everything needed to turn ad spend into signed mortgage deals — built, managed and optimized by one accountable team.",
     "modules": [
-      { "letter": "A", "title": "Funnel strategy", "body": "Offer, positioning, angle, CTA, lead flow." },
-      { "letter": "B", "title": "Website / landing page", "body": "High-converting LP, mobile optimization, booking and form optimization." },
-      { "letter": "C", "title": "Meta Ads", "body": "Campaign setup, creatives, copy, retargeting, optimization." },
-      { "letter": "D", "title": "Lead management", "body": "CRM, automation, follow-up, qualification." },
-      { "letter": "E", "title": "Scaling", "body": "KPI tracking, CAC optimization, ROAS scaling." },
-      { "letter": "F", "title": "AI layer", "body": "Lead scoring, auto-qualification, automated follow-up drafts." }
+      { "letter": "A", "title": "Funnel & landing pages", "body": "High-converting funnel, landing pages, qualification forms, CTA and trust elements, Meta & Google pixel, CRM logic." },
+      { "letter": "B", "title": "Ad management", "body": "Daily Meta Ads and Google Ads management — budget, audiences, creative testing and scaling of what works." },
+      { "letter": "C", "title": "Creatives & content", "body": "Ad visuals, video concepts, copywriting, hooks, retargeting ads and lead-magnet content." },
+      { "letter": "D", "title": "Lead qualification", "body": "An automatic process that sorts every inquiry into high, medium and low priority." },
+      { "letter": "E", "title": "Lead nurturing", "body": "Automated follow-up, email, SMS, remarketing, informational content and useful resources." },
+      { "letter": "F", "title": "CRM & automation", "body": "Lead capture, scoring, KPI tracking and follow-up automation that keeps the pipeline moving." }
     ],
     "process": {
-      "title": "How the engagement runs",
+      "title": "How we get started",
       "steps": [
-        { "label": "Week 0–1", "title": "Foundation", "body": "Offer, positioning, tracking, CRM, landing page draft." },
-        { "label": "Week 1–2", "title": "Creative production", "body": "5–10 ad creatives — founder, case-study, pain, authority." },
-        { "label": "Week 2–3", "title": "Campaign launch", "body": "Cold testing, retargeting, live KPI dashboard." },
-        { "label": "Week 3+", "title": "Optimize and scale", "body": "Kill weak creatives, scale winners, optimize funnel CVR." }
+        { "label": "Step 1", "title": "Strategy", "body": "We map the offer, positioning, audiences and qualification criteria." },
+        { "label": "Step 2", "title": "Build the funnel", "body": "Landing pages, forms, tracking, CRM and nurturing flows." },
+        { "label": "Step 3", "title": "Launch ads", "body": "Meta and Google campaigns go live with creatives and retargeting." },
+        { "label": "Step 4", "title": "Optimize & scale", "body": "Daily optimization, kill weak creatives, scale the winners." }
       ]
     }
+  },
+  "pricing": {
+    "eyebrow": "Investment & partnership",
+    "title": "Two ways to start. Both share the upside.",
+    "body": "The real value of the service is €1,500 — €1,000 build & management plus €500 ad budget. Choose the model that fits how you want to share the risk.",
+    "valueNote": "Real value €1,500 · €1,000 build & management + €500 ad budget",
+    "cta": "Start with this option",
+    "variants": [
+      {
+        "tag": "Option 1 · 50 / 50",
+        "title": "You cover the start, then we split 50/50",
+        "price": "€1,000",
+        "priceNote": "one-time to start",
+        "points": [
+          "€500 to the ad platforms",
+          "€500 to us",
+          "Then every deal is split 50/50",
+          "Half price — we work at 50% of the real value because we trust the results"
+        ]
+      },
+      {
+        "tag": "Option 2 · 75 / 25",
+        "title": "We take the risk, then we split 75/25",
+        "price": "€0",
+        "priceNote": "no upfront from you",
+        "points": [
+          "We cover the ad budget",
+          "We build the system",
+          "We launch the project entirely at our own risk",
+          "First revenue covers €1,000 for our work + €500 ad budget",
+          "After that the profit is split: 75% us / 25% you"
+        ]
+      }
+    ],
+    "roiTitle": "What one deal can do",
+    "roiBody": "Average mortgage deal: €100,000.",
+    "roi": [
+      { "k": "1 client", "v": "Investment recovered" },
+      { "k": "2+ clients", "v": "Campaign already in profit" },
+      { "k": "3–5–10+ / month", "v": "A predictable, highly profitable flow" }
+    ]
   },
   "faq": {
     "eyebrow": "Common questions",
     "title": "Honest answers before the call.",
     "items": [
-      { "q": "How much does it cost?", "a": "Engagements start at €3.5k/month management + a one-time foundation fee for landing page, tracking and CRM. Ad spend is separate and stays in your account." },
-      { "q": "How long until we see results?", "a": "First booked calls usually land in week 2–3. Stable CPL and predictable lead flow typically settles by week 4–6 once we have enough data to optimize." },
-      { "q": "Do you guarantee results?", "a": "We guarantee the process and the system. We don't guarantee specific numbers — anyone who does is misleading you. We do offer a 60-day work-with-us-until-it-works window for qualified accounts." },
-      { "q": "Who owns the ad account, pixel, CRM?", "a": "You do. Always. We work inside your assets. If we part ways, everything stays with you." },
-      { "q": "How do we communicate?", "a": "Async via Slack or Telegram, weekly live calls, monthly KPI review. You get a live dashboard for CPL, CVR, CAC, ROAS." },
-      { "q": "Do you work with our industry?", "a": "Service businesses, personal brands, local businesses, high-ticket experts. If you have a real offer and capacity to fulfill — we can probably help. If you're pre-product, we're not the right fit." }
+      { "q": "How much does it cost?", "a": "The real value is €1,500 (€1,000 build & management + €500 ad budget). We offer two partnership models: Option 1 — you start with €1,000 and we split deals 50/50; Option 2 — no upfront from you, we take the risk and split 75/25 after the first revenue covers our costs." },
+      { "q": "What kind of clients do you bring?", "a": "Only qualified ones: people who want a mortgage, are looking to buy or refinance, have good credit, stable income and a down payment, and are ready for a real deal. We deliberately filter out payday-loan seekers, low credit scores and unrealistic inquiries." },
+      { "q": "How long until we see results?", "a": "First qualified leads usually land in the first weeks. A stable, predictable flow settles once we have enough ad data to optimize audiences and creatives." },
+      { "q": "Who owns the ad account, pixel and CRM?", "a": "You do. Always. We build and work inside your assets — if we part ways, everything stays with you." },
+      { "q": "Which platforms do you run?", "a": "Meta Ads (Facebook & Instagram) and Google Ads, managed and optimized daily, with retargeting across both." },
+      { "q": "Do you guarantee results?", "a": "We guarantee the process and the system, and we share the risk with you through the partnership models. Anyone who promises exact numbers up front is misleading you — we put skin in the game instead." }
     ]
   },
   "finalCta": {
     "eyebrow": "Next step",
-    "title": "Predictable growth starts with one call.",
-    "body": "30 minutes. We audit your current funnel and tell you exactly what would move the needle first — whether you work with us or not.",
+    "title": "A predictable flow of mortgage clients starts with one call.",
+    "body": "30 minutes. We map your offer, your ideal client and the fastest path to a qualified pipeline — and you leave with a plan whether we work together or not.",
     "ctaPrimary": "Book a free strategy call",
     "ctaSecondary": "Send a quick message",
-    "trust": "No deck. No pitch. A working audit you can keep."
+    "trust": "No deck. No pitch. A working plan you can keep."
   },
   "leadForm": {
-    "title": "Get a free funnel audit",
-    "body": "Tell us about your business. We'll come back within 24 hours with a written audit of your acquisition system and the highest-leverage fix.",
+    "title": "Get your free funnel & lead strategy",
+    "body": "Tell us about your brokerage. We'll come back within 24 hours with a plan for a predictable flow of qualified mortgage clients.",
     "fields": {
       "name": "Full name",
-      "email": "Work email",
-      "company": "Company",
+      "email": "Email",
+      "company": "Company / brokerage",
       "website": "Current website (optional)",
       "monthlyRevenue": "Approx. monthly revenue",
-      "monthlyAdSpend": "Approx. monthly ad spend",
-      "biggestBottleneck": "Biggest bottleneck right now"
+      "monthlyAdSpend": "Current monthly ad spend",
+      "biggestBottleneck": "Your biggest challenge in getting clients"
     },
     "revenueOptions": ["< €5k", "€5–25k", "€25–100k", "€100k+"],
     "spendOptions": ["€0", "< €1k", "€1–5k", "€5–15k", "€15k+"],
-    "submit": "Send my audit request",
+    "submit": "Send my request",
     "submitting": "Sending…",
-    "success": "Got it. Audit on the way within 24 hours.",
+    "success": "Got it. Your strategy is on the way within 24 hours.",
     "error": "Something went wrong. Try again or email us at hello@newagecontent.com.",
-    "consent": "By submitting, you agree to be contacted about your funnel audit."
+    "consent": "By submitting, you agree to be contacted about your lead-generation strategy."
   },
   "booking": {
     "title": "Or book the call directly",
-    "body": "Pick a 30-minute slot that works for you. Free audit, no pitch deck.",
+    "body": "Pick a 30-minute slot that works for you. Free strategy session, no pitch deck.",
     "fallback": "Calendly isn't connected yet. Use the form on this page or email hello@newagecontent.com to book your call."
   }
 }
