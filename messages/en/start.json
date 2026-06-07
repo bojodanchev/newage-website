@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Get More Customers — Without the Confusion",
+    "description": "We help local businesses get a steady flow of new customers from the internet — without you learning anything technical. We handle everything. Book a free 20-minute call."
+  },
+  "nav": {
+    "cta": "Free call"
+  },
+  "hero": {
+    "eyebrow": "For local businesses",
+    "headlineLine1": "Get More Customers.",
+    "headlineLine2": "Without the Confusion.",
+    "subheadline": "We help local businesses like yours get a steady flow of new customers from the internet — without you needing to learn anything technical. We handle everything.",
+    "ctaPrimary": "Get a free discovery call",
+    "ctaSecondary": "See how it works",
+    "trust": "No obligation. No tech talk. Just a simple conversation about your business."
+  },
+  "problem": {
+    "eyebrow": "Sound familiar?",
+    "title": "Does any of this sound familiar?",
+    "items": [
+      {
+        "pain": "You're great at what you do — but new customers are hard to find.",
+        "note": "We've heard this hundreds of times. It's not your fault."
+      },
+      {
+        "pain": "You have no idea where to start with the internet.",
+        "note": "That's normal — nobody is born knowing this stuff."
+      },
+      {
+        "pain": "You tried ads before and just burned money.",
+        "note": "Usually the problem wasn't you — it was who set them up."
+      },
+      {
+        "pain": "Your competitors seem to be everywhere online, and you're not.",
+        "note": "That's easier to change than you think."
+      },
+      {
+        "pain": "You don't have time to learn all this — you have a business to run.",
+        "note": "Exactly why we handle every part of it for you."
+      }
+    ],
+    "empathy": "We've heard this hundreds of times. It's not your fault — most agencies make this way too complicated."
+  },
+  "steps": {
+    "eyebrow": "The simple system",
+    "title": "Here's what we actually do for you",
+    "intro": "Four simple steps. We handle every one — you just answer the phone.",
+    "items": [
+      {
+        "title": "We build your website",
+        "desc": "A professional website that actually works — not just looks pretty."
+      },
+      {
+        "title": "We bring you traffic",
+        "desc": "We run ads on Facebook, Instagram, and Google so people find you."
+      },
+      {
+        "title": "We capture interest",
+        "desc": "We catch every interested person and check they're ready to buy."
+      },
+      {
+        "title": "We deliver leads",
+        "desc": "Real people, ready to become your customers — straight to your phone."
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "Real results",
+    "title": "Local businesses, real growth",
+    "stats": [
+      {
+        "value": "3 → 47",
+        "label": "leads per month in 60 days"
+      },
+      {
+        "value": "60 days",
+        "label": "to see real results"
+      },
+      {
+        "value": "100+",
+        "label": "local businesses served"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "I'd tried ads before and just threw money away. With New Age my phone hasn't stopped in two months.",
+        "name": "James",
+        "role": "Plumber, Manchester",
+        "metric": "+38 leads / month"
+      },
+      {
+        "quote": "I don't understand the internet and I don't want to. They handle everything — I just answer the phone.",
+        "name": "Sofia",
+        "role": "Beauty salon, Leeds",
+        "metric": "Fully booked"
+      },
+      {
+        "quote": "For the first time I can see exactly where my customers come from. Clear, simple, and it works.",
+        "name": "George",
+        "role": "Haulage company, Birmingham",
+        "metric": "3× more enquiries"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "What's included",
+    "title": "What's included — plain and simple",
+    "items": [
+      {
+        "title": "Your website",
+        "desc": "A professional website that works on mobile and loads fast."
+      },
+      {
+        "title": "Your ads",
+        "desc": "We create and run ads that bring people to you (Facebook + Google)."
+      },
+      {
+        "title": "Lead capture",
+        "desc": "A smart form and phone system that catches every interested person."
+      },
+      {
+        "title": "Lead delivery",
+        "desc": "We send you ready-to-talk customers directly to your phone."
+      },
+      {
+        "title": "Monthly report",
+        "desc": "A simple report showing exactly what you're getting for your money."
+      }
+    ],
+    "note": "Starting from less than the price of a single new customer — and most clients earn back their investment in the first 30 days. Let's build a plan that fits your budget."
+  },
+  "leadSection": {
+    "eyebrow": "Let's talk",
+    "title": "Start getting more customers",
+    "subtitle": "Book a free 20-minute call. We'll look at your business and show you a simple plan to get more customers — no jargon, no pressure.",
+    "bullets": [
+      "No obligation and no pressure",
+      "No tech talk — just plain language",
+      "A clear plan you can act on right away"
+    ],
+    "formTitle": "Book your free 20-minute call"
+  },
+  "leadForm": {
+    "fields": {
+      "name": "Your name",
+      "phone": "Phone number",
+      "businessType": "What's your business?",
+      "biggestChallenge": "What's your biggest challenge right now?",
+      "preferredTime": "Best time to call you"
+    },
+    "placeholders": {
+      "businessType": "e.g. plumber, restaurant, salon, haulage",
+      "biggestChallenge": "Tell us what you'd most like to fix",
+      "preferredTime": "e.g. weekday mornings"
+    },
+    "consent": "By submitting, you agree we may contact you about your enquiry. We never share your details.",
+    "submit": "Book my free call",
+    "submitting": "Sending…",
+    "success": "Got it — we'll call you soon!",
+    "successSub": "We'll reach out at the time you suggested to set up your free call.",
+    "error": "Something went wrong. Please try again, or call us directly."
+  },
+  "finalCta": {
+    "title": "More customers start with one simple conversation",
+    "subtitle": "No obligation. No tech talk. Just a friendly chat about your business and how to grow it.",
+    "cta": "Book a free 20-min call",
+    "microcopy": "We reply fast — usually the same day."
+  },
+  "footer": {
+    "tagline": "We help local businesses get a steady flow of new customers from the internet.",
+    "fullSite": "Explore the full New Age site"
+  }
+}

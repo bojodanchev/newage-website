@@ -7,6 +7,11 @@
   --color-accent-purple: #6C3AFF;
   --color-accent-mint: #00E5A0;
   --color-accent-orange: #FF6B35;
+
+  /* Tier accents — 3-tier conversion system (start/grow/scale) */
+  --color-tier-green: #1A7A3C;
+  --color-tier-blue: #1A56FF;
+  --color-tier-gold: #FFB800;
   --color-neutral-900: #0A0A0A;
   --color-neutral-800: #1A1A2E;
   --color-neutral-700: #2D2D44;
@@ -224,6 +229,101 @@
 
 @utility animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* ── 3-Tier conversion theming ───────────────────────────────────────────
+   Each tier page sets a `.tier-*` class on its root. The CSS variables below
+   cascade into the tier-aware utilities so the SAME components render in the
+   tier's color (green = beginner/start, blue = intermediate/grow,
+   gold = pro/scale). Dark-first base is preserved across all tiers. */
+.tier-start {
+  --tier-from: #34D17A;
+  --tier-to: #1A7A3C;
+  --tier-accent: #2FB465;
+  --tier-accent-strong: #1A7A3C;
+  --tier-on-accent: #04130A;
+  --tier-glow: rgba(47, 180, 101, 0.32);
+  --tier-tint: rgba(47, 180, 101, 0.10);
+  --tier-ring: rgba(47, 180, 101, 0.38);
+}
+.tier-grow {
+  --tier-from: #5B9BFF;
+  --tier-to: #1A56FF;
+  --tier-accent: #3B82F6;
+  --tier-accent-strong: #1A56FF;
+  --tier-on-accent: #ffffff;
+  --tier-glow: rgba(37, 99, 235, 0.32);
+  --tier-tint: rgba(37, 99, 235, 0.10);
+  --tier-ring: rgba(59, 130, 246, 0.38);
+}
+.tier-scale {
+  --tier-from: #FFD968;
+  --tier-to: #D99700;
+  --tier-accent: #FFB800;
+  --tier-accent-strong: #E0A100;
+  --tier-on-accent: #150E00;
+  --tier-glow: rgba(255, 184, 0, 0.26);
+  --tier-tint: rgba(255, 184, 0, 0.08);
+  --tier-ring: rgba(255, 184, 0, 0.36);
+}
+
+@utility tier-grad-text {
+  background: linear-gradient(135deg, var(--tier-from), var(--tier-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-block: 0.1em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+@utility tier-accent-text {
+  color: var(--tier-accent);
+}
+
+@utility tier-cta {
+  background: var(--tier-accent);
+  color: var(--tier-on-accent);
+}
+
+@utility tier-cta-grad {
+  background: linear-gradient(120deg, var(--tier-from), var(--tier-to));
+  color: var(--tier-on-accent);
+}
+
+@utility tier-glow {
+  box-shadow: 0 0 44px var(--tier-glow);
+}
+
+@utility tier-ring {
+  border: 1px solid var(--tier-ring);
+}
+
+@utility tier-tint-bg {
+  background: var(--tier-tint);
+}
+
+@utility tier-chip {
+  background: var(--tier-tint);
+  border: 1px solid var(--tier-ring);
+  color: var(--tier-accent);
+}
+
+@utility tier-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--tier-ring), transparent);
+  }
 }
 
 /* Reduced motion */

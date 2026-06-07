@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "title": "Fix Your Funnel, Lower Your Cost-Per-Lead",
+    "description": "You're already running ads — but leads slip through the gap between attention and conversion. We build full-funnel growth systems: ads, landing pages, qualification, nurture, and CRM. Get a free funnel audit."
+  },
+  "nav": {
+    "cta": "Free audit"
+  },
+  "hero": {
+    "eyebrow": "For businesses already running ads",
+    "headlineLine1": "Your Ads Are Running.",
+    "headlineLine2": "Your Pipeline Isn't.",
+    "subheadline": "Most businesses at your stage are generating interest — but losing leads in the gap between attention and conversion. We close that gap with a full-funnel system: ads, landing pages, lead qualification, nurturing, and CRM integration.",
+    "ctaPrimary": "Request a free funnel audit",
+    "ctaSecondary": "See the growth system",
+    "trust": "Takes 20 minutes. We map your funnel, find the gaps, show you the fix. Zero obligation."
+  },
+  "problem": {
+    "eyebrow": "The growth plateau",
+    "title": "The growth plateau is real. Here's what's causing it.",
+    "items": [
+      {
+        "pain": "Leads come in but don't convert.",
+        "note": "No nurture system means interest cools before it turns into revenue."
+      },
+      {
+        "pain": "Ad spend is rising but cost-per-lead isn't improving.",
+        "note": "You're paying more to fill a leaky funnel instead of fixing the leaks."
+      },
+      {
+        "pain": "You run Facebook AND Google, but they aren't coordinated.",
+        "note": "Two channels working against each other waste budget and muddy your data."
+      },
+      {
+        "pain": "No clear attribution — you don't know which channel actually works.",
+        "note": "Without attribution you're optimizing blind and scaling the wrong things."
+      },
+      {
+        "pain": "Your team follows up manually — inefficient and inconsistent.",
+        "note": "Hot leads go cold while follow-up sits in someone's inbox."
+      }
+    ],
+    "empathy": "You don't have a traffic problem — you have a conversion problem. The fix isn't more spend, it's a system that captures, qualifies, and converts what you're already paying for."
+  },
+  "funnel": {
+    "eyebrow": "The growth system",
+    "title": "Our full-funnel growth architecture",
+    "intro": "Five connected layers that turn ad clicks into pipeline. Each layer plugs the leak the one above it creates.",
+    "layers": [
+      {
+        "title": "Paid Traffic",
+        "desc": "Meta + Google Ads, coordinated — not two disconnected campaigns competing for the same budget."
+      },
+      {
+        "title": "Landing Pages",
+        "desc": "High-converting, A/B tested, mobile-optimized pages built to turn clicks into qualified leads."
+      },
+      {
+        "title": "Lead Qualification",
+        "desc": "Smart forms plus call qualification flows that filter for fit before a lead reaches your team."
+      },
+      {
+        "title": "Lead Nurturing",
+        "desc": "Email sequences, SMS, and retargeting that keep you top of mind until the lead is ready to buy."
+      },
+      {
+        "title": "CRM Integration",
+        "desc": "Leads auto-enter your pipeline with full context — nothing slips through the cracks."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "What's included",
+    "title": "Everything in the growth system",
+    "items": [
+      {
+        "title": "Website & landing page optimization",
+        "desc": "Conversion-focused pages, continuously A/B tested to lift your lead-to-customer rate."
+      },
+      {
+        "title": "Meta Ads management",
+        "desc": "Advanced targeting, lookalike audiences, and retargeting that lowers cost-per-lead over time."
+      },
+      {
+        "title": "Google Ads",
+        "desc": "Search, Display, and Performance Max campaigns to capture demand across the whole journey."
+      },
+      {
+        "title": "Lead qualification system",
+        "desc": "Smart forms and call flows that pre-qualify leads so your team only talks to real buyers."
+      },
+      {
+        "title": "Email & SMS nurture sequences",
+        "desc": "Automated follow-up that nurtures every lead until they're ready — no manual chasing."
+      },
+      {
+        "title": "CRM setup & integration",
+        "desc": "Your own branded pipeline so every lead is tracked, scored, and accounted for."
+      }
+    ],
+    "note": "Monthly strategy call + performance dashboard included. Add-ons: your own CRM, AI-powered follow-up automation (instant 24/7 response), phone campaign management, and campaign A/B testing."
+  },
+  "methodology": {
+    "eyebrow": "Why us",
+    "title": "Why our system outperforms standard agency approaches",
+    "points": [
+      "We don't just run ads — we own the entire lead journey, from first click to closed deal.",
+      "Proprietary qualification — we pre-sell leads before they reach you, so your team closes warm.",
+      "Multi-channel attribution so you know exactly what's working and where to put the next dollar.",
+      "Monthly optimization cycles backed by data, not guesses — every change is measured against results."
+    ]
+  },
+  "proof": {
+    "eyebrow": "Results, not promises",
+    "title": "Results, not promises",
+    "stats": [
+      {
+        "value": "-42%",
+        "label": "cost per lead in 90 days"
+      },
+      {
+        "value": "2.4×",
+        "label": "lead-to-customer rate"
+      },
+      {
+        "value": "100%",
+        "label": "attribution clarity"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "We were spending more every month and getting the same number of leads. New Age rebuilt our funnel and our cost-per-lead dropped by nearly half in a quarter.",
+        "name": "Daniel R.",
+        "role": "Founder, B2B SaaS",
+        "metric": "-42% cost per lead"
+      },
+      {
+        "quote": "The qualification system was the game-changer. Our sales team stopped wasting time on tire-kickers and our close rate more than doubled.",
+        "name": "Elena M.",
+        "role": "Head of Growth, Home Services",
+        "metric": "2.4× lead-to-customer rate"
+      },
+      {
+        "quote": "For the first time we can see exactly which channel drives revenue. We cut what wasn't working and doubled down on what was.",
+        "name": "Marcus T.",
+        "role": "Marketing Director, eCommerce",
+        "metric": "Full-funnel attribution"
+      }
+    ]
+  },
+  "leadSection": {
+    "eyebrow": "Free funnel audit",
+    "title": "Get a free funnel audit",
+    "subtitle": "We'll map your current funnel, find exactly where you're losing money, and show you what a fixed system looks like. 20 minutes, zero obligation.",
+    "bullets": [
+      "A clear map of your current funnel",
+      "The specific gaps costing you leads",
+      "A clear picture of the fixed system"
+    ],
+    "formTitle": "Request your free funnel audit"
+  },
+  "leadForm": {
+    "fields": {
+      "company": "Company",
+      "name": "Your name",
+      "email": "Work email",
+      "phone": "Phone number",
+      "monthlyAdBudget": "Monthly ad budget",
+      "currentSituation": "What does your current funnel look like?",
+      "preferredTime": "Best time to reach you"
+    },
+    "placeholders": {
+      "company": "Your company name",
+      "currentSituation": "Tell us what you're running now and where you think leads are slipping",
+      "preferredTime": "e.g. weekday afternoons"
+    },
+    "budgetOptions": [
+      "Under $1k/mo",
+      "$1k–$3k/mo",
+      "$3k–$10k/mo",
+      "$10k+/mo"
+    ],
+    "consent": "By submitting, you agree we may contact you about your enquiry. We never share your details.",
+    "submit": "Request my free audit",
+    "submitting": "Sending…",
+    "success": "Audit requested — we're on it.",
+    "successSub": "We'll reach out at the time you suggested to walk you through your funnel map and the gaps we find.",
+    "error": "Something went wrong. Please try again, or contact us directly."
+  },
+  "finalCta": {
+    "title": "Stop losing leads in the gap.",
+    "subtitle": "You're already paying for the traffic. Let's build the system that actually converts it into pipeline.",
+    "cta": "Get my free funnel audit",
+    "microcopy": "20 minutes, zero obligation. We reply fast — usually the same day."
+  },
+  "footer": {
+    "tagline": "We build full-funnel growth systems that turn ad spend into predictable pipeline.",
+    "fullSite": "Explore the full New Age site"
+  }
+}

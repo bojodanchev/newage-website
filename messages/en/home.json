@@ -8,6 +8,34 @@
       "secondary": "See Our Work"
     }
   },
+  "pathPicker": {
+    "eyebrow": "Find your path",
+    "title": "Which one fits you right now?",
+    "subtitle": "Every business is at a different stage. Pick the one that sounds like you — we'll meet you exactly where you are.",
+    "cards": [
+      {
+        "key": "start",
+        "badge": "Just starting out",
+        "title": "Start",
+        "desc": "You need more customers and you're not sure where to begin. We make it simple and handle everything for you.",
+        "cta": "Get more customers"
+      },
+      {
+        "key": "grow",
+        "badge": "Growing & optimizing",
+        "title": "Grow",
+        "desc": "You already run some marketing but want better results and a real system that turns ad spend into pipeline.",
+        "cta": "Fix my funnel"
+      },
+      {
+        "key": "scale",
+        "badge": "Scaling at enterprise level",
+        "title": "Scale",
+        "desc": "You need custom infrastructure, AI automation, and a strategic growth partner — not another vendor.",
+        "cta": "Build my growth engine"
+      }
+    ]
+  },
   "logoBar": {
     "trustedBy": "Trusted by forward-thinking companies",
     "clients": {
