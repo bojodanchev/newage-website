@@ -1,49 +1,32 @@
-import type { Metadata } from 'next'
-import { setRequestLocale, getTranslations } from 'next-intl/server'
-import { MetaAdsHero } from '@/components/meta-ads/MetaAdsHero'
-import { MetaAdsProblem } from '@/components/meta-ads/MetaAdsProblem'
-import { MetaAdsSolution } from '@/components/meta-ads/MetaAdsSolution'
-import { MetaAdsQualification } from '@/components/meta-ads/MetaAdsQualification'
-import { MetaAdsCaseStudies } from '@/components/meta-ads/MetaAdsCaseStudies'
-import { MetaAdsTestimonials } from '@/components/meta-ads/MetaAdsTestimonials'
-import { MetaAdsOffer } from '@/components/meta-ads/MetaAdsOffer'
-import { MetaAdsPricing } from '@/components/meta-ads/MetaAdsPricing'
-import { MetaAdsFAQ } from '@/components/meta-ads/MetaAdsFAQ'
-import { MetaAdsLeadFormSection } from '@/components/meta-ads/MetaAdsLeadFormSection'
-import { MetaAdsBookingSection } from '@/components/meta-ads/MetaAdsBookingSection'
-import { MetaAdsFinalCTA } from '@/components/meta-ads/MetaAdsFinalCTA'
+import { permanentRedirect } from 'next/navigation'
+import { routing } from '@/i18n/routing'
+
+// Force dynamic so permanentRedirect emits a real HTTP 308 (not a prerendered
+// meta-refresh, which would drop ad tracking query params like fbclid/utm).
+export const dynamic = 'force-dynamic'
 
 interface PageProps {
   params: Promise<{ locale: string }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+/**
+ * Legacy funnel path. The mortgage-broker funnel moved to `/banking`; this
+ * permanently redirects (308) so existing ad links keep working — preserving
+ * any query string. Locale-aware: EN (default, no prefix) → /banking,
+ * BG → /bg/banking.
+ */
+export default async function MetaAdsRedirect({ params, searchParams }: PageProps) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'meta-ads.meta' })
-  return {
-    title: t('title'),
-    description: t('description'),
+  const sp = await searchParams
+
+  const qs = new URLSearchParams()
+  for (const [key, value] of Object.entries(sp)) {
+    if (Array.isArray(value)) value.forEach((v) => qs.append(key, v))
+    else if (value != null) qs.set(key, value)
   }
-}
 
-export default async function MetaAdsFunnelPage({ params }: PageProps) {
-  const { locale } = await params
-  setRequestLocale(locale)
-
-  return (
-    <>
-      <MetaAdsHero />
-      <MetaAdsProblem />
-      <MetaAdsSolution />
-      <MetaAdsQualification />
-      <MetaAdsCaseStudies />
-      <MetaAdsTestimonials />
-      <MetaAdsOffer />
-      <MetaAdsPricing />
-      <MetaAdsFAQ />
-      <MetaAdsLeadFormSection />
-      <MetaAdsBookingSection />
-      <MetaAdsFinalCTA />
-    </>
-  )
+  const base = locale === routing.defaultLocale ? '/banking' : `/${locale}/banking`
+  const query = qs.toString()
+  permanentRedirect(query ? `${base}?${query}` : base)
 }

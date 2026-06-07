@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import { SITE } from '@/lib/constants'
 import { organizationSchema } from '@/lib/structured-data'
 import { HeroSection } from '@/components/features/home/HeroSection'
+import { TierPicker } from '@/components/features/home/TierPicker'
 import { LogoBar } from '@/components/features/home/LogoBar'
 import { ProblemSection } from '@/components/features/home/ProblemSection'
 import { DifferenceSection } from '@/components/features/home/DifferenceSection'
@@ -47,6 +48,7 @@ export default async function HomePage({ params }: PageProps) {
         }}
       />
       <HeroSection />
+      <TierPicker />
       <LogoBar />
       <ProblemSection />
       <DifferenceSection />

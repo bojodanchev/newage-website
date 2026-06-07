@@ -23,6 +23,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
       errors: (await import(`../../messages/${locale}/errors.json`)).default,
       metadata: (await import(`../../messages/${locale}/metadata.json`)).default,
       'meta-ads': (await import(`../../messages/${locale}/meta-ads.json`)).default,
+      start: (await import(`../../messages/${locale}/start.json`)).default,
+      grow: (await import(`../../messages/${locale}/grow.json`)).default,
+      scale: (await import(`../../messages/${locale}/scale.json`)).default,
     },
   }
 })

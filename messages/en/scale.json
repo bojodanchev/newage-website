@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Growth Infrastructure for Enterprise — Custom Software, AI Agents & Paid Acquisition",
+    "description": "We build custom digital growth infrastructure for established businesses — paid acquisition, AI-powered automation, proprietary software, and enterprise CRM architecture, engineered into one growth engine. Book a strategic diagnostic session."
+  },
+  "nav": {
+    "cta": "Strategy session"
+  },
+  "hero": {
+    "eyebrow": "Enterprise growth engineering",
+    "headlineLine1": "Growth at Scale Requires",
+    "headlineLine2": "a System, Not a Service.",
+    "subheadline": "We build custom digital growth infrastructure — integrating paid acquisition, AI-powered automation, proprietary software, and enterprise CRM architecture into one growth engine. If you're past basic marketing and ready to build a real competitive moat, we should talk.",
+    "ctaPrimary": "Book a strategy session",
+    "ctaSecondary": "Explore our capabilities",
+    "trust": "We take a limited number of enterprise clients each quarter."
+  },
+  "positioning": {
+    "eyebrow": "Positioning",
+    "title": "We're not an ad agency. We're a growth engineering firm.",
+    "paragraphs": [
+      "Most agencies run your ads. We architect your entire customer-acquisition infrastructure — from top-of-funnel targeting to custom AI follow-up agents to enterprise-grade CRM pipelines and proprietary software built for your business model.",
+      "The result isn't a campaign you rent month to month. It's an owned, compounding asset: a measurable growth engine where every layer — acquisition, conversion, automation, attribution — is engineered to work as one system."
+    ],
+    "stats": [
+      {
+        "value": "1",
+        "label": "integrated growth engine, not five disconnected tools"
+      },
+      {
+        "value": "100%",
+        "label": "infrastructure owned by you"
+      },
+      {
+        "value": "Q",
+        "label": "quarterly strategic review, not monthly box-checking"
+      }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "Capabilities",
+    "title": "The full capability stack",
+    "intro": "Four integrated layers, engineered to function as a single growth system — not a list of services you stitch together yourself.",
+    "groups": [
+      {
+        "title": "Paid Acquisition",
+        "items": [
+          "Meta Ads — advanced audience architecture, creative testing, full-funnel sequencing",
+          "Google Ads — Search, Display, YouTube, Performance Max",
+          "Programmatic & native demand generation",
+          "Attribution modelling — first/last-touch, data-driven, and custom"
+        ]
+      },
+      {
+        "title": "Conversion Infrastructure",
+        "items": [
+          "Custom landing systems with dynamic personalization",
+          "Advanced A/B and multivariate testing",
+          "Full marketing automation — email, SMS, push, retargeting",
+          "AI-powered lead scoring"
+        ]
+      },
+      {
+        "title": "Software & Technology",
+        "items": [
+          "Custom CRM development — owned by you",
+          "AI agent deployment — follow-up, qualification, booking",
+          "Custom software projects — internal tools, portals, dashboards",
+          "API integrations and proprietary automation workflows"
+        ]
+      },
+      {
+        "title": "Strategy & Intelligence",
+        "items": [
+          "Quarterly growth audits and competitive analysis",
+          "Custom real-time attribution dashboards",
+          "Dedicated strategist and technical account management",
+          "Enterprise SLA"
+        ]
+      }
+    ]
+  },
+  "differentiators": {
+    "eyebrow": "What sets the system apart",
+    "title": "Two layers most agencies can't build",
+    "blocks": [
+      {
+        "title": "AI agents that work while you sleep",
+        "body": "We deploy custom AI agents that handle lead response (under 60 seconds, 24/7), qualification, appointment booking, follow-up, and pipeline updates — without human intervention. Not automation. Intelligent infrastructure.",
+        "points": [
+          "Custom-trained on your business, offers, and brand voice",
+          "Real-time, two-way CRM integration",
+          "Escalates to a human at exactly the right moment",
+          "Full conversation logging and analysis for continuous improvement"
+        ]
+      },
+      {
+        "title": "Technology built for your business, not rented from someone else's",
+        "body": "We scope, design, and build custom software — internal ops tools, client-facing platforms, proprietary advantages. If a SaaS tool almost does what you need, we build the version that does it exactly.",
+        "points": [
+          "Discovery and scoping workshops to define the real requirement",
+          "Agile development with weekly demos",
+          "Full IP transfer — you own everything we build",
+          "Ongoing maintenance and iteration as you scale"
+        ]
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "Evidence",
+    "title": "Enterprise outcomes",
+    "stats": [
+      {
+        "value": "4.1×",
+        "label": "ROAS at scale"
+      },
+      {
+        "value": "<60s",
+        "label": "AI lead response, 24/7"
+      },
+      {
+        "value": "100%",
+        "label": "IP ownership transferred"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "They didn't just optimize our spend — they rebuilt the entire acquisition stack and handed us a CRM and AI follow-up system we now own outright. Pipeline velocity is a different business now.",
+        "name": "VP of Growth",
+        "role": "B2B SaaS, Series B",
+        "metric": "4.1× ROAS, 9 months"
+      },
+      {
+        "quote": "The custom AI agents respond to every lead in under a minute, around the clock. Our human team only touches qualified, booked conversations. It paid for itself inside the first quarter.",
+        "name": "Founder & CEO",
+        "role": "Multi-location services group",
+        "metric": "−62% cost per booked call"
+      }
+    ]
+  },
+  "engagement": {
+    "eyebrow": "Engagement model",
+    "title": "How we work with enterprise clients",
+    "phases": [
+      {
+        "title": "Month 1 — Diagnostic",
+        "desc": "A full audit of your acquisition, tech stack, and growth blockers. We map where revenue is leaking and where the real ceiling is."
+      },
+      {
+        "title": "Month 2–3 — Architecture",
+        "desc": "We design and build the core infrastructure — acquisition, conversion systems, AI agents, CRM, and any custom software the model requires."
+      },
+      {
+        "title": "Month 4+ — Scale",
+        "desc": "Continuous optimization, expansion into new channels, and iteration on the system as the data compounds."
+      }
+    ],
+    "note": "Retainer, project-based, or hybrid. Minimum engagement: 3 months."
+  },
+  "leadSection": {
+    "eyebrow": "Strategic diagnostic",
+    "title": "Book a strategic diagnostic session",
+    "subtitle": "A 60-minute deep-dive into your acquisition infrastructure. You'll leave with a clear picture of your growth ceiling and what it takes to break through it. Limited to 4 sessions per month.",
+    "bullets": [
+      "A defensible read on your true growth ceiling — not a sales pitch",
+      "A concrete view of where your acquisition and tech stack leak revenue",
+      "A peer-to-peer conversation, strategist to decision maker"
+    ],
+    "formTitle": "Request your strategy session"
+  },
+  "leadForm": {
+    "fields": {
+      "company": "Company",
+      "role": "Your role",
+      "email": "Work email",
+      "phone": "Phone",
+      "annualRevenue": "Annual revenue",
+      "primaryChallenge": "Your primary growth challenge",
+      "preferredTime": "Preferred time for the session"
+    },
+    "placeholders": {
+      "company": "Company name",
+      "primaryChallenge": "Where is growth bottlenecked — acquisition, conversion, tech, or attribution?",
+      "preferredTime": "e.g. weekday afternoons"
+    },
+    "revenueOptions": [
+      "Under $500k",
+      "$500k–$2M",
+      "$2M–$10M",
+      "$10M+"
+    ],
+    "consent": "By submitting, you agree we may contact you about your enquiry. We treat everything you share as confidential and never share your details.",
+    "submit": "Request strategy session",
+    "submitting": "Sending…",
+    "success": "Request received — we'll be in touch.",
+    "successSub": "A strategist will reach out at your preferred time to confirm your diagnostic session.",
+    "error": "Something went wrong. Please try again, or email us directly."
+  },
+  "finalCta": {
+    "title": "Limited to 4 strategic sessions per month.",
+    "subtitle": "We take a limited number of enterprise clients each quarter so every engagement gets senior strategic and technical attention. If you're serious about building a growth system, secure a session now.",
+    "cta": "Book my strategy session",
+    "microcopy": "Sessions fill quarterly. We reply to qualified enquiries within one business day."
+  },
+  "footer": {
+    "tagline": "We build custom digital growth infrastructure for businesses ready to build a real competitive moat.",
+    "fullSite": "Explore the full New Age site"
+  }
+}

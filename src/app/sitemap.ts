@@ -8,6 +8,10 @@ const BASE_URL = 'https://newagecontent.com'
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     '',
+    '/start',
+    '/grow',
+    '/scale',
+    '/banking',
     '/services',
     '/work',
     '/process',
