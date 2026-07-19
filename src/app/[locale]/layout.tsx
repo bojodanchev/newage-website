@@ -10,6 +10,10 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
 
+// Unknown top-level segments (bot junk like /wp-login.php) must 404 statically
+// instead of invoking a function to SSR the not-found page.
+export const dynamicParams = false
+
 export default async function LocaleLayout({
   children,
   params,
