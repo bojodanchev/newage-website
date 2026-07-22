@@ -1,6 +1,7 @@
 {
   "nav": {
     "services": "Услуги",
+    "influencer-marketing": "Инфлуенс",
     "work": "Проекти",
     "process": "Процес",
     "about": "За нас",
@@ -23,6 +24,7 @@
       "softwareDevelopment": "Разработка на софтуер",
       "automation": "Автоматизация",
       "marketing": "Маркетинг",
+      "influence": "Инфлуенсър маркетинг",
       "sales": "Продажби",
       "fullBuild": "Цялостно изграждане",
       "about": "За нас",

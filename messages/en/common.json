@@ -1,6 +1,7 @@
 {
   "nav": {
     "services": "Services",
+    "influencer-marketing": "Influence",
     "work": "Work",
     "process": "Process",
     "about": "About",
@@ -23,6 +24,7 @@
       "softwareDevelopment": "Software Development",
       "automation": "Automation",
       "marketing": "Marketing",
+      "influence": "Influencer Marketing",
       "sales": "Sales",
       "fullBuild": "Full Build",
       "about": "About",

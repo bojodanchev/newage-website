@@ -30,7 +30,7 @@ const itemVariants = {
   exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
 }
 
-const NAV_HREFS = ['/services', '/work', '/process', '/about', '/blog', '/contact'] as const
+const NAV_HREFS = ['/services', '/influencer-marketing', '/work', '/process', '/about', '/blog', '/contact'] as const
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const t = useTranslations('common')

@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/Button'
 import { MobileMenu } from './MobileMenu'
 import { LocaleSwitcher } from './LocaleSwitcher'
 
-const NAV_HREFS = ['/services', '/work', '/process', '/about', '/blog', '/contact'] as const
+const NAV_HREFS = ['/services', '/influencer-marketing', '/work', '/process', '/about', '/blog', '/contact'] as const
 
 export function Navbar() {
   const pathname = usePathname()
@@ -62,7 +62,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden items-center gap-8 md:flex">
+          <ul className="hidden items-center gap-5 lg:flex xl:gap-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
@@ -82,14 +82,14 @@ export function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <LocaleSwitcher />
             </div>
             <Button
               href="/contact"
               variant="primary"
               size="sm"
-              className="hidden md:inline-flex"
+              className="hidden lg:inline-flex"
             >
               {t('nav.getStarted')}
             </Button>
@@ -97,7 +97,7 @@ export function Navbar() {
             {/* Hamburger */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
+              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
               aria-label={t('nav.openMenu')}
             >
               <span className="block h-0.5 w-6 bg-foreground transition-transform" />

@@ -148,3 +148,32 @@ export const tierLeadSchema = z
   })
 
 export type TierLeadFormData = z.infer<typeof tierLeadSchema>
+
+export const influencerLeadSchema = z
+  .object({
+    audienceType: z.enum(['brands', 'influencers', 'ugc']),
+    name: z.string().min(2).max(200),
+    email: z.string().email().max(320),
+    phone: z.string().max(80).optional().or(z.literal('')),
+    company: z.string().max(200).optional().or(z.literal('')),
+    website: z.string().url().max(500).optional().or(z.literal('')),
+    audienceSize: z.string().max(100).optional().or(z.literal('')),
+    niche: z.string().max(200).optional().or(z.literal('')),
+    goals: z.string().min(12).max(2000),
+    locale: z.string().max(8).optional(),
+    website_url: z.string().optional(),
+    renderedAt: z.number().int().nonnegative().optional(),
+  })
+  .superRefine((data, ctx) => {
+    if (data.website_url) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'spam_detected', path: ['website_url'] })
+    }
+    if (data.renderedAt && Date.now() - data.renderedAt < 1200) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'too_fast', path: ['renderedAt'] })
+    }
+    if (data.audienceType === 'brands' && !data.company) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Company is required', path: ['company'] })
+    }
+  })
+
+export type InfluencerLeadFormData = z.infer<typeof influencerLeadSchema>

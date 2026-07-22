@@ -17,6 +17,9 @@ const ALLOWED_SOURCES = [
   'start',
   'grow',
   'scale',
+  'influencer-brands',
+  'influencer-talent',
+  'influencer-ugc',
 ] as const
 
 const CREATE_LEADS_SQL = `
