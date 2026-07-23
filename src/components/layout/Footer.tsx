@@ -8,7 +8,6 @@ const footerLinkData = {
     { key: 'softwareDevelopment', href: '/services/software-development' },
     { key: 'automation', href: '/services/automation-systems' },
     { key: 'marketing', href: '/services/marketing-growth' },
-    { key: 'influence', href: '/influencer-marketing' },
     { key: 'sales', href: '/services/sales-infrastructure' },
     { key: 'fullBuild', href: '/services/full-business-build' },
   ],
