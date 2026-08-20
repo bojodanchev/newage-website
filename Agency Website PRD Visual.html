@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRD — 3-Tier Website Conversion System</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --dark: #0A0A0F;
+    --green: #1A7A3C;
+    --green-light: #E8F5EE;
+    --blue: #1A56FF;
+    --blue-light: #E8EEFF;
+    --gold: #B07800;
+    --gold-bg: #FFF8E1;
+    --gray: #F4F6FA;
+    --border: #E2E8F0;
+    --text: #1A1A2E;
+    --muted: #64748B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #F8FAFD;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--dark);
+    color: white;
+    padding: 60px 80px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(26,86,255,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-tag {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width: 700px;
+  }
+  .header p {
+    color: #94A3B8;
+    font-size: 16px;
+    max-width: 600px;
+  }
+  .meta-chips {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 40px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: #CBD5E1;
+    font-weight: 500;
+  }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+  
+  /* ── NAV TABS ── */
+  .nav-tabs {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  }
+  .nav-tabs-inner {
+    display: flex;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    overflow-x: auto;
+  }
+  .nav-tab {
+    padding: 16px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+  .nav-tab:hover { color: var(--dark); }
+  .nav-tab.green { border-bottom-color: var(--green); color: var(--green); }
+  .nav-tab.blue { border-bottom-color: var(--blue); color: var(--blue); }
+  .nav-tab.gold { border-bottom-color: var(--gold); color: var(--gold); }
+
+  /* ── SECTION BLOCKS ── */
+  .section {
+    padding: 70px 0 50px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-tag {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .section-tag.green { color: var(--green); }
+  .section-tag.blue { color: var(--blue); }
+  .section-tag.gold { color: var(--gold); }
+  .section-tag.dark { color: #94A3B8; }
+
+  .section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 640px;
+    margin-bottom: 40px;
+    margin-top: 8px;
+  }
+
+  /* ── TIER CARD BLOCKS ── */
+  .tier-banner {
+    border-radius: 12px;
+    padding: 28px 36px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .tier-banner.green { background: var(--green); color: white; }
+  .tier-banner.blue { background: var(--blue); color: white; }
+  .tier-banner.gold { background: #8B5E00; color: white; }
+
+  .tier-emoji { font-size: 36px; }
+  .tier-banner-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .tier-banner-sub {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 4px;
+  }
+  .tier-route {
+    margin-left: auto;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* ── GRID LAYOUTS ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 24px 0; }
+
+  /* ── CARDS ── */
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+  .card h4.green { color: var(--green); }
+  .card h4.blue { color: var(--blue); }
+  .card h4.gold { color: var(--gold); }
+  .card h4.dark { color: var(--muted); }
+
+  .card p, .card li {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+  .card ul { padding-left: 18px; }
+
+  /* ── COPY BLOCKS ── */
+  .copy-block {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    position: relative;
+  }
+  .copy-block::before {
+    content: 'COPY';
+    position: absolute;
+    top: 10px; right: 14px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.4;
+    font-family: 'Syne', sans-serif;
+  }
+  .copy-block.green { background: var(--green-light); border-left: 4px solid var(--green); }
+  .copy-block.blue { background: var(--blue-light); border-left: 4px solid var(--blue); }
+  .copy-block.gold { background: var(--gold-bg); border-left: 4px solid var(--gold); }
+  .copy-block.dark { background: #0A0A0F; border-left: 4px solid #333; }
+
+  .copy-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-family: 'Syne', sans-serif;
+  }
+  .copy-label.green { color: var(--green); }
+  .copy-label.blue { color: var(--blue); }
+  .copy-label.gold { color: var(--gold); }
+
+  .copy-headline {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+  .copy-block.dark .copy-headline { color: white; }
+  .copy-block.green .copy-headline { color: #0D4020; }
+  .copy-block.blue .copy-headline { color: #0A2080; }
+  .copy-block.gold .copy-headline { color: #5C3D00; }
+
+  .copy-sub {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .copy-block.dark .copy-sub { color: #94A3B8; }
+  .copy-block.green .copy-sub { color: #1A4A2A; }
+  .copy-block.blue .copy-sub { color: #1A2F6A; }
+  .copy-block.gold .copy-sub { color: #4A3000; }
+
+  /* ── FUNNEL VIZ ── */
+  .funnel {
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  .funnel-step {
+    border-radius: 6px;
+    padding: 14px 28px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+  }
+  .funnel-step::after {
+    content: '▼';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CBD5E1;
+    font-size: 14px;
+  }
+  .funnel-step:last-child::after { display: none; }
+  .funnel-arrow { height: 24px; }
+
+  /* ── CHECKLIST ── */
+  .checklist { margin: 20px 0; }
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: #334155;
+  }
+  .checklist-item:last-child { border-bottom: none; }
+  .check-icon {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-weight: 700;
+  }
+  .check-icon.green { background: var(--green-light); color: var(--green); }
+  .check-icon.blue { background: var(--blue-light); color: var(--blue); }
+  .check-icon.gold { background: var(--gold-bg); color: var(--gold); }
+  .check-icon.red { background: #FEE2E2; color: #DC2626; }
+
+  /* ── COMPARISON TABLE ── */
+  .compare-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 10px; overflow: hidden; }
+  .compare-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .compare-table th:first-child { background: #F1F5F9; color: var(--muted); }
+  .compare-table th.th-green { background: var(--green); color: white; }
+  .compare-table th.th-blue { background: var(--blue); color: white; }
+  .compare-table th.th-gold { background: #8B5E00; color: white; }
+  .compare-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+    color: #334155;
+    vertical-align: top;
+  }
+  .compare-table td:first-child { font-weight: 600; background: #F8FAFC; color: var(--muted); }
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  /* ── ROUTE ARCHITECTURE ── */
+  .routes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .route-card {
+    border-radius: 12px;
+    padding: 28px;
+    border: 2px solid;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .route-card:hover { transform: translateY(-3px); }
+  .route-card.green { border-color: var(--green); background: var(--green-light); }
+  .route-card.blue { border-color: var(--blue); background: var(--blue-light); }
+  .route-card.gold { border-color: var(--gold); background: var(--gold-bg); }
+  .route-url {
+    font-family: monospace;
+    font-size: 12px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    font-weight: 600;
+  }
+  .route-card.green .route-url { color: var(--green); }
+  .route-card.blue .route-url { color: var(--blue); }
+  .route-card.gold .route-url { color: var(--gold); }
+  .route-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .route-card.green .route-title { color: #0D4020; }
+  .route-card.blue .route-title { color: #0A2080; }
+  .route-card.gold .route-title { color: #5C3D00; }
+  .route-desc { font-size: 13px; color: #4B5563; line-height: 1.5; }
+
+  /* ── DEV NOTES ── */
+  .dev-note {
+    background: #0F172A;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .dev-note-icon { font-size: 18px; flex-shrink: 0; }
+  .dev-note p { font-size: 13px; color: #94A3B8; line-height: 1.6; }
+  .dev-note strong { color: #38BDF8; }
+
+  /* ── PHASE TIMELINE ── */
+  .phases { margin: 28px 0; }
+  .phase {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .phase:last-child { border-bottom: none; }
+  .phase-num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .phase-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .phase-items { font-size: 13px; color: #475569; line-height: 1.8; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--dark);
+    color: #64748B;
+    text-align: center;
+    padding: 40px;
+    font-size: 13px;
+    margin-top: 60px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .header { padding: 40px 24px; }
+    .header h1 { font-size: 30px; }
+    .container { padding: 0 20px; }
+    .grid-2, .grid-3, .routes { grid-template-columns: 1fr; }
+    .nav-tabs-inner { padding: 0 20px; }
+    .tier-banner { flex-direction: column; text-align: center; }
+    .tier-route { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-tag">Product Requirements Document</div>
+  <h1>3-Tier Website Conversion System</h1>
+  <p>Full copywriting, psychology, and technical architecture for your digital agency website — three buyer stages, three experiences, one system.</p>
+  <div class="meta-chips">
+    <span class="chip">Version 1.0</span>
+    <span class="chip">June 2026</span>
+    <span class="chip">For Developer Use</span>
+    <span class="chip">Software & Ads Agency</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <a href="#overview" class="nav-tab">Overview</a>
+    <a href="#homepage" class="nav-tab">Homepage Router</a>
+    <a href="#tier1" class="nav-tab green">🟢 Beginner /start</a>
+    <a href="#tier2" class="nav-tab blue">🔵 Intermediate /grow</a>
+    <a href="#tier3" class="nav-tab gold">🟡 Pro /scale</a>
+    <a href="#tech" class="nav-tab">Technical Specs</a>
+    <a href="#roadmap" class="nav-tab">Roadmap</a>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div id="overview" class="section">
+  <div class="container">
+    <div class="section-tag dark">Strategic Overview</div>
+    <h2>The Three-Tier Problem & Solution</h2>
+    <p class="section-sub">One website, one message — three radically different buyers. The current approach converts nobody well. This system fixes that.</p>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th class="th-green">🟢 Beginner</th>
+          <th class="th-blue">🔵 Intermediate</th>
+          <th class="th-gold">🟡 Pro / Advanced</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Who They Are</td><td>Local business owner, zero digital knowledge</td><td>Business with some marketing, wants better results</td><td>Scaling company, marketing director / founder</td></tr>
+        <tr><td>Primary Fear</td><td>"I don't understand this"</td><td>"I'm wasting money"</td><td>"I need a real partner, not a vendor"</td></tr>
+        <tr><td>Primary Desire</td><td>More customers, simply</td><td>Better ROI, real system</td><td>Competitive moat, custom infrastructure</td></tr>
+        <tr><td>Language</td><td>Plain English, zero jargon</td><td>Industry terms, some tech</td><td>Full technical vocabulary</td></tr>
+        <tr><td>Decision Driver</td><td>Trust + Simplicity</td><td>Results + Proof</td><td>Capability + Partnership</td></tr>
+        <tr><td>Sales Cycle</td><td>Emotional, needs nurturing</td><td>Logical, in comparison phase</td><td>Consultative, long-term</td></tr>
+        <tr><td>URL Route</td><td>/start</td><td>/grow</td><td>/scale</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- HOMEPAGE -->
+<div id="homepage" class="section">
+  <div class="container">
+    <div class="section-tag dark">Homepage Architecture</div>
+    <h2>The Routing Hub — yourwebsite.com</h2>
+    <p class="section-sub">The homepage has ONE job: route the visitor to the right tier experience in under 10 seconds.</p>
+
+    <div class="copy-block dark">
+      <div class="copy-label" style="color:#38BDF8">HERO HEADLINE</div>
+      <div class="copy-headline">"We Grow Businesses Online.<br>At Every Stage."</div>
+      <div class="copy-sub">"Whether you're just starting or scaling past 7 figures — we have the right system for where you are."</div>
+    </div>
+
+    <div class="routes">
+      <div class="route-card green">
+        <div class="route-url">yourwebsite.com/start</div>
+        <div class="route-title">🟢 Just Starting Out</div>
+        <div class="route-desc">You need more customers and you're not sure where to start. We make it simple.</div>
+      </div>
+      <div class="route-card blue">
+        <div class="route-url">yourwebsite.com/grow</div>
+        <div class="route-title">🔵 Growing & Optimizing</div>
+        <div class="route-desc">You have some marketing running but want better results and a real system.</div>
+      </div>
+      <div class="route-card gold">
+        <div class="route-url">yourwebsite.com/scale</div>
+        <div class="route-title">🟡 Scaling at Enterprise Level</div>
+        <div class="route-desc">You need custom infrastructure, AI automation, and a strategic growth partner.</div>
+      </div>
+    </div>
+
+    <div class="dev-note">
+      <span class="dev-note-icon">💻</span>
+      <p><strong>Developer:</strong> Cards should have hover lift animations, distinct color themes (green/blue/gold), and clear directional arrows. Consider adding a 3-question smart quiz as an alternative routing method. Mobile: vertical stacked cards with large tap targets. Each card links to its tier page.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TIER 1 -->
+<div id="tier1" class="section">
+  <div class="container">
+    <div class="tier-banner green">
+      <span class="tier-emoji">🟢</span>
+      <div>
+        <div class="tier-banner-title">TIER 1 — BEGINNER</div>
+        <div class="tier-banner-sub">The Starter Experience — Simplicity, Trust, Action</div>
+      </div>
+      <div class="tier-route">yourwebsite.com/start</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4 class="green">Who This Person Is</h4>
+        <ul>
+          <li>Local business owner — plumber, dentist, restaurant, contractor</li>
+          <li>Relies on word-of-mouth or walk-in traffic</li>
+          <li>Intimidated by technology and digital terms</li>
+          <li>Core need: more phone calls, bookings, customers</li>
+          <li>Budget-sensitive, needs to see simple ROI math</li>
+          <li>Likely been burned before by ads or a website that didn't work</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="green">Psychological Profile</h4>
+        <p>This person is <strong>skeptical and overwhelmed</strong>. Your job is NOT to sell them on digital marketing — it's to earn trust and make complexity feel simple.</p>
+        <br>
+        <p style="background:#E8F5EE;padding:12px;border-radius:6px;font-size:13px;color:#1A4A2A;font-weight:500;">Don't sell them "marketing." Sell them "more customers." They don't care how — they want the result.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;margin:36px 0 16px;color:var(--green)">Page Copy — Section by Section</h3>
+
+    <div class="copy-block green">
+      <div class="copy-label green">HERO HEADLINE (H1)</div>
+      <div class="copy-headline">"Get More Customers.<br>Without the Confusion."</div>
+      <div class="copy-sub">We help local businesses like yours get a steady flow of new customers from the internet — without you needing to learn anything technical. We handle everything.</div>
+    </div>
+
+    <div class="copy-block dark" style="margin-top:16px">
+      <div class="copy-label" style="color:#4ADE80">PROBLEM SECTION HEADLINE</div>
+      <div class="copy-headline" style="font-size:18px;">"Does Any of This Sound Familiar?"</div>
+      <div class="copy-sub">• You're great at what you do — but new customers are hard to find<br>• You have no idea where to start with the internet<br>• You tried ads before and just burned money<br>• Your competitors seem to be everywhere online and you're not<br>• You don't have time to learn all this — you have a business to run</div>
+    </div>
+
+    <div class="card" style="margin:20px 0">
+      <h4 class="green">SOLUTION: Simple 4-Step Flow (Visual)</h4>
+      <p style="margin-bottom:12px;font-size:13px;color:var(--muted)">Present as horizontal steps with icons and connecting arrows. Mobile: vertical stack.</p>
+      <div class="funnel">
+        <div class="funnel-step" style="background:var(--green);width:100%">Step 1 — We build you a professional website that actually works</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#1E8A46;width:90%">Step 2 — We run ads on Facebook, Instagram & Google to bring people to you</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#239751;width:80%">Step 3 — We capture their interest and qualify them (ready-to-buy only)</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#28A45B;width:70%">Step 4 — We deliver you leads — real people, ready to become customers</div>
+      </div>
+    </div>
+
+    <div class="copy-block green">
+      <div class="copy-label green">PRIMARY CTA</div>
+      <div class="copy-headline">"Start Getting More Customers →<br>Book a Free 20-Min Call"</div>
+      <div class="copy-sub">No obligation. No tech talk. Just a simple conversation about your business.</div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px">
+      <div class="card">
+        <h4 class="green">✅ Words TO Use</h4>
+        <ul>
+          <li>customers, calls, bookings</li>
+          <li>people finding you</li>
+          <li>results, simple, easy</li>
+          <li>we handle everything</li>
+          <li>your business, for you</li>
+          <li>ready to buy, interested people</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="red" style="color:#DC2626">🚫 Words to NEVER Use</h4>
+        <ul>
+          <li>funnel, conversion rate, pixel</li>
+          <li>CPC, ROAS, CPM, CTR</li>
+          <li>automation, CRM, API</li>
+          <li>retargeting, attribution</li>
+          <li>lead nurturing, lifecycle</li>
+          <li>omnichannel, touchpoints</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TIER 2 -->
+<div id="tier2" class="section">
+  <div class="container">
+    <div class="tier-banner blue">
+      <span class="tier-emoji">🔵</span>
+      <div>
+        <div class="tier-banner-title">TIER 2 — INTERMEDIATE</div>
+        <div class="tier-banner-sub">The Growth Experience — Methodology, Proof, System</div>
+      </div>
+      <div class="tier-route">yourwebsite.com/grow</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4 class="blue">Who This Person Is</h4>
+        <ul>
+          <li>Has a website, maybe running basic ads</li>
+          <li>Understands leads, conversions, Facebook ads basics</li>
+          <li>Frustrated with inconsistent or underperforming results</li>
+          <li>In comparison mode — evaluating agencies</li>
+          <li>Thinking about CRM, automation for the first time</li>
+          <li>Will invest if ROI is clear and demonstrable</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="blue">Psychological Profile</h4>
+        <p>Analytical and frustrated. They've invested in marketing without the expected returns. They're <strong>comparing agencies</strong>.</p>
+        <br>
+        <p style="background:var(--blue-light);padding:12px;border-radius:6px;font-size:13px;color:#0A2080;font-weight:500;">Don't sell them "why digital marketing matters." Sell them WHY YOUR SYSTEM is better than what they have now. Lead with methodology and proof.</p>
+      </div>
+    </div>
+
+    <div class="copy-block blue">
+      <div class="copy-label blue">HERO HEADLINE (H1)</div>
+      <div class="copy-headline">"Your Ads Are Running.<br>Your Pipeline Isn't."</div>
+      <div class="copy-sub">Most businesses at your stage are generating interest — but losing leads in the gap between attention and conversion. We close that gap with a full-funnel system: ads, landing pages, lead qualification, nurturing, and CRM integration.</div>
+    </div>
+
+    <div class="copy-block dark" style="margin-top:16px">
+      <div class="copy-label" style="color:#60A5FA">PROBLEM SECTION</div>
+      <div class="copy-headline" style="font-size:18px;">"The Growth Plateau is Real. Here's What's Causing It."</div>
+      <div class="copy-sub">
+        • Leads come in but don't convert — no nurture system in place<br>
+        • Ad spend is rising but cost-per-lead isn't improving<br>
+        • Running Facebook AND Google but they aren't coordinated<br>
+        • No clear attribution — you don't know which channel works<br>
+        • Team manually follows up — inefficient and inconsistent
+      </div>
+    </div>
+
+    <div class="card" style="margin:20px 0">
+      <h4 class="blue">SOLUTION: Full-Funnel Architecture (5 Layers)</h4>
+      <p style="margin-bottom:16px;font-size:13px;color:var(--muted)">Show as an animated SVG funnel. Each layer clickable to expand detail.</p>
+      <div class="funnel">
+        <div class="funnel-step" style="background:#1A56FF;width:100%">Layer 1 — Paid Traffic: Meta Ads + Google Ads coordinated strategy</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#1E60FF;width:90%">Layer 2 — Landing Pages: High-converting, A/B tested, mobile-optimized</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#2268E8;width:80%">Layer 3 — Lead Qualification: Smart forms + call qualification flows</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#2570D0;width:70%">Layer 4 — Lead Nurturing: Email sequences, SMS, retargeting</div>
+        <div class="funnel-arrow"></div>
+        <div class="funnel-step" style="background:#2877B8;width:60%">Layer 5 — CRM Integration: Leads auto-enter pipeline, nothing slips</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin:20px 0">
+      <h4 class="blue">EXPANDED SERVICES (Intermediate adds these)</h4>
+      <div class="grid-2" style="margin-top:12px">
+        <div>
+          <p style="font-weight:600;font-size:12px;color:var(--blue);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Core Services</p>
+          <ul style="font-size:13px;line-height:2">
+            <li>Website & Landing Page Optimization</li>
+            <li>Meta Ads — advanced targeting + retargeting</li>
+            <li>Google Ads — Search, Display, Performance Max</li>
+            <li>Lead Qualification System</li>
+            <li>Email & SMS Nurture Sequences</li>
+            <li>Monthly Strategy Call + Dashboard</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-weight:600;font-size:12px;color:#009E6B;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">NEW Add-On Services</p>
+          <ul style="font-size:13px;line-height:2">
+            <li>🆕 Your Own CRM — branded pipeline tool</li>
+            <li>🆕 AI-Powered Follow-Up Automation (24/7)</li>
+            <li>🆕 Phone Campaign Management</li>
+            <li>🆕 Campaign A/B Testing framework</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy-block blue">
+      <div class="copy-label blue">PRIMARY CTA</div>
+      <div class="copy-headline">"Get a Free Funnel Audit — We'll Show You Exactly Where You're Losing Money"</div>
+      <div class="copy-sub">Takes 20 minutes. We'll map your current funnel, find the gaps, and show you what a fixed system would look like. Zero obligation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIER 3 -->
+<div id="tier3" class="section">
+  <div class="container">
+    <div class="tier-banner gold">
+      <span class="tier-emoji">🟡</span>
+      <div>
+        <div class="tier-banner-title">TIER 3 — PRO / ENTERPRISE</div>
+        <div class="tier-banner-sub">The Scale Experience — Depth, Partnership, Custom Infrastructure</div>
+      </div>
+      <div class="tier-route">yourwebsite.com/scale</div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h4 class="gold">Who This Person Is</h4>
+        <ul>
+          <li>Marketing director or founder, 5+ figures/month revenue</li>
+          <li>Speaks: ROAS, CAC, LTV, MQL/SQL, API, AI agents</li>
+          <li>Has functioning marketing — wants to upgrade capability</li>
+          <li>Evaluating partners on depth, custom solutions, culture fit</li>
+          <li>Will invest significantly for the right strategic partner</li>
+          <li>Time-scarce — will dismiss you in 10 seconds if generic</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 class="gold">Psychological Profile</h4>
+        <p>Sophisticated and time-scarce. Dismisses generic pitches instantly. Wants to see genuine technical depth and custom thinking.</p>
+        <br>
+        <p style="background:var(--gold-bg);padding:12px;border-radius:6px;font-size:13px;color:#5C3D00;font-weight:500;">Don't pitch them. Consult them. Your homepage should feel like the first page of a strategy document, not a sales brochure.</p>
+      </div>
+    </div>
+
+    <div class="copy-block gold">
+      <div class="copy-label gold">HERO HEADLINE (H1)</div>
+      <div class="copy-headline">"Growth at Scale Requires a System, Not a Service."</div>
+      <div class="copy-sub">We build custom digital growth infrastructure for ambitious businesses — integrating paid acquisition, AI-powered automation, proprietary software, and enterprise CRM architecture into a unified growth engine.</div>
+    </div>
+
+    <div class="copy-block dark" style="margin-top:16px">
+      <div class="copy-label" style="color:#FCD34D">POSITIONING STATEMENT</div>
+      <div class="copy-headline" style="font-size:18px;">"We're Not an Ad Agency. We're a Growth Engineering Firm."</div>
+      <div class="copy-sub">Most agencies run your ads. We architect your entire customer acquisition infrastructure — from top-of-funnel targeting to custom AI follow-up agents to enterprise-grade CRM pipelines and proprietary software built for your business model.</div>
+    </div>
+
+    <div class="card" style="margin:20px 0">
+      <h4 class="gold">FULL CAPABILITIES STACK</h4>
+      <div class="grid-2" style="margin-top:12px">
+        <div>
+          <p style="font-weight:600;font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Paid Acquisition</p>
+          <ul style="font-size:13px;line-height:1.9;margin-bottom:16px">
+            <li>Meta Ads — advanced audience architecture</li>
+            <li>Google Ads — Search, Display, YouTube, PMax</li>
+            <li>Programmatic & Native channels</li>
+            <li>Custom attribution modeling</li>
+          </ul>
+          <p style="font-weight:600;font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Conversion Infrastructure</p>
+          <ul style="font-size:13px;line-height:1.9">
+            <li>Dynamic content personalization</li>
+            <li>Multivariate testing frameworks</li>
+            <li>Full marketing automation stack</li>
+            <li>AI-powered lead scoring</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-weight:600;font-size:12px;color:#EF4444;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">🔴 KEY DIFFERENTIATOR: Software & AI</p>
+          <ul style="font-size:13px;line-height:1.9;margin-bottom:16px">
+            <li>🤖 Custom CRM — built for your exact process</li>
+            <li>🤖 AI Agent deployment — 24/7 autonomous follow-up</li>
+            <li>🤖 Custom software development projects</li>
+            <li>🤖 API integrations — full stack unified</li>
+            <li>🤖 Proprietary automation workflows</li>
+          </ul>
+          <p style="font-weight:600;font-size:12px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Strategy & Intelligence</p>
+          <ul style="font-size:13px;line-height:1.9">
+            <li>Quarterly Growth Audits</li>
+            <li>Real-time attribution dashboards</li>
+            <li>Dedicated strategist + tech AM</li>
+            <li>Enterprise SLA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy-block gold">
+      <div class="copy-label gold">PRIMARY CTA</div>
+      <div class="copy-headline">"Book a Strategic Diagnostic Session —<br>Limited to 4 Per Month"</div>
+      <div class="copy-sub">We take a small number of new enterprise clients each quarter to maintain quality. The diagnostic is a 60-minute deep-dive into your current acquisition infrastructure — at the end, you'll have a clear picture of your growth ceiling and what it would take to break through it.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TECH SPECS -->
+<div id="tech" class="section">
+  <div class="container">
+    <div class="section-tag dark">Technical Specifications</div>
+    <h2>Developer Requirements</h2>
+    <p class="section-sub">Everything your developer needs to build this correctly the first time.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h4 class="green">🟢 Beginner /start</h4>
+        <p><strong>Color:</strong> Warm Green #1A7A3C</p>
+        <p><strong>Tone:</strong> Friendly, large body text</p>
+        <p><strong>Imagery:</strong> Real people, local businesses</p>
+        <p><strong>CTA:</strong> Large, simple, low friction</p>
+        <p><strong>Proof:</strong> Testimonials, before/after</p>
+        <p><strong>Form:</strong> 4 fields max</p>
+      </div>
+      <div class="card">
+        <h4 class="blue">🔵 Intermediate /grow</h4>
+        <p><strong>Color:</strong> Trust Blue #1A56FF</p>
+        <p><strong>Tone:</strong> Professional, data-forward</p>
+        <p><strong>Imagery:</strong> Dashboards, results, teams</p>
+        <p><strong>CTA:</strong> Audit/diagnostic, medium friction</p>
+        <p><strong>Proof:</strong> Case studies with metrics</p>
+        <p><strong>Form:</strong> 6 fields, budget range</p>
+      </div>
+      <div class="card">
+        <h4 class="gold">🟡 Pro /scale</h4>
+        <p><strong>Color:</strong> Premium Gold #B07800</p>
+        <p><strong>Tone:</strong> Editorial, sophisticated</p>
+        <p><strong>Imagery:</strong> Abstract, architectural</p>
+        <p><strong>CTA:</strong> Strategy session, high intent</p>
+        <p><strong>Proof:</strong> Enterprise case studies</p>
+        <p><strong>Form:</strong> 6 fields, revenue range</p>
+      </div>
+    </div>
+
+    <div class="dev-note" style="margin-top:24px">
+      <span class="dev-note-icon">📊</span>
+      <p><strong>Conversion Tracking:</strong> Each tier needs independent GA4 events. Track: page visit, scroll depth (25/50/75/100%), CTA click, form start, form submit, booking complete. Pass tier source as UTM parameter to CRM on every lead.</p>
+    </div>
+    <div class="dev-note">
+      <span class="dev-note-icon">📱</span>
+      <p><strong>Mobile Requirements:</strong> All pages 100% mobile-first. Test on iPhone SE as baseline. Hero fully readable without scroll. CTAs thumb-reachable (bottom 60%). Load time under 2 seconds on 4G.</p>
+    </div>
+    <div class="dev-note">
+      <span class="dev-note-icon">🔗</span>
+      <p><strong>Lead Routing:</strong> All forms connect to CRM with tier tag. Email notification to sales includes tier context. Beginner leads get nurture sequence. Intermediate get audit booking. Pro get strategy call booking.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ROADMAP -->
+<div id="roadmap" class="section">
+  <div class="container">
+    <div class="section-tag dark">Implementation</div>
+    <h2>Build Roadmap</h2>
+    <p class="section-sub">6-week build-and-launch plan with clear deliverables per phase.</p>
+
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-num">1</div>
+        <div>
+          <div class="phase-title">Foundation — Week 1–2</div>
+          <div class="phase-items">Finalize copy for all tiers · Design system (colors, fonts, components per tier) · Homepage router design · Mobile-first wireframes all three pages</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">2</div>
+        <div>
+          <div class="phase-title">Build — Week 3–4</div>
+          <div class="phase-items">Develop all three tier pages · CRM form integration with tier tagging · Conversion tracking per tier · Homepage self-selection routing with quiz option</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">3</div>
+        <div>
+          <div class="phase-title">Optimize — Week 5–6</div>
+          <div class="phase-items">QA across devices and browsers · A/B testing setup on hero headlines · Load speed optimization · Soft traffic test before full launch</div>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">4</div>
+        <div>
+          <div class="phase-title">Scale — Month 2+</div>
+          <div class="phase-items">Analyze conversion by tier · Add video testimonials to highest-converting tier · Blog/resources section per tier language · Industry-specific landing pages (dentists, contractors, etc.)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:32px;border-color:var(--blue)">
+      <h4 class="blue">⚠️ Non-Negotiable Rules (Developer + Copywriter)</h4>
+      <div class="checklist">
+        <div class="checklist-item"><span class="check-icon blue">✓</span>Every page has ONE primary CTA. One. Not three options.</div>
+        <div class="checklist-item"><span class="check-icon green">✓</span>Beginner page: zero jargon. Have a non-marketer read and flag anything unclear.</div>
+        <div class="checklist-item"><span class="check-icon gold">✓</span>Pro page: zero fluffy claims. Every sentence defensible and specific.</div>
+        <div class="checklist-item"><span class="check-icon blue">✓</span>CTA above the fold on every single page.</div>
+        <div class="checklist-item"><span class="check-icon green">✓</span>Every testimonial must include specific numbers. "It worked great" is NOT proof.</div>
+        <div class="checklist-item"><span class="check-icon blue">✓</span>Design mobile-first. Desktop is the secondary consideration.</div>
+        <div class="checklist-item"><span class="check-icon gold">✓</span>When sending link to a prospect, send the tier-matched URL, not the homepage.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  PRD v1.0 — Digital Agency 3-Tier Website Conversion System — June 2026<br>
+  <span style="font-size:11px;margin-top:6px;display:block">This document defines copywriting, psychology, and technical architecture for developer and copywriter use.</span>
+</div>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>
