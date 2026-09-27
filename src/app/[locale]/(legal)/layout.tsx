@@ -1,13 +1,17 @@
 import { Link } from '@/i18n/routing'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { SITE } from '@/lib/constants'
 
 export default async function LegalLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }) {
-  const t = await getTranslations('errors')
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: 'errors' })
 
   return (
     <>
